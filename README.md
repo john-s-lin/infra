@@ -1,2 +1,2 @@
-# nix
-Nix for everything
+# infra
+Everything is computer
