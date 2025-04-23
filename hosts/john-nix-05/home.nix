@@ -11,12 +11,15 @@
   imports = [
     ../../modules/nixvim.nix
     inputs.nixvim.homeManagerModules.nixvim
+    ../../modules/starship.nix
   ];
 
   home.username = "john";
   home.homeDirectory = "/home/john";
-
   home.stateVersion = "24.11";
+
+  # Enable zsh
+  home.programs.zsh.enable = true;
 
   home.file = {
     ".bash_aliases".source = "${dotfiles}/.bash_aliases";
@@ -47,10 +50,6 @@
     };
     ".config/hypr" = {
       source = "${dotfiles}/config/hypr";
-      recursive = true;
-    };
-    ".config/starship" = {
-      source = "${dotfiles}/config/starship";
       recursive = true;
     };
     ".config/tmux" = {

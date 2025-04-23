@@ -138,7 +138,6 @@
     git
     vim
     wget
-    neovim
     nixfmt-rfc-style
   ];
 
