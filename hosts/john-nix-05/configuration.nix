@@ -125,6 +125,7 @@
     vim
     wget
     neovim
+    nixfmt-rfc-style
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

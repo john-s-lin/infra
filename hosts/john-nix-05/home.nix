@@ -1,5 +1,10 @@
-{ pkgs, config, lib, dotfiles, inputs, ... }:
+{ pkgs, config, lib, dotfiles, inputs, nixvim, ... }@args:
 {
+  imports = [
+    ../../modules/nixvim.nix
+    inputs.nixvim.homeManagerModules.nixvim
+  ];
+
   home.username = "john";
   home.homeDirectory = "/home/john";
 

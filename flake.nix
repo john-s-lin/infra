@@ -8,16 +8,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    nixvim = {
+      url = "github:nix-community/nixvim.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dotfiles = {
       url = "github:john-s-lin/dotfiles";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, home-manager, dotfiles, ... }@inputs: 
+  outputs = { self, nixpkgs, nixos-cosmic, nixvim, home-manager, dotfiles, ... }@inputs: 
     let 
       system = "x86_64-linux";
-      specialArgs = { inherit inputs dotfiles system; };
+      specialArgs = { inherit inputs dotfiles nixvim system; };
     in
     {
     nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
