@@ -9,7 +9,7 @@
     };
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
     nixvim = {
-      url = "github:nix-community/nixvim.git";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dotfiles = {
