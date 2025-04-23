@@ -36,10 +36,6 @@
       source = "${dotfiles}/config/hypr";
       recursive = true;
     };
-    ".config/nvim" = {
-      source = "${dotfiles}/config/nvim";
-      recursive = true;
-    };
     ".config/starship" = {
       source = "${dotfiles}/config/starship";
       recursive = true;
