@@ -25,6 +25,31 @@
       expandtab = true;
     };
 
+    keymaps = [
+      {
+        mode = "i";
+        key = "jj";
+        action = "<ESC>";
+        options = {
+          silent = true;
+        };
+        # Optional: add a description
+        # description = "Exit Insert mode with jj";
+      }
+      {
+        mode = "i"; # Insert mode
+        key = "kk";
+        action = "<ESC>";
+        options = {
+          silent = true;
+        };
+        # Optional: add a description
+        # description = "Exit Insert mode with kk";
+      }
+      # Add other keymap definitions here...
+    ];
+
+    # Colorschemes
     colorschemes.tokyonight.enable = true;
   };
 }
