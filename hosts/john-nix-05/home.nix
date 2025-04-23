@@ -1,4 +1,12 @@
-{ pkgs, config, lib, dotfiles, inputs, nixvim, ... }@args:
+{
+  pkgs,
+  config,
+  lib,
+  dotfiles,
+  inputs,
+  nixvim,
+  ...
+}@args:
 {
   imports = [
     ../../modules/nixvim.nix

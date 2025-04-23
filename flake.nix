@@ -18,18 +18,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, nixvim, home-manager, dotfiles, ... }@inputs: 
-    let 
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixos-cosmic,
+      nixvim,
+      home-manager,
+      dotfiles,
+      ...
+    }@inputs:
+    let
       system = "x86_64-linux";
-      specialArgs = { inherit inputs dotfiles nixvim system; };
+      specialArgs = {
+        inherit
+          inputs
+          dotfiles
+          nixvim
+          system
+          ;
+      };
     in
     {
-    nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
-      inherit system specialArgs;
-      modules = [
-        ./hosts/john-nix-05/configuration.nix
-	home-manager.nixosModules.home-manager
-      ];
+      nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
+        inherit system specialArgs;
+        modules = [
+          ./hosts/john-nix-05/configuration.nix
+          home-manager.nixosModules.home-manager
+        ];
+      };
     };
-  };
 }

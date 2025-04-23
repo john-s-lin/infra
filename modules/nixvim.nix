@@ -1,4 +1,11 @@
-{ pkgs, config, lib, dotfiles, inputs, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  dotfiles,
+  inputs,
+  ...
+}:
 
 {
   programs.nixvim = {
@@ -8,13 +15,13 @@
       # Line numbers
       number = true;
       relativenumber = true;
-      
+
       # Mouse
       mouse = "a";
 
       # Tabs
       shiftwidth = 2;
-      tabstop = 2; 
+      tabstop = 2;
       expandtab = true;
     };
 

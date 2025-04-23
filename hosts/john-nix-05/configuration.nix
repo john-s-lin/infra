@@ -2,22 +2,31 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, dotfiles, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  dotfiles,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix  
-      ../../modules/cosmic.nix
-      inputs.nixos-cosmic.nixosModules.default
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/cosmic.nix
+    inputs.nixos-cosmic.nixosModules.default
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   networking.hostName = "john-nix-05"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -95,19 +104,24 @@
   users.users.john = {
     isNormalUser = true;
     description = "John";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.john = { pkgs, ... }: {
-      home.stateVersion = "24.11";
-      imports = [ ./home.nix ];
-    };
+    users.john =
+      { pkgs, ... }:
+      {
+        home.stateVersion = "24.11";
+        imports = [ ./home.nix ];
+      };
     backupFileExtension = "bk";
     extraSpecialArgs = { inherit inputs dotfiles; };
   };
@@ -141,7 +155,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = true;
-  services.openssh.ports = [22];
+  services.openssh.ports = [ 22 ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedUDPPorts = [ ... ];
