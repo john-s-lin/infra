@@ -12,7 +12,7 @@
   config = {
     programs.zsh = {
       enable = true;
-      enableCompletions = true;
+      enableCompletion = true;
 
       # Enable Oh My Zsh integration
       ohMyZsh = {
