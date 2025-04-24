@@ -13,8 +13,6 @@
     programs.zsh = {
       enable = true;
       enableCompletions = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
 
       # Enable Oh My Zsh integration
       ohMyZsh = {
