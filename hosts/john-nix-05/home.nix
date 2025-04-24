@@ -12,6 +12,7 @@
     ../../modules/nixvim.nix
     inputs.nixvim.homeManagerModules.nixvim
     ../../modules/starship.nix
+    ../../modules/zsh.nix
   ];
 
   home.username = "john";
@@ -32,7 +33,7 @@
     ".bash_aliases".source = "${dotfiles}/.bash_aliases";
     ".bashrc".source = "${dotfiles}/.bashrc";
     ".gitconfig".source = "${dotfiles}/.gitconfig";
-    ".zshrc".source = "${dotfiles}/.zshrc";
+    # ".zshrc".source = "${dotfiles}/.zshrc";
 
     # Config
     ".config/alacritty" = {
@@ -71,9 +72,9 @@
       source = "${dotfiles}/config/zellij";
       recursive = true;
     };
-    ".config/zsh" = {
-      source = "${dotfiles}/config/zsh";
-      recursive = true;
-    };
+    # ".config/zsh" = {
+    #   source = "${dotfiles}/config/zsh";
+    #   recursive = true;
+    # };
   };
 }
