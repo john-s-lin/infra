@@ -6,7 +6,7 @@
   ...
 }:
 {
-  home.programs.starship.enable = true;
+  programs.starship.enable = true;
 
   # Refer to dotfiles
   home.file.".config/starship" = {

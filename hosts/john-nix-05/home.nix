@@ -19,7 +19,14 @@
   home.stateVersion = "24.11";
 
   # Enable zsh
-  home.programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+
+    # Oh My Zsh
+    ohMyZsh.enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
 
   home.file = {
     ".bash_aliases".source = "${dotfiles}/.bash_aliases";
