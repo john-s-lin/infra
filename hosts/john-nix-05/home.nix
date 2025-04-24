@@ -19,21 +19,10 @@
   home.homeDirectory = "/home/john";
   home.stateVersion = "24.11";
 
-  # Enable zsh
-  programs.zsh = {
-    enable = true;
-
-    # Oh My Zsh
-    ohMyZsh.enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
-
   home.file = {
     ".bash_aliases".source = "${dotfiles}/.bash_aliases";
     ".bashrc".source = "${dotfiles}/.bashrc";
     ".gitconfig".source = "${dotfiles}/.gitconfig";
-    # ".zshrc".source = "${dotfiles}/.zshrc";
 
     # Config
     ".config/alacritty" = {
@@ -72,9 +61,5 @@
       source = "${dotfiles}/config/zellij";
       recursive = true;
     };
-    # ".config/zsh" = {
-    #   source = "${dotfiles}/config/zsh";
-    #   recursive = true;
-    # };
   };
 }
