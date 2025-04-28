@@ -15,8 +15,6 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -28,11 +26,21 @@
     enable = true;
     includes = [ { path = "~/.gitconfig.local"; } ];
     extraConfig = {
-      init = { defaultBranch = "main"; };
-      pager = { branch = false; };
-      push = { autoSetupRemote = true; };
-      gpg = { format = "ssh"; };
-      pull = { rebase = true; };
+      init = {
+        defaultBranch = "main";
+      };
+      pager = {
+        branch = false;
+      };
+      push = {
+        autoSetupRemote = true;
+      };
+      gpg = {
+        format = "ssh";
+      };
+      pull = {
+        rebase = true;
+      };
     };
   };
 
