@@ -1,5 +1,5 @@
 {
-  description = "Entrypoint Flake";
+  description = "A very basic flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -7,14 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
-    nixvim = {
-      url = "github:nix-community/nixvim";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dotfiles = {
-      url = "github:john-s-lin/dotfiles";
-      flake = false;
     };
   };
 
@@ -22,30 +17,25 @@
     {
       self,
       nixpkgs,
-      nixos-cosmic,
-      nixvim,
       home-manager,
-      dotfiles,
+      zen-browser,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      specialArgs = {
-        inherit
-          inputs
-          dotfiles
-          nixvim
-          system
-          ;
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
-        inherit system specialArgs;
-        modules = [
-          ./hosts/john-nix-05/configuration.nix
-          home-manager.nixosModules.home-manager
-        ];
+      nixosConfigurations.narsil = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [ ./configuration.nix ];
+      };
+      homeConfigurations = {
+        john = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./home.nix ];
+        };
       };
     };
 }
