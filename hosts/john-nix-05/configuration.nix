@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/fonts.nix
   ];
 
   # Bootloader.
@@ -146,17 +147,6 @@
     wget
     nixfmt-rfc-style
     inputs.zen-browser.packages."${system}".twilight
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.geist-mono
-    geist-font
-    noto-fonts-cjk-sans
-    noto-fonts
-    noto-fonts-emoji
-    font-awesome
-    source-han-sans
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
