@@ -19,5 +19,9 @@
     # Browsers
     inputs.zen-browser.packages."${system}".twilight
     google-chrome
+
+    # Developer
+    alacritty
+    vscode
   ];
 }
