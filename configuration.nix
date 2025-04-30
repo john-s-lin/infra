@@ -25,7 +25,7 @@
     "flakes"
   ];
 
-  networking.hostName = "narsil"; # Define your hostname.
+  networking.hostName = "john-nix-05"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

@@ -26,7 +26,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations.narsil = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [ ./configuration.nix ];

@@ -1,4 +1,4 @@
-HOSTNAME?=narsil
+HOSTNAME?=john-nix-05
 USER?=john
 
 # Run nixos-rebuild
