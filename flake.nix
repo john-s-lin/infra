@@ -29,12 +29,12 @@
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
-        modules = [ ./configuration.nix ];
+        modules = [ ./hosts/john-nix-05/configuration.nix ];
       };
       homeConfigurations = {
         john = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ ./hosts/john-nix-05/home.nix ];
         };
       };
     };
