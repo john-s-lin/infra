@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
+    ../../modules/packages/default.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
@@ -63,22 +64,6 @@
       #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-    wget
-    nixfmt-rfc-style
-    inputs.zen-browser.packages."${system}".twilight
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
