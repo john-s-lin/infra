@@ -27,8 +27,7 @@
     in
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs system; };
         modules = [ ./hosts/john-nix-05/configuration.nix ];
       };
       homeConfigurations = {
