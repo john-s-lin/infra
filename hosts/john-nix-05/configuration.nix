@@ -16,6 +16,7 @@
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
     ../../modules/services/networking.nix
+    ../../modules/services/printing.nix
     ../../modules/services/sound.nix
   ];
 
