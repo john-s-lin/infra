@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
   ];
 
@@ -52,50 +53,6 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  # Disable default GNOME apps
-  environment.gnome.excludePackages = with pkgs; [
-    baobab # disk usage analyzer
-    cheese # photo booth
-    eog # image viewer
-    epiphany # web browser
-    gedit # text editor
-    simple-scan # document scanner
-    totem # video player
-    yelp # help viewer
-    evince # document viewer
-    file-roller # archive manager
-    geary # email client
-    seahorse # password manager
-
-    # these should be self explanatory
-    gnome-calculator
-    gnome-calendar
-    gnome-characters
-    gnome-clocks
-    gnome-contacts
-    gnome-font-viewer
-    gnome-logs
-    gnome-maps
-    gnome-music
-    gnome-photos
-    gnome-screenshot
-    gnome-system-monitor
-    gnome-weather
-    pkgs.gnome-connections
-  ];
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   # Enable CUPS to print documents.
