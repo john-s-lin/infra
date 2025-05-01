@@ -8,6 +8,7 @@
     ../../modules/home/bat.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
+    ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
 
@@ -67,16 +68,6 @@
         rebase = true;
       };
     };
-  };
-
-  # Zoxide
-  programs.zoxide = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    options = [
-      "--cmd cd"
-    ];
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
