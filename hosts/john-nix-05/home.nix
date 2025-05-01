@@ -29,6 +29,12 @@
   home.packages = with pkgs; [
   ];
 
+  # Aliases
+  home.shellAliases = {
+    lg = "lazygit";
+    cat = "bat";
+  };
+
   # Enable XDG
   xdg.enable = true;
 
