@@ -1,7 +1,5 @@
 {
-  inputs,
   pkgs,
-  system,
   ...
 }:
 {
@@ -15,9 +13,5 @@
     vim
     wget
     nixfmt-rfc-style
-
-    # Browsers
-    inputs.zen-browser.packages."${system}".twilight
-    google-chrome
   ];
 }
