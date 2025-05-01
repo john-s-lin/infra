@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ../../modules/home/bat.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zsh.nix
