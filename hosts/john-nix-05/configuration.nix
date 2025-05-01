@@ -18,6 +18,7 @@
     ../../modules/packages/default.nix
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
+    ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
