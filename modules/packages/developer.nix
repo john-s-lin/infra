@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 {
   users.users.john.packages = with pkgs; [
     # Terminal and CLIs
