@@ -8,6 +8,7 @@
       layout = "us";
       variant = "";
     };
+    excludePackages = [ pkgs.xterm ];
   };
 
   # Disable default GNOME apps
