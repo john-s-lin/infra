@@ -3,8 +3,9 @@
   pkgs,
   ...
 }:
-
 {
+  imports = [ ../../modules/home/zsh.nix ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "john";
@@ -55,27 +56,6 @@
         rebase = true;
       };
     };
-  };
-
-  # Zsh
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "vi-mode"
-      ];
-      theme = "robbyrussell";
-    };
-
-    initContent = ''
-      eval "$(starship init zsh)"
-    '';
   };
 
   # Zoxide
