@@ -6,6 +6,7 @@
 {
   imports = [
     ../../modules/home/bat.nix
+    ../../modules/home/bottom.nix
     ../../modules/home/git.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
