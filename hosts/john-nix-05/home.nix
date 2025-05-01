@@ -70,6 +70,7 @@
         "git"
         "vi-mode"
       ];
+      theme = "robbyrussell";
     };
   };
 
