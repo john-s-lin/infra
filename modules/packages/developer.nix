@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
-  home.packages = with pkgs; [
+  users.users.john.packages = with pkgs; [
     alacritty
     hyperfine
     tmux
