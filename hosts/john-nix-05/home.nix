@@ -30,7 +30,7 @@
   # Environment variables to always set in every shell
   home.sessionVariables = {
     # Zoxide environment variables
-    _ZO_DATA_DIR = "${HOME}/.local/share";
+    _ZO_DATA_DIR = "${home.homeDirectory}/.local/share";
   };
 
   # Git
