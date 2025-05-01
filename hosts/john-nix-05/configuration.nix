@@ -54,6 +54,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Enable Zsh
+  programs.zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.john = {
     isNormalUser = true;
@@ -62,10 +65,10 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
     packages = with pkgs; [
       #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
