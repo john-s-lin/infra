@@ -24,6 +24,15 @@
   home.packages = with pkgs; [
   ];
 
+  # Enable XDG
+  xdg.enable = true;
+
+  # Environment variables to always set in every shell
+  home.sessionVariables = {
+    # Zoxide environment variables
+    _ZO_DATA_DIR = "${XDG_DATA_HOME}";
+  };
+
   # Git
   programs.git = {
     enable = true;
@@ -45,6 +54,16 @@
         rebase = true;
       };
     };
+  };
+
+  # zoxide
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    options = [
+      "--cmd cd"
+    ];
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
