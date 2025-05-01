@@ -6,6 +6,7 @@
 {
   imports = [
     ../../modules/home/bat.nix
+    ../../modules/home/git.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zoxide.nix
@@ -45,29 +46,6 @@
     # Zoxide environment variables
     _ZO_DATA_DIR = "${config.home.homeDirectory}/.local/share";
     EDITOR = "vim";
-  };
-
-  # Git
-  programs.git = {
-    enable = true;
-    includes = [ { path = "~/.gitconfig.local"; } ];
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      pager = {
-        branch = false;
-      };
-      push = {
-        autoSetupRemote = true;
-      };
-      gpg = {
-        format = "ssh";
-      };
-      pull = {
-        rebase = true;
-      };
-    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
