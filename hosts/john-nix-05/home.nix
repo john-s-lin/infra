@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  pkgs.allowUnfree = true;
+
   imports = [
     ../../modules/home/packages/developer.nix
   ];
