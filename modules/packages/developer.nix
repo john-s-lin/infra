@@ -10,6 +10,7 @@
     fnm
     fzf
     ghostty
+    gnumake
     hyperfine
     lazygit
     parallel
