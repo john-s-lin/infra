@@ -31,6 +31,7 @@
   home.sessionVariables = {
     # Zoxide environment variables
     _ZO_DATA_DIR = "${config.home.homeDirectory}/.local/share";
+    EDITOR = "vim";
   };
 
   # Git
@@ -69,10 +70,6 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-  };
-
-  home.sessionVariables = {
-    EDITOR = "vim";
   };
 
   # Let Home Manager install and manage itself.
