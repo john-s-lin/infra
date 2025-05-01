@@ -1,9 +1,27 @@
 { pkgs, username, ... }:
 {
   users.users.john.packages = with pkgs; [
+    # Terminal and CLIs
     alacritty
+    bat
+    bottom
+    bun
+    fd
+    fnm
+    fzf
+    ghostty
     hyperfine
+    lazygit
+    parallel
+    rename
+    ripgrep
+    starship
     tmux
+    tree
+    uv
+    zoxide
+
+    # Editors
     vscode
     zed-editor
   ];
