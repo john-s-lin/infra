@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  dotfiles,
   ...
 }:
 {
@@ -52,6 +53,10 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/alacritty" = {
+      source = "${dotfiles}/config/alacritty";
+      recursive = true;
+    };
   };
 
   # Let Home Manager install and manage itself.

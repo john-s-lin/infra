@@ -11,6 +11,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dotfiles = {
+      url = "github:john-s-lin/dotfiles";
+      flake = false;
+    };
   };
 
   outputs =
@@ -19,6 +23,7 @@
       nixpkgs,
       home-manager,
       zen-browser,
+      dotfiles,
       ...
     }@inputs:
     let
@@ -33,6 +38,7 @@
       homeConfigurations = {
         john = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit dotfiles; };
           modules = [ ./hosts/john-nix-05/home.nix ];
         };
       };
