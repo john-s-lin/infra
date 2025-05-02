@@ -38,7 +38,7 @@
       homeConfigurations = {
         john = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit dotfiles; };
+          extraSpecialArgs = { inherit inputs dotfiles system; };
           modules = [ ./hosts/john-nix-05/home.nix ];
         };
       };

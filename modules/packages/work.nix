@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  users.users.john.packages = with pkgs; [
+  home.packages = with pkgs; [
     obsidian
     thunderbird
   ];

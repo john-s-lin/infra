@@ -5,7 +5,7 @@
   ...
 }:
 {
-  users.users.john.packages = with pkgs; [
+  home.packages = with pkgs; [
     google-chrome
     inputs.zen-browser.packages."${system}".twilight
   ];

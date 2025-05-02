@@ -16,10 +16,6 @@
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
-    ../../modules/packages/browsers.nix
-    ../../modules/packages/developer.nix
-    ../../modules/packages/personal.nix
-    ../../modules/packages/work.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
@@ -56,9 +52,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Enable Zsh
-  programs.zsh.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.john = {
     isNormalUser = true;
@@ -70,6 +63,7 @@
     packages = with pkgs; [
       #  thunderbird
     ];
+    ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
 

@@ -5,7 +5,19 @@
   ...
 }:
 {
+  # Allow unfree
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   imports = [
+    # Packages
+    ../../modules/packages/browsers.nix
+    ../../modules/packages/developer.nix
+    ../../modules/packages/personal.nix
+    ../../modules/packages/work.nix
+
+    # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
     ../../modules/home/git.nix
@@ -29,10 +41,9 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = with pkgs; [
-  ];
+  # This is being imported from the modules above
+  # home.packages = with pkgs; [
+  # ];
 
   # Aliases
   home.shellAliases = {
