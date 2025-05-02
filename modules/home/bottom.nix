@@ -6,8 +6,10 @@
     settings = {
 
       # Flags
-      battery = true;
-      enable_gpu = true;
+      flags = {
+        battery = true;
+        tree = true;
+      };
 
       # Layout
       row = [
