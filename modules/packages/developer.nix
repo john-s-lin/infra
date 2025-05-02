@@ -13,6 +13,7 @@
     gnumake
     hyperfine
     lazygit
+    nvtopPackages.full
     parallel
     rename
     ripgrep
