@@ -13,5 +13,6 @@
     vim
     wget
     nixfmt-rfc-style
+    wl-clipboard
   ];
 }
