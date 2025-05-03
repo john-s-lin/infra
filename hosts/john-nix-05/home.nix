@@ -52,6 +52,7 @@
   home.shellAliases = {
     lg = "lazygit";
     cat = "bat";
+    zed = "zeditor";
   };
 
   # Enable XDG
@@ -69,6 +70,10 @@
   home.file = {
     ".config/alacritty" = {
       source = "${dotfiles}/config/alacritty";
+      recursive = true;
+    };
+    ".config/zed" = {
+      source = "${dotfiles}/config/zed";
       recursive = true;
     };
   };
