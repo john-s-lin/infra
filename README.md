@@ -30,4 +30,4 @@ make gc
 ### rclone
 
 `rclone` is used to sync cloud storage to local drives. The configuration is pretty much ready to go, except you need to sign in to get access tokens to OneDrive and Google Drive.
-Refer to [[./docs/cloud-storage.md]] for more info.
+Refer to [docs/cloud-storage.md](./docs/cloud-storage.md) for more info.
