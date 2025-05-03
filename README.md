@@ -6,7 +6,7 @@ Everything is computer
 To rebuild, run
 
 ```bash
-nixos-rebuild switch --flake .#${hostname}
+make nr HOSTNAME=<hostname>
 ```
 
 ## Home Manager
@@ -14,5 +14,20 @@ nixos-rebuild switch --flake .#${hostname}
 For `home-manager`, rebuilding is run through
 
 ```bash
-home-manager switch --flake .
+make hm USER=<user>
 ```
+
+## Garbage Collection
+
+To collect garbage, run
+
+```bash
+make gc
+```
+
+## Additional Setup
+
+### rclone
+
+`rclone` is used to sync cloud storage to local drives. The configuration is pretty much ready to go, except you need to sign in to get access tokens to OneDrive and Google Drive.
+Refer to [[./docs/cloud-storage.md]] for more info.
