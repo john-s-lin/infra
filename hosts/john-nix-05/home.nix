@@ -17,6 +17,9 @@
     ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
 
+    # Cloud - OneDrive, GDrive
+    ../../modules/home/cloud.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
