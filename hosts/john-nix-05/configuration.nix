@@ -59,6 +59,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "lp"
+      "scanner"
     ];
     packages = with pkgs; [
       #  thunderbird
