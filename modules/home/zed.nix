@@ -1,0 +1,61 @@
+{ ... }:
+{
+  programs.zed-editor = {
+    enable = true;
+    extensions = [
+      "nix"
+      "toml"
+    ];
+
+    userSettings = {
+      assistant = {
+        enabled = false;
+        version = "2";
+      };
+      features = {
+        edit_prediction_provider = "none";
+      };
+      auto_install_extensions = {
+        html = false;
+      };
+      auto_update = false;
+      base_keymap = "VSCode";
+      buffer_font_family = "JetBrainsMono Nerd Font Mono";
+      buffer_font_size = 13;
+      format_on_save = "on";
+      git_panel = {
+        dock = "right";
+      };
+      preferred_line_length = 120;
+      project_panel = {
+        dock = "left";
+      };
+      relative_line_numbers = true;
+      telemetry = {
+        diagnostics = false;
+        metrics = false;
+      };
+      terminal = {
+        line_height = "standard";
+      };
+      theme = "One Dark Pro";
+      ui_font_family = "Geist";
+      ui_font_size = 16;
+      vim_mode = true;
+
+      languages = {
+        Nix = {
+          language_servers = [
+            "nil"
+            "!nixd"
+          ];
+          formatter = {
+            external = {
+              command = "nixfmt";
+            };
+          };
+        };
+      };
+    };
+  };
+}

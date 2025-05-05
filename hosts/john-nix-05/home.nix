@@ -27,6 +27,7 @@
     ../../modules/home/nixvim.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
+    ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
@@ -73,8 +74,9 @@
       source = "${dotfiles}/config/alacritty";
       recursive = true;
     };
-    ".config/zed" = {
-      source = "${dotfiles}/config/zed";
+    # Copy only the themes over. Zed configuration is covered by ../../modules/home/zed.nix
+    ".config/zed/themes" = {
+      source = "${dotfiles}/config/zed/themes";
       recursive = true;
     };
   };

@@ -12,7 +12,10 @@
     git
     vim
     wget
-    nixfmt-rfc-style
     wl-clipboard
+
+    # Nix LSP and formatter
+    nil
+    nixfmt-rfc-style
   ];
 }
