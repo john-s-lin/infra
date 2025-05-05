@@ -16,6 +16,7 @@
 
     # Nix LSP and formatter
     nil
+    nixd
     nixfmt-rfc-style
   ];
 }
