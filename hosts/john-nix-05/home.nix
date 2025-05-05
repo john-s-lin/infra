@@ -24,6 +24,7 @@
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
     ../../modules/home/git.nix
+    ../../modules/home/nixvim.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zoxide.nix

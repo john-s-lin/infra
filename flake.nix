@@ -15,6 +15,10 @@
       url = "github:john-s-lin/dotfiles";
       flake = false;
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,6 +28,7 @@
       home-manager,
       zen-browser,
       dotfiles,
+      nixvim,
       ...
     }@inputs:
     let
@@ -38,8 +43,17 @@
       homeConfigurations = {
         john = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit inputs dotfiles system; };
-          modules = [ ./hosts/john-nix-05/home.nix ];
+          extraSpecialArgs = {
+            inherit
+              inputs
+              dotfiles
+              nixvim
+              system
+              ;
+          };
+          modules = [
+            ./hosts/john-nix-05/home.nix
+          ];
         };
       };
     };
