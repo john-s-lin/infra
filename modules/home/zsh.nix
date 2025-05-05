@@ -14,9 +14,5 @@
       ];
       theme = "robbyrussell";
     };
-
-    initContent = ''
-      eval "$(starship init zsh)"
-    '';
   };
 }
