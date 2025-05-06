@@ -23,12 +23,14 @@
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
     ../../modules/home/git.nix
-    ../../modules/home/nixvim.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
+
+    # Nixvim
+    ../../modules/nixvim/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
