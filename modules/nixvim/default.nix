@@ -3,10 +3,16 @@
   ...
 }:
 {
-  imports = [ nixvim.homeManagerModules.nixvim ];
+  imports = [
+    nixvim.homeManagerModules.nixvim
+    ./options.nix
+  ];
 
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
+
+    nixpkgs.useGlobalPackages = true;
 
     colorschemes.tokyonight = {
       enable = true;
@@ -14,5 +20,9 @@
         style = "night";
       };
     };
+
+    viAlias = true;
+    vimAlias = true;
+    luaLoader.enable = true;
   };
 }
