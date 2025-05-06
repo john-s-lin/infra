@@ -20,7 +20,6 @@
     starship
     tmux
     tree
-    uv
     zoxide
 
     # Editors
