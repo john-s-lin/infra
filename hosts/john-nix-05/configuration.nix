@@ -32,7 +32,7 @@
   ];
 
   # Set your time zone.
-  time.timeZone = "America/Toronto";
+  time.timeZone = "America/San Francisco";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
