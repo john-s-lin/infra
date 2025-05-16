@@ -4,7 +4,7 @@
     hostName = "john-nix-05";
     networkmanager.enable = true;
     nameservers = [
-      "192.168.2.100"
+      # "192.168.2.100"
       "1.1.1.3"
       "1.0.0.3"
     ];
