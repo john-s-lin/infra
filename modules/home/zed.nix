@@ -8,7 +8,7 @@
     ];
 
     userSettings = {
-      assistant = {
+      agent = {
         enabled = false;
         version = "2";
       };
@@ -21,16 +21,25 @@
       auto_update = false;
       base_keymap = "VSCode";
       buffer_font_family = "JetBrainsMono Nerd Font Mono";
+      buffer_font_fallbacks = [ "Zed Plex Mono" ];
       buffer_font_size = 13;
+      enable_language_server = true;
       format_on_save = "on";
       git_panel = {
         dock = "right";
+      };
+      minimap = {
+        show = "always";
+        thumb = "always";
+        thumb_border = "left_open";
+        current_line_highlight = "line";
       };
       preferred_line_length = 120;
       project_panel = {
         dock = "left";
       };
       relative_line_numbers = true;
+      remove_trailing_whitespace_on_save = true;
       telemetry = {
         diagnostics = false;
         metrics = false;
@@ -40,8 +49,10 @@
       };
       theme = "One Dark Pro";
       ui_font_family = "Geist";
+      ui_font_fallbacks = [ "Zed Plex Sans" ];
       ui_font_size = 16;
       vim_mode = true;
+      wrap_guides = [ 120 ];
 
       languages = {
         Nix = {
