@@ -1,9 +1,6 @@
 {
   programs.nixvim = {
     globals = {
-      mapleader = " ";
-      maplocalleader = "\\";
-
       autoformat = true;
       snacks_animate = true;
     };
