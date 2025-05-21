@@ -15,10 +15,12 @@
   environment.gnome.excludePackages = with pkgs; [
     baobab # disk usage analyzer
     cheese # photo booth
+    decibels # audio player
     eog # image viewer
     epiphany # web browser
     gedit # text editor
     simple-scan # document scanner
+    snapshot # camera
     totem # video player
     yelp # help viewer
     evince # document viewer
@@ -39,6 +41,7 @@
     gnome-photos
     gnome-screenshot
     gnome-system-monitor
+    gnome-tour
     gnome-weather
     pkgs.gnome-connections
   ];
