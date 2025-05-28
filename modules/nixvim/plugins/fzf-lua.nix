@@ -15,7 +15,7 @@
         action = "live_grep";
         options = {
           silent = true;
-          desc = "Grep";
+          desc = "Grep (Root Dir)";
         };
       };
       "<leader>," = {
