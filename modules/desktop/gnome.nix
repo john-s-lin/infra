@@ -1,14 +1,17 @@
 { pkgs, ... }:
 {
-  services.xserver = {
-    enable = true;
+  services = {
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
+
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+      excludePackages = [ pkgs.xterm ];
     };
-    excludePackages = [ pkgs.xterm ];
   };
 
   # Disable default GNOME apps
