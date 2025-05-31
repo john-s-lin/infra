@@ -67,6 +67,13 @@
           };
         };
       };
+
+      # Custom configuration options for language servers
+      # ref: https://zed.dev/docs/configuring-languages#configuring-language-servers
+      lsp = {
+        # ref: https://github.com/oxalica/nil/blob/577d160da311cc7f5042038456a0713e9863d09e/docs/configuration.md
+        nil.nix.flake.autoArchive = true;
+      };
     };
   };
 }
