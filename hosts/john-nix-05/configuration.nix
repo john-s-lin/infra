@@ -16,6 +16,7 @@
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
+    ../../modules/services/fingerprint.nix
     ../../modules/services/keyd.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
