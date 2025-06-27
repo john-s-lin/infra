@@ -1,6 +1,6 @@
 {
   config,
-  dotfiles,
+  inputs,
   ...
 }:
 {
@@ -71,12 +71,12 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/alacritty" = {
-      source = "${dotfiles}/config/alacritty";
+      source = "${inputs.dotfiles}/config/alacritty";
       recursive = true;
     };
     # Copy only the themes over. Zed configuration is covered by ../../modules/home/zed.nix
     ".config/zed/themes" = {
-      source = "${dotfiles}/config/zed/themes";
+      source = "${inputs.dotfiles}/config/zed/themes";
       recursive = true;
     };
   };
