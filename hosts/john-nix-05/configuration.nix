@@ -5,14 +5,21 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }:
-
+let
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/master.tar.gz;
+in
 {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    # Home manager
+    (import "${home-manager}/nixos")
+
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
