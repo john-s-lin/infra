@@ -40,21 +40,5 @@
         specialArgs = { inherit inputs system; };
         modules = [ ./hosts/john-nix-05/configuration.nix ];
       };
-      homeConfigurations = {
-        john = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = {
-            inherit
-              inputs
-              dotfiles
-              nixvim
-              system
-              ;
-          };
-          modules = [
-            ./hosts/john-nix-05/home.nix
-          ];
-        };
-      };
     };
 }

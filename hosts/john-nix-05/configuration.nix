@@ -70,6 +70,13 @@
     shell = pkgs.zsh;
   };
 
+  home-manager.users.john = { pkgs, ... }: {
+    imports = [
+      ./home.nix
+      inputs.nixvim.homeManagerModules.nixvim
+    ];
+  }
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
