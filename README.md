@@ -9,14 +9,6 @@ To rebuild, run
 make nr HOSTNAME=<hostname>
 ```
 
-## Home Manager
-
-For `home-manager`, rebuilding is run through
-
-```bash
-make hm USER=<user>
-```
-
 ## Garbage Collection
 
 To collect garbage, run
