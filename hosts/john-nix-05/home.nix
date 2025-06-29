@@ -4,11 +4,6 @@
   ...
 }:
 {
-  # Allow unfree
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
-
   imports = [
     # Packages
     ../../modules/packages/browsers.nix

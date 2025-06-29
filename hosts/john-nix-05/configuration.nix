@@ -33,6 +33,11 @@
     "flakes"
   ];
 
+  # Allow unfree
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
@@ -70,14 +75,6 @@
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
-
-  # REMOVE THIS BLOCK ENTIRELY!
-  # home-manager.users.john = { pkgs, ... }: {
-  #   imports = [
-  #     ./home.nix
-  #     inputs.nixvim.homeManagerModules.nixvim
-  #   ];
-  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
