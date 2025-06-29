@@ -38,7 +38,15 @@
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
-        modules = [ ./hosts/john-nix-05/configuration.nix ];
+        modules = [ 
+          ./hosts/john-nix-05/configuration.nix 
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPkgs = true;
+            home-manager.users.john = import ./hosts/john-nix-05/home.nix;
+          }
+        ];
       };
     };
 }

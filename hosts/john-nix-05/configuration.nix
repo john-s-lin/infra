@@ -5,7 +5,6 @@
 {
   config,
   pkgs,
-  lib,
   inputs,
   ...
 }:
@@ -13,9 +12,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-
-    # Home manager
-    (import "${home-manager}/nixos")
 
     ../../modules/desktop/gnome.nix
     ../../modules/fonts.nix
