@@ -43,11 +43,13 @@
           ./hosts/john-nix-05/configuration.nix
 
           # Enable Home Manager and define user 'john' here
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs system; };
-            home-manager.users.john = { # This is the *only* place this block should be defined
+            home-manager.users.john = {
+              # This is the *only* place this block should be defined
               # Arguments (config, pkgs, inputs) are automatically passed by Home Manager
               imports = [
                 ./hosts/john-nix-05/home.nix # Your main Home Manager config
