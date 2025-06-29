@@ -8,3 +8,7 @@ nr:
 # Run garbage-collect
 gc:
 	nix-collect-garbage --delete-older-than $(GC_DAYS)d
+
+# Run update
+update:
+	nix flake update
