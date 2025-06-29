@@ -5,7 +5,7 @@
     extraConfig = ''
       # Settings
       set -g mouse on
-      set -g history-limit 5000
+      set -g history-limit 10000
 
       # Keybinds
       bind-key h select-pane -L
