@@ -1,4 +1,5 @@
 # infra
+
 Everything is computer
 
 ## NixOS
@@ -15,6 +16,14 @@ To collect garbage, run
 
 ```bash
 make gc
+```
+
+## Updating
+
+Updating is as easy as
+
+```bash
+make update
 ```
 
 ## Additional Setup
