@@ -1,3 +1,4 @@
+# flake.nix
 {
   description = "A very basic flake";
 
@@ -38,13 +39,20 @@
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
-        modules = [ 
-          ./hosts/john-nix-05/configuration.nix 
+        modules = [
+          ./hosts/john-nix-05/configuration.nix
 
+          # Enable Home Manager and define user 'john' here
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.john = import ./hosts/john-nix-05/home.nix;
+            home-manager.users.john = { # This is the *only* place this block should be defined
+              # Arguments (config, pkgs, inputs) are automatically passed by Home Manager
+              imports = [
+                ./hosts/john-nix-05/home.nix # Your main Home Manager config
+                inputs.nixvim.homeManagerModules.nixvim # Enable nixvim for Home Manager
+              ];
+            };
           }
         ];
       };

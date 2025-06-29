@@ -1,3 +1,4 @@
+# hosts/john-nix-05/configuration.nix
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -70,12 +71,13 @@
     shell = pkgs.zsh;
   };
 
-  home-manager.users.john = { pkgs, ... }: {
-    imports = [
-      ./home.nix
-      inputs.nixvim.homeManagerModules.nixvim
-    ];
-  };
+  # REMOVE THIS BLOCK ENTIRELY!
+  # home-manager.users.john = { pkgs, ... }: {
+  #   imports = [
+  #     ./home.nix
+  #     inputs.nixvim.homeManagerModules.nixvim
+  #   ];
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
