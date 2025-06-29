@@ -12,7 +12,7 @@
     ../../modules/packages/work.nix
 
     # Cloud - OneDrive, GDrive
-    # ../../modules/home/cloud.nix
+    ../../modules/home/cloud.nix
 
     # Config
     ../../modules/home/bat.nix
