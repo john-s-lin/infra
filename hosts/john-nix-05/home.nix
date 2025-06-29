@@ -20,7 +20,7 @@
     ../../modules/home/git.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
-    # ../../modules/home/zed.nix
+    ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
 
