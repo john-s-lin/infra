@@ -4,7 +4,6 @@
 }:
 {
   imports = [
-    nixvim.homeManagerModules.nixvim
     ./keymaps.nix
     ./options.nix
     ./plugins
