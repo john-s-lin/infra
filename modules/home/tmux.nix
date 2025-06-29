@@ -6,6 +6,7 @@
       # Settings
       set -g mouse on
       set -g history-limit 10000
+      set -g default-terminal "tmux"
 
       # Keybinds
       bind-key h select-pane -L
