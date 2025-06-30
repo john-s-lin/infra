@@ -18,13 +18,15 @@ To collect garbage, run
 make gc
 ```
 
-## Updating
+## Updating Packages
 
-Updating is as easy as
+Updating packages is as easy as
 
 ```bash
 make update
 ```
+
+which will update your `flake.lock` file.
 
 ## Additional Setup
 
