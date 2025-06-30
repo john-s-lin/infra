@@ -11,6 +11,7 @@
     fzf
     ghostty
     gnumake
+    helix
     hyperfine
     lazygit
     nvtopPackages.intel

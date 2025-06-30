@@ -18,6 +18,7 @@
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
     ../../modules/home/git.nix
+    ../../modules/home/helix.nix
     ../../modules/home/starship.nix
     ../../modules/home/tmux.nix
     ../../modules/home/zed.nix
