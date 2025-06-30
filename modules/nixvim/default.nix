@@ -11,7 +11,6 @@
 
   programs.nixvim = {
     enable = true;
-    defaultEditor = true;
 
     nixpkgs.useGlobalPackages = true;
 
@@ -21,9 +20,6 @@
         style = "night";
       };
     };
-
-    viAlias = true;
-    vimAlias = true;
     luaLoader.enable = true;
   };
 }
