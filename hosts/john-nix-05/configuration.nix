@@ -69,9 +69,6 @@
       "lp"
       "scanner"
     ];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
