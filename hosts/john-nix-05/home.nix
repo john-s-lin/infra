@@ -24,9 +24,6 @@
     ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
-
-    # Nixvim
-    ../../modules/nixvim/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

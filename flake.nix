@@ -16,12 +16,7 @@
       url = "github:john-s-lin/dotfiles";
       flake = false;
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
-
   outputs =
     {
       self,
@@ -29,7 +24,6 @@
       home-manager,
       zen-browser,
       dotfiles,
-      nixvim,
       ...
     }@inputs:
     let
@@ -53,7 +47,6 @@
               # Arguments (config, pkgs, inputs) are automatically passed by Home Manager
               imports = [
                 ./hosts/john-nix-05/home.nix # Your main Home Manager config
-                inputs.nixvim.homeManagerModules.nixvim # Enable nixvim for Home Manager
               ];
             };
           }
