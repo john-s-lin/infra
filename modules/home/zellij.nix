@@ -5,7 +5,7 @@
 
     settings = {
       theme = "tokyo-night-dark";
-      pane_frames = false;
+      pane_frames = true;
       copy_command = "wl-copy";
     };
   };
