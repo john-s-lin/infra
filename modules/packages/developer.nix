@@ -6,6 +6,7 @@
     bat
     bottom
     bun
+    devenv
     fd
     fnm
     fzf
