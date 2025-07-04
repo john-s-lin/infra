@@ -21,6 +21,7 @@
     starship
     tmux
     tree
+    zellij
     zoxide
 
     # Editors
