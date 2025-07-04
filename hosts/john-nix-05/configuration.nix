@@ -28,9 +28,6 @@
     "flakes"
   ];
 
-  # For devenv
-  nix.settings.trusted-users = [ "root" "john" ];
-
   # Allow unfree
   nixpkgs.config = {
     allowUnfree = true;
