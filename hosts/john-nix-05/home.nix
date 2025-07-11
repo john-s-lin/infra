@@ -20,7 +20,6 @@
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
-    ../../modules/home/tmux.nix
     ../../modules/home/zed.nix
     ../../modules/home/zellij.nix
     ../../modules/home/zoxide.nix

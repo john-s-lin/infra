@@ -19,7 +19,6 @@
     rename
     ripgrep
     starship
-    tmux
     tree
     zellij
     zoxide
