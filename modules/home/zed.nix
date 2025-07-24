@@ -23,6 +23,7 @@
       buffer_font_family = "JetBrainsMono Nerd Font Mono";
       buffer_font_fallbacks = [ "Zed Plex Mono" ];
       buffer_font_size = 13;
+      disable_ai = true;
       enable_language_server = true;
       format_on_save = "on";
       git_panel = {
