@@ -19,6 +19,7 @@
     ../../modules/home/bottom.nix
     ../../modules/home/direnv.nix
     ../../modules/home/git.nix
+    ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
@@ -71,10 +72,6 @@
     # Copy only the themes over. Zed configuration is covered by ../../modules/home/zed.nix
     ".config/zed/themes" = {
       source = "${inputs.dotfiles}/config/zed/themes";
-      recursive = true;
-    };
-    ".config/ghostty" = {
-      source = "${inputs.dotfiles}/config/ghostty";
       recursive = true;
     };
   };
