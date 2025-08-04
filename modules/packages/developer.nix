@@ -6,6 +6,7 @@
     bat
     bottom
     bun
+    direnv
     fd
     fnm
     fzf
