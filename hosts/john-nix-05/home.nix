@@ -17,6 +17,7 @@
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
+    ../../modules/home/direnv.nix
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
