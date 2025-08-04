@@ -10,7 +10,6 @@
     userSettings = {
       agent = {
         enabled = false;
-        version = "2";
       };
       features = {
         edit_prediction_provider = "none";
