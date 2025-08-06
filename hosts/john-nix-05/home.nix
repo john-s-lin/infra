@@ -74,6 +74,10 @@
       source = "${inputs.dotfiles}/config/zed/themes";
       recursive = true;
     };
+    ".config/ghostty/themes" = {
+      source = "${inputs.dotfiles}/config/ghostty/themes";
+      recursive = true;
+    };
   };
 
   # Let Home Manager install and manage itself.
