@@ -1,9 +1,14 @@
-HOSTNAME?=john-nix-05
+AIR?=john-air-03
+NIX?=john-nix-05
 GC_DAYS?=30
 
 # Run nixos-rebuild
 nr:
-	sudo nixos-rebuild switch --flake .#$(HOSTNAME)
+	sudo nixos-rebuild switch --flake .#$(NIX)
+
+# darwin-rebuild
+dr:
+	nix run nix-darwin -- switch --flake .#$(AIR)
 
 # Run garbage-collect
 gc:
