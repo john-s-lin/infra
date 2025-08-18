@@ -1,6 +1,6 @@
 # flake.nix
 {
-  description = "A very basic flake";
+  description = "Infra for NixOS and nix-darwin on MacOS";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -16,6 +16,10 @@
       url = "github:john-s-lin/dotfiles";
       flake = false;
     };
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
@@ -24,10 +28,12 @@
       home-manager,
       zen-browser,
       dotfiles,
+      nix-darwin,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
+      darwinSystem = "aarch64-darwin";
     in
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
@@ -49,6 +55,16 @@
               ];
             };
           }
+        ];
+      };
+      darwinConfigurations."john-air-03" = nix-darwin.lib.darwinSystem {
+        system = darwinSystem;
+        specialArgs = {
+          inherit inputs;
+          system = darwinSystem;
+        };
+        modules = [
+          ./hosts/john-air-03/configuration.nix
         ];
       };
     };
