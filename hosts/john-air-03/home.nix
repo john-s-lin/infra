@@ -12,7 +12,7 @@
 
   # It is good practice to manage your shell with Home Manager.
   # For example, for zsh:
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   home.file = {
     ".config" = {
