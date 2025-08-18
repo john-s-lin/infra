@@ -11,13 +11,5 @@
     "flakes"
   ];
 
-  environment.variables = {
-    EDITOR = "vim";
-  };
-
-  environment.systemPackages = [
-    pkgs.vim
-  ];
-
   system.stateVersion = 6;
 }

@@ -65,6 +65,22 @@
         };
         modules = [
           ./hosts/john-air-03/configuration.nix
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              system = darwinSystem;
+            };
+            home-manager.users.john = {
+              imports = [
+                # Point to the new home-manager config for this host
+                ./hosts/john-air-03/home.nix
+              ];
+            };
+          }
         ];
       };
     };
