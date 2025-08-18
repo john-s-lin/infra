@@ -11,5 +11,10 @@
     "flakes"
   ];
 
+  users.users.john = {
+    name = "john.lin";
+    home = "/Users/john.lin";
+  };
+
   system.stateVersion = 6;
 }
