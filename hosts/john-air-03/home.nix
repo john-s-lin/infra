@@ -21,9 +21,10 @@
     pkgs.helix
   ];
 
-  # It is good practice to manage your shell with Home Manager.
-  # For example, for zsh:
-  # programs.zsh.enable = true;
+  home.shellAliases = {
+    lg = "lazygit";
+    cat = "bat";
+  };
 
   home.file = {
     ".config/ghostty" = {
