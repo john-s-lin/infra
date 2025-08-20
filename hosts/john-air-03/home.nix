@@ -13,7 +13,7 @@
 
   # Set user-specific environment variables here. This will override the system.
   home.sessionVariables = {
-    EDITOR = "hx";
+    EDITOR = "nvim";
   };
 
   # Make sure vim is installed for your user.
