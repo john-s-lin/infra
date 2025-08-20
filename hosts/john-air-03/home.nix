@@ -1,5 +1,16 @@
 { pkgs, inputs, ... }:
 {
+  imports = [
+    # Config
+    ../../modules/home/bat.nix
+    ../../modules/home/bottom.nix
+    ../../modules/home/git.nix
+    ../../modules/home/helix.nix
+    ../../modules/home/starship.nix
+    ../../modules/home/zoxide.nix
+    ../../modules/home/zsh.nix
+  ];
+
   # Set user-specific environment variables here. This will override the system.
   home.sessionVariables = {
     EDITOR = "hx";
@@ -15,25 +26,20 @@
   # programs.zsh.enable = true;
 
   home.file = {
-    ".config" = {
-      source = "${inputs.dotfiles}/config";
+    ".config/ghostty" = {
+      source = "${inputs.dotfiles}/config/ghostty";
+      recursive = true;
+    };
+    ".config/zed" = {
+      source = "${inputs.dotfiles}/config/zed";
+      recursive = true;
+    };
+    ".config/zellij" = {
+      source = "${inputs.dotfiles}/config/zellij";
       recursive = true;
     };
     ".bashrc" = {
       source = "${inputs.dotfiles}/.bashrc";
-    };
-    ".zshrc" = {
-      source = "${inputs.dotfiles}/.zshrc";
-    };
-    ".zshenv" = {
-      text = ''
-        . "$HOME/.cargo/env"
-
-        # ZVM
-        export ZVM_INSTALL="$HOME/.zvm/self"
-        export PATH="$PATH:$HOME/.zvm/bin"
-        export PATH="$PATH:$ZVM_INSTALL/"
-      '';
     };
   };
 
