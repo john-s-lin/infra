@@ -11,11 +11,6 @@
     ../../modules/home/zsh.nix
   ];
 
-  # Set user-specific environment variables here. This will override the system.
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
   # Make sure vim is installed for your user.
   home.packages = [
     pkgs.helix
