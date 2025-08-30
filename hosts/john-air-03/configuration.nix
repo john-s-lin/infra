@@ -20,5 +20,6 @@
     home = "/Users/john.lin";
   };
 
+  system.primaryUser = "john.lin";
   system.stateVersion = 6;
 }
