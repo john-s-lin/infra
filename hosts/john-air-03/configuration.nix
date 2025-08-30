@@ -6,6 +6,7 @@
 }:
 {
   imports = [
+    ../../modules/fonts.nix
     ../../modules/packages/homebrew.nix
   ];
 
