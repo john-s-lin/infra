@@ -7,6 +7,7 @@
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
+    ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
@@ -24,10 +25,6 @@
   home.file = {
     ".config/ghostty" = {
       source = "${inputs.dotfiles}/config/ghostty";
-      recursive = true;
-    };
-    ".config/zed" = {
-      source = "${inputs.dotfiles}/config/zed";
       recursive = true;
     };
     ".config/zellij" = {
