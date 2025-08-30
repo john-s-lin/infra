@@ -1,10 +1,4 @@
 {
-  pkgs,
-  lib,
-  inputs,
-  ...
-}:
-{
   imports = [
     ../../modules/fonts.nix
     ../../modules/packages/default.nix

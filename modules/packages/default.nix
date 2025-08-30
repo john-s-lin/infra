@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, ... }:
 let
   nixDeveloperPackages = with pkgs; [
     nil
@@ -24,5 +20,5 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages =
-    defaultPackages ++ nixDeveloperPackages ++ (if pkgs.stdenv.isLinux then linuxPackages else []);
+    defaultPackages ++ nixDeveloperPackages ++ (if pkgs.stdenv.isLinux then linuxPackages else [ ]);
 }
