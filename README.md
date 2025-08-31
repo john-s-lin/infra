@@ -7,8 +7,18 @@ Everything is computer
 To rebuild, run
 
 ```bash
-make nr HOSTNAME=<hostname>
+make nr NIX=<hostname>
 ```
+
+## macOS
+
+To rebuild, run
+
+```bash
+make dr AIR=<hostname>
+```
+
+> `AIR` is currently a temp variable since the nix-darwin config was originally made for `john-air-03`.
 
 ## Garbage Collection
 
