@@ -3,6 +3,7 @@
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
     ../../modules/packages/darwin/common.nix
+    ../../modules/packages/darwin/mas.nix
   ];
 
   # Flakes
