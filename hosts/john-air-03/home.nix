@@ -1,6 +1,9 @@
 { pkgs, inputs, ... }:
 {
   imports = [
+    # Cloud
+    ../../modules/home/darwin/cloud.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
