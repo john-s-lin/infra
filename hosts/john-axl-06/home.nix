@@ -8,6 +8,7 @@
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
+    ../../modules/home/zsh.nix
   ];
 
   # Make sure vim is installed for your user.
@@ -31,13 +32,6 @@
     };
     ".bashrc" = {
       source = "${inputs.dotfiles}/.bashrc";
-    };
-    ".zshrc" = {
-      source = "${inputs.dotfiles}/.zshrc";
-    };
-    ".config/zsh" = {
-      source = "${inputs.dotfiles}/zsh";
-      recursive = true;
     };
   };
 
