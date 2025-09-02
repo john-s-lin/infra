@@ -4,6 +4,7 @@
       "1password"
       "cursor"
       "slack"
+      "thunderbird"
     ];
   };
 }
