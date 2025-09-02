@@ -7,6 +7,9 @@
       "thunderbird"
     ];
     taps = [
+      "sst/homebrew-tap"
+    ];
+    brews = [
       "sst/tap/opencode"
     ];
   };
