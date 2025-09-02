@@ -8,7 +8,7 @@ nr:
 
 # darwin-rebuild
 dr:
-	sudo nix run nix-darwin -- switch --flake .#$(AIR)
+	sudo nix run nix-darwin -- switch --flake .#$(DARWIN)
 
 # Run garbage-collect
 gc:
