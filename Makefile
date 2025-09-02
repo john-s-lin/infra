@@ -1,4 +1,4 @@
-AIR?=john-air-03
+DARWIN?=john-air-03
 NIX?=john-nix-05
 GC_DAYS?=30
 

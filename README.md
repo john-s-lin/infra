@@ -15,10 +15,8 @@ make nr NIX=<hostname>
 To rebuild, run
 
 ```bash
-make dr AIR=<hostname>
+make dr DARWIN=<hostname>
 ```
-
-> `AIR` is currently a temp variable since the nix-darwin config was originally made for `john-air-03`.
 
 ## Garbage Collection
 
