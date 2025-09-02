@@ -83,5 +83,30 @@
           }
         ];
       };
+      darwinConfigurations."john-axl-06" = nix-darwin.lib.darwinSystem {
+        system = darwinSystem;
+        specialArgs = {
+          inherit inputs;
+          system = darwinSystem;
+        };
+        modules = [
+          ./hosts/john-axl-06/configuration.nix
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              system = darwinSystem;
+            };
+            home-manager.users.john = {
+              imports = [
+                ./hosts/john-axl-06/home.nix
+              ];
+            };
+          }
+        ];
+      };
     };
 }
