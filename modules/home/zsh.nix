@@ -16,7 +16,7 @@
     };
 
     # Conditional configuration for Darwin on aarch64
-    initExtra =
+    initContent =
       if pkgs.stdenv.isDarwin then
         ''
           if [[ $(uname -m) == 'arm64' ]]; then
