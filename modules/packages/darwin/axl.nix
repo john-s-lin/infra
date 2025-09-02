@@ -5,7 +5,8 @@
       "cursor"
       "slack"
       "thunderbird"
-
+    ];
+    taps = [
       "sst/tap/opencode"
     ];
   };
