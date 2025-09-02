@@ -5,6 +5,8 @@
       "cursor"
       "slack"
       "thunderbird"
+
+      "sst/tap/opencode"
     ];
   };
 }
