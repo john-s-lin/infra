@@ -1,7 +1,12 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   home.sessionVariables = lib.mkIf pkgs.stdenv.isDarwin {
-    _ZO_DATA_DIR = "/Users/john.lin/.local/share/zoxide";
+    _ZO_DATA_DIR = "${config.users.users.username.home}/.local/share/zoxide";
   };
 
   programs.zoxide = {
