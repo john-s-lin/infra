@@ -33,7 +33,32 @@
     }@inputs:
     let
       system = "x86_64-linux";
-      darwinSystem = "aarch64-darwin";
+
+      mkDarwinSystem =
+        { hostname, system }:
+        nix-darwin.lib.darwinSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs system;
+          };
+          modules = [
+            ./hosts/${hostname}/configuration.nix
+
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit inputs system;
+              };
+              home-manager.users.john = {
+                imports = [
+                  ./hosts/${hostname}/home.nix
+                ];
+              };
+            }
+          ];
+        };
     in
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
@@ -41,72 +66,30 @@
         modules = [
           ./hosts/john-nix-05/configuration.nix
 
-          # Enable Home Manager and define user 'john' here
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs system; };
             home-manager.users.john = {
-              # This is the *only* place this block should be defined
-              # Arguments (config, pkgs, inputs) are automatically passed by Home Manager
               imports = [
-                ./hosts/john-nix-05/home.nix # Your main Home Manager config
+                ./hosts/john-nix-05/home.nix
               ];
             };
           }
         ];
       };
-      darwinConfigurations."john-air-03" = nix-darwin.lib.darwinSystem {
-        system = darwinSystem;
-        specialArgs = {
-          inherit inputs;
-          system = darwinSystem;
-        };
-        modules = [
-          ./hosts/john-air-03/configuration.nix
 
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              system = darwinSystem;
-            };
-            home-manager.users.john = {
-              imports = [
-                # Point to the new home-manager config for this host
-                ./hosts/john-air-03/home.nix
-              ];
-            };
-          }
-        ];
-      };
-      darwinConfigurations."john-axl-06" = nix-darwin.lib.darwinSystem {
-        system = darwinSystem;
-        specialArgs = {
-          inherit inputs;
-          system = darwinSystem;
+      darwinConfigurations = {
+        "john-air-03" = mkDarwinSystem {
+          hostname = "john-air-03";
+          system = "aarch64-darwin";
         };
-        modules = [
-          ./hosts/john-axl-06/configuration.nix
 
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-              system = darwinSystem;
-            };
-            home-manager.users.john = {
-              imports = [
-                ./hosts/john-axl-06/home.nix
-              ];
-            };
-          }
-        ];
+        "john-axl-06" = mkDarwinSystem {
+          hostname = "john-axl-06";
+          system = "aarch64-darwin";
+        };
       };
     };
 }
