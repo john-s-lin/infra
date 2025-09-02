@@ -8,6 +8,7 @@
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
+    ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
 
