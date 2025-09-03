@@ -11,6 +11,7 @@
     ];
     brews = [
       "sst/tap/opencode"
+      "uv"
     ];
   };
 }
