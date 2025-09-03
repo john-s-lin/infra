@@ -4,7 +4,7 @@
       "1password"
       "cursor"
       "slack"
-      "thunderbird"
+
     ];
     taps = [
       "sst/homebrew-tap"
