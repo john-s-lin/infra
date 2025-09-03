@@ -1,4 +1,4 @@
-AIR?=john-air-03
+DARWIN?=john-air-03
 NIX?=john-nix-05
 GC_DAYS?=30
 
@@ -8,7 +8,7 @@ nr:
 
 # darwin-rebuild
 dr:
-	sudo nix run nix-darwin -- switch --flake .#$(AIR)
+	sudo nix run nix-darwin -- switch --flake .#$(DARWIN)
 
 # Run garbage-collect
 gc:

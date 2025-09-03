@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -14,5 +14,16 @@
       ];
       theme = "robbyrussell";
     };
+
+    # Conditional configuration for Darwin on aarch64
+    initContent =
+      if pkgs.stdenv.isDarwin then
+        ''
+          if [[ $(uname -m) == 'arm64' ]]; then
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+          fi
+        ''
+      else
+        null;
   };
 }

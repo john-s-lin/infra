@@ -4,6 +4,8 @@
     ../../modules/packages/default.nix
     ../../modules/packages/darwin/common.nix
     ../../modules/packages/darwin/mas.nix
+    ../../modules/packages/darwin/personal.nix
+    ../../modules/packages/darwin/work.nix
   ];
 
   # Flakes
