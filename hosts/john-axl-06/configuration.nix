@@ -2,9 +2,9 @@
   imports = [
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
-    ../../modules/packages/darwin/common.nix
-    ../../modules/packages/darwin/ai.nix
-    ../../modules/packages/darwin/axl.nix
+    ../../modules/darwin/packages/common.nix
+    ../../modules/darwin/packages/ai.nix
+    ../../modules/darwin/packages/axl.nix
     ../../modules/darwin/defaults.nix
   ];
 
