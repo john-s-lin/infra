@@ -2,10 +2,11 @@
   imports = [
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
-    ../../modules/packages/darwin/common.nix
-    ../../modules/packages/darwin/mas.nix
-    ../../modules/packages/darwin/personal.nix
-    ../../modules/packages/darwin/work.nix
+    ../../modules/darwin/packages/common.nix
+    ../../modules/darwin/packages/mas.nix
+    ../../modules/darwin/packages/personal.nix
+    ../../modules/darwin/packages/work.nix
+    ../../modules/darwin/defaults.nix
   ];
 
   # Flakes
