@@ -18,6 +18,11 @@
     home = "/Users/john";
   };
 
+  system.defaults.dock = {
+    orientation = "left";
+    tilesize = 36;
+  };
+
   system.primaryUser = "john";
   system.stateVersion = 6;
 }
