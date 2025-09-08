@@ -24,7 +24,7 @@
 
     ".GlobalPreferences" = {
       # -1.0 is no mouse acceleration
-      "com.apple.mouse.scaling" = -1.0;
+      "com.apple.mouse.scaling" = 2.5;
     };
   };
 }
