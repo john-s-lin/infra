@@ -7,7 +7,6 @@
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
     ../../modules/home/starship.nix
-    ../../modules/home/zed.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
@@ -33,6 +32,10 @@
     };
     ".bashrc" = {
       source = "${inputs.dotfiles}/.bashrc";
+    };
+    ".config/zed" = {
+      source = "${inputs.dotfiles}/config/zed";
+      recursive = true;
     };
   };
 
