@@ -32,10 +32,33 @@
       ...
     }@inputs:
     let
-      system = "x86_64-linux";
+      mkUserConfig =
+        {
+          username,
+          hostname,
+          system,
+        }:
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "bak";
+          home-manager.extraSpecialArgs = {
+            inherit inputs system;
+          };
+          # Use the passed `username` parameter to configure the user
+          home-manager.users.${username} = {
+            imports = [
+              ./hosts/${hostname}/home.nix
+            ];
+          };
+        };
 
       mkDarwinSystem =
-        { hostname, system }:
+        {
+          hostname,
+          system,
+          username,
+        }:
         nix-darwin.lib.darwinSystem {
           inherit system;
           specialArgs = {
@@ -43,40 +66,25 @@
           };
           modules = [
             ./hosts/${hostname}/configuration.nix
-
             home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit inputs system;
-              };
-              home-manager.users.john = {
-                imports = [
-                  ./hosts/${hostname}/home.nix
-                ];
-              };
-            }
+            (mkUserConfig { inherit hostname system username; })
           ];
         };
     in
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
+        specialArgs = {
+          inherit inputs;
+          system = "x86_64-linux";
+        };
         modules = [
           ./hosts/john-nix-05/configuration.nix
-
           home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs system; };
-            home-manager.users.john = {
-              imports = [
-                ./hosts/john-nix-05/home.nix
-              ];
-            };
-          }
+          (mkUserConfig {
+            hostname = "john-nix-05";
+            username = "john";
+            system = "x86_64-linux";
+          })
         ];
       };
 
@@ -84,11 +92,13 @@
         "john-air-03" = mkDarwinSystem {
           hostname = "john-air-03";
           system = "aarch64-darwin";
+          username = "john.lin"; # Specify the correct username here
         };
 
         "john-axl-06" = mkDarwinSystem {
           hostname = "john-axl-06";
           system = "aarch64-darwin";
+          username = "john"; # Specify the correct username here
         };
       };
     };

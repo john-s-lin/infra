@@ -1,3 +1,0 @@
-{
-  home-manager.backupFileExtension = "bak";
-}

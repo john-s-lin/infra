@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ../../modules/home/common.nix
-
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix

@@ -5,9 +5,6 @@
 }:
 {
   imports = [
-    # Common
-    ../../modules/home/common.nix
-
     # Packages
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
