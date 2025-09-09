@@ -5,14 +5,14 @@
 }:
 {
   imports = [
+    # Common
+    ../../modules/home/common.nix
+
     # Packages
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
     ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
-
-    # Cloud - OneDrive, GDrive
-    ../../modules/home/rclone.nix
 
     # Config
     ../../modules/home/bat.nix
@@ -21,6 +21,7 @@
     ../../modules/home/git.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
+    ../../modules/home/rclone.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
     ../../modules/home/zellij.nix
