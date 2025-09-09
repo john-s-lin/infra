@@ -45,8 +45,7 @@
           home-manager.extraSpecialArgs = {
             inherit inputs system;
           };
-          # Use the passed `username` parameter to configure the user
-          home-manager.users.${username} = {
+          home-manager.users.john = {
             imports = [
               ./hosts/${hostname}/home.nix
             ];
@@ -92,13 +91,13 @@
         "john-air-03" = mkDarwinSystem {
           hostname = "john-air-03";
           system = "aarch64-darwin";
-          username = "john.lin"; # Specify the correct username here
+          username = "john.lin";
         };
 
         "john-axl-06" = mkDarwinSystem {
           hostname = "john-axl-06";
           system = "aarch64-darwin";
-          username = "john"; # Specify the correct username here
+          username = "john";
         };
       };
     };
