@@ -1,5 +1,8 @@
 {
   homebrew = {
+    taps = [
+      "supabase/homebrew-tap"
+    ];
     casks = [
       "1password"
       "slack"
@@ -8,6 +11,7 @@
       "fnm"
       "gh"
       "uv"
+      "supabase/tap/supabase"
     ];
   };
 }
