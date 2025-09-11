@@ -5,6 +5,7 @@
       "slack"
     ];
     brews = [
+      "fnm"
       "gh"
       "uv"
     ];
