@@ -40,7 +40,7 @@
   };
 
   # Set your Home Manager state version.
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     eval "$(fnm env --use-on-cd --shell zsh)"
   '';
 
