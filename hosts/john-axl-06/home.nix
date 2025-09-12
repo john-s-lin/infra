@@ -37,6 +37,10 @@
       source = "${inputs.dotfiles}/config/zed";
       recursive = true;
     };
+    ".config/opencode" = {
+      source = "${inputs.dotfiles}/config/opencode";
+      recursive = true;
+    };
   };
 
   # Set your Home Manager state version.
