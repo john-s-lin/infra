@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1757941948,
-        "narHash": "sha256-Db3fvaHhWNvFJlfjoseNvm5kOZWuaXvm7zsOQsm1nco=",
+        "lastModified": 1758058831,
+        "narHash": "sha256-ZbQto5g7OeXIGRy2SRYbps2KjzGR0JrOFWWLXNaZtQg=",
         "owner": "john-s-lin",
         "repo": "dotfiles",
-        "rev": "c2f9dc8d4b331467ab28421274b90ac58e0c2e7a",
+        "rev": "6bb8172ce230feb0a5d397cdb165c6c04e71410e",
         "type": "github"
       },
       "original": {
@@ -111,11 +111,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757999874,
-        "narHash": "sha256-kgV3ms4hR86tIxaNAYJI8NNgkmEygN+JwkXCPAx2P2U=",
+        "lastModified": 1758054058,
+        "narHash": "sha256-6Lc3klI3kCcl62DSely7sx+REuPYhuecnMaF/O6PFL0=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "7dcbd22ca3943e4cfb3122f96cf515f028b3236a",
+        "rev": "d792dbec41fc967ba5866ab315a05b1892c77d25",
         "type": "github"
       },
       "original": {
