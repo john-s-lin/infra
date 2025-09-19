@@ -5,6 +5,7 @@
     ];
     casks = [
       "1password"
+      "brave-browser"
       "slack"
     ];
     brews = [
