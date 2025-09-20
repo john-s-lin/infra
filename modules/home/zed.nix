@@ -66,6 +66,13 @@
             };
           };
         };
+        Python = {
+          language_servers = [
+            "ty"
+            "!basedpyright"
+            "ruff"
+          ];
+        };
       };
 
       # Custom configuration options for language servers
