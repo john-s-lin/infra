@@ -18,6 +18,7 @@
 
   home.shellAliases = {
     lg = "lazygit";
+    ldock = "lazydocker";
     cat = "bat";
   };
 
