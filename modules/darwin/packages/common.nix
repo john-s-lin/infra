@@ -18,6 +18,7 @@
       "fd"
       "fzf"
       "hyperfine"
+      "lazydocker"
       "lazygit"
       "nvtop"
       "rename"
