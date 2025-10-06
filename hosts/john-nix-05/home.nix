@@ -6,6 +6,7 @@
 {
   imports = [
     # Packages
+    ../../modules/packages/ai.nix
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
     ../../modules/packages/personal.nix
@@ -18,6 +19,7 @@
     ../../modules/home/git.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
+    ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
