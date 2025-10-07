@@ -19,6 +19,7 @@
     ../../modules/home/git.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
+    ../../modules/home/hypr.nix
     ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
     ../../modules/home/starship.nix
