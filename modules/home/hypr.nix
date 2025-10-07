@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.file = {
     ".config/hypr" = {
@@ -6,4 +6,9 @@
       recursive = true;
     };
   };
+
+  home.packages = with pkgs; [
+    rofi
+    waybar
+  ];
 }
