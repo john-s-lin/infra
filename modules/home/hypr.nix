@@ -165,7 +165,7 @@ in
         ", PRINT, exec, hyprshot -m output"
         "$shiftMod, PRINT, exec, hyprshot -m region"
         "$mainMod, Tab, cyclenext"
-        "$mainMod SHIFT, Tab, cycleprev"
+        "$mainMod SHIFT, Tab, cyclenext, prev"
       ];
 
       bindel = [
