@@ -29,6 +29,8 @@ in
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
+        "XCURSOR_THEME,apple-cursor"
+        "HYPRCURSOR_THEME,apple-cursor"
       ];
 
       general = {
@@ -563,5 +565,6 @@ in
     playerctl
     blueberry
     pavucontrol
+    apple-cursor
   ];
 }
