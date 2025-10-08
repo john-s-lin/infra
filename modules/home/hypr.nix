@@ -27,10 +27,10 @@ in
       ];
 
       env = [
-        "XCURSOR_SIZE,24"
-        "HYPRCURSOR_SIZE,24"
-        "XCURSOR_THEME,apple-cursor"
-        "HYPRCURSOR_THEME,apple-cursor"
+        "XCURSOR_SIZE,28"
+        "HYPRCURSOR_SIZE,28"
+        "XCURSOR_THEME,macOS-White"
+        "HYPRCURSOR_THEME,macOS-White"
       ];
 
       general = {
