@@ -307,7 +307,7 @@ in
         layer = "top";
         position = "top";
         spacing = 0;
-        height = 26;
+        height = 36;
         "modules-left" = [
           "custom/omarchy"
           "hyprland/workspaces"
@@ -489,7 +489,7 @@ in
         border: none;
         border-radius: 0;
         min-height: 0;
-        font-family: CaskaydiaMono Nerd Font;
+        font-family: Geist Mono;
         font-size: 12px;
       }
 
