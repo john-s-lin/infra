@@ -489,8 +489,8 @@ in
         border: none;
         border-radius: 0;
         min-height: 0;
-        font-family: Geist Mono;
-        font-size: 12px;
+        font-family: JetBrainsMono NFM;
+        font-size: 16px;
       }
 
       .modules-left {
