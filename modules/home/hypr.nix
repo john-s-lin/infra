@@ -368,10 +368,10 @@ in
           "on-click" = "${terminal} -e btm";
         };
         clock = {
-          format = "{:L%A %H:%M}";
-          "format-alt" = "{:L%d %B W%V %Y}";
+          format = "{:%Y-%m-%d %H:%M:%S}";
+          "format-alt" = "{:%A, %b %d, %Y}";
           tooltip = false;
-          "on-click-right" = "omarchy-cmd-tzupdate";
+          interval = 1;
         };
         network = {
           "format-icons" = [
