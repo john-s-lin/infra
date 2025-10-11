@@ -15,7 +15,7 @@
     ../../modules/packages/default.nix
     ../../modules/services/keyd.nix
     ../../modules/services/networking.nix
-    # ../../modules/services/printing.nix
+    ../../modules/services/printing.nix
     ../../modules/services/sound.nix
   ];
 
