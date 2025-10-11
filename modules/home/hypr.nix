@@ -351,7 +351,7 @@ in
         };
         cpu = {
           interval = 1;
-          format = "<span font='24' rise='-2000'>  {icon0}{icon1}{icon2}{icon3}</span> {usage:>2}%";
+          format = "<span font='24' rise='2000'>  {icon0}{icon1}{icon2}{icon3}</span> {usage:>2}%";
           "format-icons" = [
             "▁"
             "▂"
@@ -365,7 +365,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "<span font='24' rise='-2000'></span>  {used:0.1f}G/{total:0.1f}G";
+          format = "<span font='24' rise='2000'></span>  {used:0.1f}G/{total:0.1f}G";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
