@@ -506,13 +506,7 @@ in
 
 
 
-      #cpu,
-      #memory {
-        background-color: #101010;
-        padding: 0.5rem 1rem;
-        margin: 5px 0;
-        border-radius: 0px 5px 5px 0px;
-      }
+
 
       tooltip {
         padding: 2px;
