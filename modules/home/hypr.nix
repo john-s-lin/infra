@@ -351,7 +351,7 @@ in
         };
         cpu = {
           interval = 1;
-          format = "<span font='20' rise='-4000'></span> {icon0}{icon1}{icon2}{icon3} {usage:>2}% ";
+          format = "  {icon0}{icon1}{icon2}{icon3} {usage:>2}% ";
           "format-icons" = [
             "▁"
             "▂"
@@ -365,7 +365,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "<span font='20' rise='-4000'></span>  {used:0.1f}G/{total:0.1f}G  ";
+          format = "  {used:0.1f}G/{total:0.1f}G  ";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
@@ -375,9 +375,9 @@ in
           "on-click-right" = "thunderbird";
         };
         network = {
-          "format-wifi" = "<span font='20' rise='-4000'>󰤢</span> ";
-          "format-ethernet" = "<span font='20' rise='-4000'>󰈀</span> ";
-          "format-disconnected" = "<span font='20' rise='-4000'>󰤠</span> ";
+          "format-wifi" = "󰤢  ";
+          "format-ethernet" = "󰈀  ";
+          "format-disconnected" = "󰤠  ";
           "tooltip-format-wifi" = "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-ethernet" = "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-disconnected" = "Disconnected";
@@ -426,13 +426,13 @@ in
         };
         bluetooth = {
           format = "";
-          "format-disabled" = "󰂲";
-          "format-connected" = "";
+          "format-disabled" = "󰂲  ";
+          "format-connected" = "  ";
           "tooltip-format" = "Devices connected: {num_connections}";
           "on-click" = "blueberry";
         };
         pulseaudio = {
-          format = "<span font='20' rise='-4000'>{icon}</span> ";
+          format = "{icon}  ";
           "on-click" = "pavucontrol";
           "on-click-right" = "pamixer -t";
           "tooltip-format" = "Playing at {volume}%";
@@ -459,7 +459,7 @@ in
         border: none;
         border-radius: 0;
         min-height: 0;
-        font-family: JetBrainsMono NFM;
+        font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free", "Font Awesome 7 Brands";
         font-size: 16px;
       }
 
