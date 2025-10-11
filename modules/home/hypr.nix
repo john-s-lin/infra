@@ -3,6 +3,7 @@ let
   terminal = "ghostty";
   fileManager = "nautilus";
   menu = "rofi -show drun";
+  secondMonitor = "DP-2";
 in
 {
   wayland.windowManager.hyprland = {
@@ -17,6 +18,16 @@ in
       monitor = [
         "eDP-1, 1920x1080@60.05, 0x0, 1"
         "DP-2, 1920x1080@75, 0x-1080, 1"
+      ];
+
+      # Assign workspaces to monitors
+      workspace = [
+        "1, monitor:eDP-1"
+        "2, monitor:eDP-1"
+        "3, monitor:eDP-1"
+        "4, monitor:${secondMonitor}"
+        "5, monitor:${secondMonitor}"
+        "6, monitor:${secondMonitor}"
       ];
 
       exec-once = [
@@ -191,7 +202,11 @@ in
         "$mainMod, mouse:273, resizewindow"
       ];
 
-      windowrulev2 = [
+      windowrule = [
+        # Assign applications to specific workspaces
+        "workspace 1, class:ghostty"
+        "workspace 4, class:firefox"
+        "workspace 5, class:zed"
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
@@ -262,7 +277,7 @@ in
       ];
       wallpaper = [
         "eDP-1, ~/Pictures/Wallpapers/arch-02-tokyo.jpg"
-        "DP-1, ~/Pictures/Wallpapers/arch-01-nz.jpg"
+        "${secondMonitor}, ~/Pictures/Wallpapers/arch-01-nz.jpg"
       ];
     };
   };
