@@ -351,7 +351,7 @@ in
         };
         cpu = {
           interval = 1;
-          format = "<span font='20' rise='-4000'></span>  {icon0}{icon1}{icon2}{icon3} {usage:>2}%";
+          format = "<span font='20' rise='-4000'></span>  {icon0}{icon1}{icon2}{icon3} {usage:>2}% ";
           "format-icons" = [
             "▁"
             "▂"
