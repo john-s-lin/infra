@@ -372,6 +372,7 @@ in
           "format-alt" = "{:%A, %b %d, %Y}";
           tooltip = false;
           interval = 1;
+          "on-click-right" = "thunderbird";
         };
         network = {
           "format-icons" = [
