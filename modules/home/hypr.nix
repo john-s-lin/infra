@@ -351,7 +351,7 @@ in
         };
         cpu = {
           interval = 1;
-          format = "<span font='20' rise='-4000'></span>  {icon0}{icon1}{icon2}{icon3} {usage:>2}% ";
+          format = "<span font='20' rise='-4000'></span> {icon0}{icon1}{icon2}{icon3} {usage:>2}% ";
           "format-icons" = [
             "▁"
             "▂"
@@ -365,7 +365,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "<span font='20' rise='-4000'></span>  {used:0.1f}G/{total:0.1f}G";
+          format = "<span font='20' rise='-4000'></span>  {used:0.1f}G/{total:0.1f}G  ";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
@@ -432,7 +432,7 @@ in
           "on-click" = "blueberry";
         };
         pulseaudio = {
-          format = "{icon}";
+          format = "<span font='20' rise='-4000'>{icon}</span> ";
           "on-click" = "pavucontrol";
           "on-click-right" = "pamixer -t";
           "tooltip-format" = "Playing at {volume}%";
@@ -503,10 +503,6 @@ in
         border-bottom: 3px dashed #ffaa00;
         color: #ffaa00;
       }
-
-
-
-
 
       tooltip {
         padding: 2px;
