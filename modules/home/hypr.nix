@@ -336,7 +336,6 @@ in
           "cpu"
           "memory"
           "tray"
-          "custom/lock"
         ];
         "hyprland/workspaces" = {
           "on-click" = "activate";
@@ -349,19 +348,6 @@ in
             "5" = [ ];
             "6" = [ ];
           };
-        };
-        "custom/omarchy" = {
-          format = "<span font='omarchy'>\ue900</span>";
-          "on-click" = "omarchy-menu";
-          "tooltip-format" = "Omarchy Menu\n\nSuper + Alt + Space";
-        };
-        "custom/update" = {
-          format = "";
-          exec = "omarchy-update-available";
-          "on-click" = "omarchy-launch-floating-terminal-with-presentation omarchy-update";
-          "tooltip-format" = "Omarchy update available";
-          signal = 7;
-          interval = 3600;
         };
         cpu = {
           interval = 1;
@@ -470,27 +456,6 @@ in
             ];
           };
         };
-        "group/tray-expander" = {
-          orientation = "inherit";
-          drawer = {
-            "transition-duration" = 600;
-            "children-class" = "tray-group-item";
-          };
-          modules = [
-            "custom/expand-icon"
-            "tray"
-          ];
-        };
-        "custom/expand-icon" = {
-          format = " ";
-          tooltip = false;
-        };
-        "custom/screenrecording-indicator" = {
-          "on-click" = "omarchy-cmd-screenrecord";
-          exec = "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh";
-          signal = 8;
-          "return-type" = "json";
-        };
         tray = {
           "icon-size" = 12;
           spacing = 12;
@@ -559,24 +524,13 @@ in
       #battery,
       #network,
       #bluetooth,
-      #pulseaudio,
-      #custom-omarchy,
-      #custom-screenrecording-indicator,
-      #custom-update {
+      #pulseaudio {
         min-width: 12px;
         margin: 0 7.5px;
       }
 
-      #custom-expand-icon {
-        margin-right: 7px;
-      }
-
       tooltip {
         padding: 2px;
-      }
-
-      #custom-update {
-        font-size: 10px;
       }
 
       #clock {
@@ -585,16 +539,6 @@ in
 
       .hidden {
         opacity: 0;
-      }
-
-      #custom-screenrecording-indicator {
-        min-width: 12px;
-        margin-left: 8.75px;
-        font-size: 10px;
-      }
-
-      #custom-screenrecording-indicator.active {
-        color: #a55555;
       }
     '';
   };
