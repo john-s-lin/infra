@@ -322,7 +322,7 @@ in
         layer = "top";
         position = "top";
         spacing = 0;
-        height = 36;
+        height = 30;
         "modules-left" = [
           "hyprland/workspaces"
         ];
