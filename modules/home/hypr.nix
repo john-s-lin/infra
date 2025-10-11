@@ -504,10 +504,7 @@ in
         color: #ffaa00;
       }
 
-      #workspaces button:hover {
-        background: #333333;
-        color: #ffffff;
-      }
+
 
       #bluetooth,
       #pulseaudio,
@@ -526,7 +523,7 @@ in
       }
 
       #clock {
-        color: #8caaee;
+        color: #fff;
         border-radius: 5px;
         margin-right: 1rem;
       }
