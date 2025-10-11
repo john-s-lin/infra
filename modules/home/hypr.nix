@@ -375,9 +375,9 @@ in
           "on-click-right" = "thunderbird";
         };
         network = {
-          "format-wifi" = "󰤢 ";
-          "format-ethernet" = "󰈀 ";
-          "format-disconnected" = "󰤠 ";
+          "format-wifi" = "<span font='20' rise='-4000'>󰤢</span> ";
+          "format-ethernet" = "<span font='20' rise='-4000'>󰈀</span> ";
+          "format-disconnected" = "<span font='20' rise='-4000'>󰤠</span> ";
           "tooltip-format-wifi" = "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-ethernet" = "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-disconnected" = "Disconnected";
