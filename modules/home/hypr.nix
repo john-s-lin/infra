@@ -341,13 +341,14 @@ in
         "hyprland/workspaces" = {
           "on-click" = "activate";
           format = "{name}";
-          "persistent-workspaces" = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-            "5" = [ ];
-          };
+           "persistent-workspaces" = {
+             "1" = [ ];
+             "2" = [ ];
+             "3" = [ ];
+             "4" = [ ];
+             "5" = [ ];
+             "6" = [ ];
+           };
         };
         "custom/omarchy" = {
           format = "<span font='omarchy'>\ue900</span>";
