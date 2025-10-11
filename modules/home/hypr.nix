@@ -506,12 +506,8 @@ in
 
 
 
-      #bluetooth,
-      #pulseaudio,
-      #network,
       #cpu,
-      #memory,
-      #tray {
+      #memory {
         background-color: #101010;
         padding: 0.5rem 1rem;
         margin: 5px 0;
