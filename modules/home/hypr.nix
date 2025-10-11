@@ -341,14 +341,14 @@ in
         "hyprland/workspaces" = {
           "on-click" = "activate";
           format = "{name}";
-           "persistent-workspaces" = {
-             "1" = [ ];
-             "2" = [ ];
-             "3" = [ ];
-             "4" = [ ];
-             "5" = [ ];
-             "6" = [ ];
-           };
+          "persistent-workspaces" = {
+            "1" = [ ];
+            "2" = [ ];
+            "3" = [ ];
+            "4" = [ ];
+            "5" = [ ];
+            "6" = [ ];
+          };
         };
         "custom/omarchy" = {
           format = "<span font='omarchy'>\ue900</span>";
@@ -364,9 +364,22 @@ in
           interval = 3600;
         };
         cpu = {
-          interval = 5;
-          format = "󰍛";
-          "on-click" = "${terminal} -e btm";
+          interval = 1;
+          format = "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%";
+          "format-icons" = [
+            "▁"
+            "▂"
+            "▃"
+            "▄"
+            "▅"
+            "▆"
+            "▇"
+            "█"
+          ];
+        };
+        memory = {
+          interval = 30;
+          format = "  {used:0.1f}G/{total:0.1f}G";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
