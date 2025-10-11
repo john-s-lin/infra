@@ -351,7 +351,7 @@ in
         };
         cpu = {
           interval = 1;
-          format = "<span font='24' rise='0'>  {icon0}{icon1}{icon2}{icon3}</span> {usage:>2}%";
+          format = "<span font='20' rise='-4000'></span>  {icon0}{icon1}{icon2}{icon3} {usage:>2}%";
           "format-icons" = [
             "▁"
             "▂"
@@ -365,7 +365,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "<span font='24' rise='0'></span>  {used:0.1f}G/{total:0.1f}G";
+          format = "<span font='20' rise='-4000'></span>  {used:0.1f}G/{total:0.1f}G";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
@@ -375,23 +375,13 @@ in
           "on-click-right" = "thunderbird";
         };
         network = {
-          "format-icons" = [
-            "󰤯"
-            "󰤟"
-            "󰤢"
-            "󰤥"
-            "󰤨"
-          ];
-          format = "{icon}";
-          "format-wifi" = "{icon}";
-          "format-ethernet" = "󰀂";
-          "format-disconnected" = "󰤮";
+          "format-wifi" = "󰤢 ";
+          "format-ethernet" = "󰈀 ";
+          "format-disconnected" = "󰤠 ";
           "tooltip-format-wifi" = "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-ethernet" = "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-disconnected" = "Disconnected";
-          interval = 3;
-          spacing = 1;
-          "on-click" = "omarchy-launch-wifi";
+          interval = 5;
         };
         battery = {
           format = "{capacity}% {icon}";
@@ -519,14 +509,16 @@ in
         color: #ffffff;
       }
 
-      #tray,
-      #cpu,
-      #battery,
-      #network,
       #bluetooth,
-      #pulseaudio {
-        min-width: 12px;
-        margin: 0 7.5px;
+      #pulseaudio,
+      #network,
+      #cpu,
+      #memory,
+      #tray {
+        background-color: #101010;
+        padding: 0.5rem 1rem;
+        margin: 5px 0;
+        border-radius: 0px 5px 5px 0px;
       }
 
       tooltip {
@@ -534,7 +526,9 @@ in
       }
 
       #clock {
-        margin-left: 8.75px;
+        color: #8caaee;
+        border-radius: 5px;
+        margin-right: 1rem;
       }
 
       .hidden {
