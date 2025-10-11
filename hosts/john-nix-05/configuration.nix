@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
 
     ../../modules/desktop/gnome.nix
+    ../../modules/desktop/hyprland.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
     ../../modules/services/keyd.nix
