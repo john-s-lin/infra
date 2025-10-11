@@ -309,38 +309,23 @@ in
         spacing = 0;
         height = 36;
         "modules-left" = [
-          "custom/omarchy"
           "hyprland/workspaces"
         ];
         "modules-center" = [
           "clock"
-          "custom/update"
-          "custom/screenrecording-indicator"
         ];
         "modules-right" = [
-          "group/tray-expander"
           "bluetooth"
-          "network"
           "pulseaudio"
+          "network"
           "cpu"
-          "battery"
+          "memory"
+          "tray"
+          "custom/lock"
         ];
         "hyprland/workspaces" = {
           "on-click" = "activate";
-          format = "{icon}";
-          "format-icons" = {
-            default = "";
-            "1" = "1";
-            "2" = "2";
-            "3" = "3";
-            "4" = "4";
-            "5" = "5";
-            "6" = "6";
-            "7" = "7";
-            "8" = "8";
-            "9" = "9";
-            active = "󱓻";
-          };
+          format = "{name}";
           "persistent-workspaces" = {
             "1" = [ ];
             "2" = [ ];
@@ -502,15 +487,42 @@ in
         margin-right: 8px;
       }
 
+      #workspaces {
+        color: transparent;
+        margin-right: 1.5px;
+        margin-left: 1.5px;
+      }
+
       #workspaces button {
-        all: initial;
         padding: 0 6px;
         margin: 0 1.5px;
         min-width: 9px;
+        color: #888888;
+        transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
 
       #workspaces button.empty {
         opacity: 0.5;
+      }
+
+      #workspaces button.active {
+        color: #ffffff;
+        border-bottom: 3px solid white;
+      }
+
+      #workspaces button.focused {
+        color: #444444;
+      }
+
+      #workspaces button.urgent {
+        background: rgba(255, 200, 0, 0.35);
+        border-bottom: 3px dashed #ffaa00;
+        color: #ffaa00;
+      }
+
+      #workspaces button:hover {
+        background: #333333;
+        color: #ffffff;
       }
 
       #tray,
