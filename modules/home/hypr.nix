@@ -425,8 +425,8 @@ in
           };
         };
         bluetooth = {
-          format = "";
-          "format-disabled" = "󰂲  ";
+          format = "  ";
+          "format-disabled" = "";
           "format-connected" = "  ";
           "tooltip-format" = "Devices connected: {num_connections}";
           "on-click" = "blueberry";
