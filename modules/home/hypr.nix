@@ -184,7 +184,8 @@ in
         "$mainMod, PRINT, exec, hyprshot -m window"
         ", PRINT, exec, hyprshot -m output"
         "$shiftMod, PRINT, exec, hyprshot -m region"
-        "$mainMod, Tab, cyclenext"
+        "$mainMod, F, fullscreen"
+        "$mainMod, TAB, cyclenext"
         "$mainMod SHIFT, Tab, cyclenext, prev"
       ];
 
