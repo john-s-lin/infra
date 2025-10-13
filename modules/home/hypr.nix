@@ -39,7 +39,8 @@ in
         # Apps that I want open
         "obsidian"
         "thunderbird"
-        "zed"
+        # `zed` is aliased to zeditor so we need to run this instead
+        "zeditor"
         "zen-twilight"
       ];
 
