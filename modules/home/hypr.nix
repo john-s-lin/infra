@@ -35,6 +35,12 @@ in
         "waybar"
         "hyprpaper"
         "hypridle"
+
+        # Apps that I want open
+        "obsidian"
+        "thunderbird"
+        "zed"
+        "zen-twilight"
       ];
 
       env = [
