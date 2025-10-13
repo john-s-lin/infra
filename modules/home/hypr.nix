@@ -205,6 +205,8 @@ in
       windowrule = [
         # Assign applications to specific workspaces
         "workspace 1, class:com.mitchellh.ghostty"
+        "workspace 2, class:thunderbird"
+        "workspace 3, class:obsidian"
         "workspace 4, class:zen-twilight"
         "workspace 5, class:dev.zed.Zed"
         "suppressevent maximize, class:.*"
