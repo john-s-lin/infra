@@ -347,6 +347,7 @@ in
           "cpu"
           "memory"
           "tray"
+          "battery"
         ];
         "hyprland/workspaces" = {
           "on-click" = "activate";
@@ -395,9 +396,9 @@ in
           interval = 5;
         };
         battery = {
-          format = "{capacity}% {icon}";
-          "format-discharging" = "{icon}";
-          "format-charging" = "{icon}";
+          format = "{icon} {capacity}%";
+          "format-discharging" = "{icon} {capacity}%";
+          "format-charging" = "{icon} {capacity}%";
           "format-plugged" = "";
           "format-icons" = {
             charging = [
