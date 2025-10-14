@@ -377,7 +377,7 @@ in
           ];
         };
         temperature = {
-          format = "{temperatureC}°C  ";
+          format = "{temperatureC}°C ";
           "critical-threshold" = 80;
           interval = 5;
         };
@@ -402,9 +402,9 @@ in
           interval = 5;
         };
         battery = {
-          format = "{icon} {capacity}%";
-          "format-discharging" = "{icon} {capacity}%";
-          "format-charging" = "{icon} {capacity}%";
+          format = "{capacity}% {icon}";
+          "format-discharging" = "{capacity}% {icon}";
+          "format-charging" = "{capacity}% {icon}";
           "format-plugged" = "";
           "format-icons" = {
             charging = [
@@ -547,5 +547,6 @@ in
     blueberry
     pavucontrol
     apple-cursor
+    lm_sensors
   ];
 }
