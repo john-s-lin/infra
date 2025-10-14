@@ -344,6 +344,7 @@ in
           "bluetooth"
           "pulseaudio"
           "network"
+          "temperature"
           "cpu"
           "memory"
           "tray"
@@ -374,6 +375,11 @@ in
             "▇"
             "█"
           ];
+        };
+        temperature = {
+          format = "{temperatureC}°C  ";
+          "critical-threshold" = 80;
+          interval = 5;
         };
         memory = {
           interval = 30;
