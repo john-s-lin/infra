@@ -3,7 +3,7 @@
   programs.git = {
     enable = true;
     includes = [ { path = "~/.gitconfig.local"; } ];
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
       };
