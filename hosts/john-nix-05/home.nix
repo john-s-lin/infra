@@ -57,12 +57,6 @@
   # Enable XDG
   xdg.enable = true;
 
-  # Environment variables to always set in every shell
-  home.sessionVariables = {
-    # Zoxide environment variables
-    _ZO_DATA_DIR = "${config.home.homeDirectory}/.local/share";
-  };
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
