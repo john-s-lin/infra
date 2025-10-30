@@ -19,6 +19,9 @@
     ../../modules/services/sound.nix
   ];
 
+  # Firewall
+  networking.firewall.allowedTCPPorts = [ 53317 ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
