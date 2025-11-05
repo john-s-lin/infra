@@ -8,7 +8,7 @@
       "obsidian"
       "rectangle"
       "zed"
-      "zen"
+      "zen@twilight"
     ];
     # Always upgrade casks
     greedyCasks = true;
