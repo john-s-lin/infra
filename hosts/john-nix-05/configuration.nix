@@ -17,7 +17,7 @@
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
-    ../../modules/nix-gc/default.nix
+    ../../modules/gc/default.nix
   ];
 
   # Firewall

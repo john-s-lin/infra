@@ -7,7 +7,7 @@
     ../../modules/darwin/packages/axl.nix
     ../../modules/darwin/packages/rclone.nix
     ../../modules/darwin/defaults.nix
-    ../../modules/nix-gc/default.nix
+    ../../modules/gc/darwin.nix
   ];
 
   # Flakes
