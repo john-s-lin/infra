@@ -10,13 +10,18 @@
     ./hardware-configuration.nix
 
     ../../modules/desktop/gnome.nix
+    ../../modules/desktop/hyprland.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
     ../../modules/services/keyd.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
+    ../../modules/gc/default.nix
   ];
+
+  # Firewall
+  networking.firewall.allowedTCPPorts = [ 53317 ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
