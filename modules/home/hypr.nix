@@ -1,5 +1,4 @@
 { pkgs, rofiPowermenuScript, ... }:
-
 let
   terminal = "ghostty";
   fileManager = "nautilus";
@@ -8,7 +7,7 @@ let
 in
 {
   imports = [
-    ../rofi.nix
+    ./rofi.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -325,9 +324,9 @@ in
         }
       ];
     };
-   };
+  };
 
-   programs.waybar = {
+  programs.waybar = {
     enable = true;
     settings = [
       {
