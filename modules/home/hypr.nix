@@ -1,7 +1,7 @@
 {
-pkgs,
-# rofiPowermenuScript,
-...
+  pkgs,
+  # rofiPowermenuScript,
+  ...
 }:
 let
   terminal = "ghostty";
@@ -408,10 +408,10 @@ in
           interval = 5;
         };
         battery = {
-          format = "{capacity}% {icon}";
-          "format-discharging" = "{capacity}% {icon}";
-          "format-charging" = "{capacity}% {icon}";
-          "format-plugged" = "";
+          format = "{capacity}% {icon} ";
+          "format-discharging" = "{capacity}% {icon} ";
+          "format-charging" = "{capacity}% {icon} ";
+          "format-plugged" = " ";
           "format-icons" = {
             charging = [
               "󰢜"
@@ -438,7 +438,7 @@ in
               "󰁹"
             ];
           };
-          "format-full" = "󰂅";
+          "format-full" = "󰂅 ";
           "tooltip-format-discharging" = "{power:>1.0f}W↓ {capacity}%";
           "tooltip-format-charging" = "{power:>1.0f}W↑ {capacity}%";
           interval = 5;
@@ -476,7 +476,7 @@ in
           "reverse-direction" = true;
         };
         "custom/power" = {
-          format = "⏻";
+          format = "⏻  ";
           tooltip = "Power Menu";
           # on-click = "${rofiPowermenuScript}/bin/powermenu";
         };
