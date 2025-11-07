@@ -7,7 +7,7 @@ let
 in
 {
   imports = [
-    ./rofi.nix
+    # ./rofi.nix
   ];
 
   wayland.windowManager.hyprland = {
