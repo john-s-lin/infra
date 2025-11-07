@@ -389,7 +389,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "  {used:0.1f}G/{total:0.1f}G  ";
+          format = "  {used:0.1f}G/{total:0.1f}G ";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
@@ -476,7 +476,7 @@ in
           "reverse-direction" = true;
         };
         "custom/power" = {
-          format = "⏻  ";
+          format = "⏻ ";
           tooltip = "Power Menu";
           # on-click = "${rofiPowermenuScript}/bin/powermenu";
         };
