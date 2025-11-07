@@ -389,7 +389,7 @@ in
         };
         memory = {
           interval = 30;
-          format = "  {used:0.1f}G/{total:0.1f}G ";
+          format = "  {used:0.1f}G/{total:0.1f}G  ";
         };
         clock = {
           format = "{:%Y-%m-%d %H:%M:%S}";
@@ -408,10 +408,10 @@ in
           interval = 5;
         };
         battery = {
-          format = "{capacity}% {icon} ";
-          "format-discharging" = "{capacity}% {icon} ";
-          "format-charging" = "{capacity}% {icon} ";
-          "format-plugged" = " ";
+          format = "{capacity}% {icon}  ";
+          "format-discharging" = "{capacity}% {icon}  ";
+          "format-charging" = "{capacity}% {icon}  ";
+          "format-plugged" = "  ";
           "format-icons" = {
             charging = [
               "󰢜"
@@ -438,7 +438,7 @@ in
               "󰁹"
             ];
           };
-          "format-full" = "󰂅 ";
+          "format-full" = "󰂅  ";
           "tooltip-format-discharging" = "{power:>1.0f}W↓ {capacity}%";
           "tooltip-format-charging" = "{power:>1.0f}W↑ {capacity}%";
           interval = 5;
