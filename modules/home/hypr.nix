@@ -1,4 +1,8 @@
-{ pkgs, rofiPowermenuScript, ... }:
+{
+pkgs,
+# rofiPowermenuScript,
+...
+}:
 let
   terminal = "ghostty";
   fileManager = "nautilus";
@@ -474,7 +478,7 @@ in
         "custom/power" = {
           format = "⏻";
           tooltip = "Power Menu";
-          on-click = "${rofiPowermenuScript}/bin/powermenu";
+          # on-click = "${rofiPowermenuScript}/bin/powermenu";
         };
       }
     ];
