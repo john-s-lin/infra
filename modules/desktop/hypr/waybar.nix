@@ -158,7 +158,7 @@
         border: none;
         border-radius: 0;
         min-height: 0;
-        font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free", "Font Awesome 7 Brands";
+        font-family: "Geist Mono Nerd Font", "Font Awesome 7 Free", "Font Awesome 7 Brands";
         font-size: 16px;
       }
 
