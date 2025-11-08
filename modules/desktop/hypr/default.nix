@@ -14,6 +14,8 @@ in
     # ./rofi.nix
     ./waybar.nix
     ./hyprlock.nix
+    (./hyprpaper.nix { inherit secondMonitor; })
+    ./hypridle.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -233,51 +235,7 @@ in
 
 
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = [
-        "~/Pictures/Wallpapers/arch-02-tokyo.jpg"
-        "~/Pictures/Wallpapers/arch-01-nz.jpg"
-      ];
-      wallpaper = [
-        "eDP-1, ~/Pictures/Wallpapers/arch-02-tokyo.jpg"
-        "${secondMonitor}, ~/Pictures/Wallpapers/arch-01-nz.jpg"
-      ];
-    };
-  };
 
-  services.hypridle = {
-    enable = true;
-    settings = {
-      general = {
-        lock_cmd = "pidof hyprlock || hyprlock";
-        before_sleep_cmd = "loginctl lock-session";
-        after_sleep_cmd = "hyprctl dispatch dpms on";
-      };
-
-      listener = [
-        {
-          timeout = 120;
-          on-timeout = "brightnessctl -s set 5%";
-          on-resume = "brightnessctl -r";
-        }
-        {
-          timeout = 300;
-          on-timeout = "loginctl lock-session";
-        }
-        {
-          timeout = 330;
-          on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpms on";
-        }
-        {
-          timeout = 1800;
-          on-timeout = "systemctl suspend";
-        }
-      ];
-    };
-  };
 
   home.packages = with pkgs; [
     rofi
