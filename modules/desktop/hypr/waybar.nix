@@ -147,7 +147,7 @@
         "custom/power" = {
           format = "⏻ ";
           tooltip = "Power Menu";
-          # on-click = "${rofiPowermenuScript}/bin/powermenu";
+          on-click = "wlogout";
         };
       }
     ];

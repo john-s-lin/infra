@@ -243,5 +243,6 @@ in
     pavucontrol
     apple-cursor
     lm_sensors
+    wlogout
   ];
 }
