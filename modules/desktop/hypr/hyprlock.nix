@@ -1,3 +1,6 @@
+let
+  wallpaperPrimary = ./wallpapers/new-zealand-01.jpg;
+in
 { ... }:
 
 {
@@ -11,7 +14,7 @@
 
       background = {
         monitor = "";
-        path = "~/Pictures/Wallpapers/arch-02-tokyo.jpg";
+        path = "${wallpaperPrimary}";
         blur_passes = 2;
         blur_size = 5;
       };
