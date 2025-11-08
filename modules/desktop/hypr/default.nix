@@ -28,8 +28,8 @@ in
       "$menu" = menu;
 
       monitor = [
-        "eDP-1, 1920x1080@60.05, 0x0, 1"
-        "DP-2, 1920x1080@75, 0x-1080, 1"
+        "eDP-1,1920x1080@60.05,0x0,1"
+        "${secondMonitor},1920x1080@75,0x-1080,1"
       ];
 
       # Assign workspaces to monitors
