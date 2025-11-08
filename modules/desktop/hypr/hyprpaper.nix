@@ -1,6 +1,5 @@
-{ secondMonitor, ... }:
-
 let
+  secondMonitor = "DP-2";
   wallpaperPrimary = ./wallpapers/new-zealand-01.jpg;
   wallpaperSecondary = ./wallpapers/tokyo-01.jpg;
 in

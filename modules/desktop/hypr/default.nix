@@ -14,7 +14,7 @@ in
     # ./rofi.nix
     ./waybar.nix
     ./hyprlock.nix
-    (./hyprpaper.nix { inherit secondMonitor; })
+    ./hyprpaper.nix
     ./hypridle.nix
   ];
 
@@ -232,10 +232,6 @@ in
       ];
     };
   };
-
-
-
-
 
   home.packages = with pkgs; [
     rofi
