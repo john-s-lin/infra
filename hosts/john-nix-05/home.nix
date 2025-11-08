@@ -12,6 +12,9 @@
     ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
 
+    # Desktop
+    ../../modules/desktop/hypr/default.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
@@ -19,7 +22,6 @@
     ../../modules/home/git.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
-    ../../modules/home/hypr.nix
     ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
     ../../modules/home/starship.nix
