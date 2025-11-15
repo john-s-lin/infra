@@ -5,6 +5,6 @@
     obsidian
     thunderbird
     libreoffice-qt-fresh
-    kdePackages.okular
+    onlyoffice-desktopeditors
   ];
 }
