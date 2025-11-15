@@ -4,5 +4,7 @@
     naps2 # Document scanner
     obsidian
     thunderbird
+    libreoffice-qt-fresh
+    kdePackages.okular
   ];
 }
