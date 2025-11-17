@@ -3,6 +3,7 @@
     ghostty = {
       enable = true;
       enableZshIntegration = true;
+      enableFishIntegration = true;
       enableBashIntegration = true;
       settings = {
         theme = "tokyo-passion.ghostty";
