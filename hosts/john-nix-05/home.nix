@@ -12,6 +12,9 @@
     ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
 
+    # Desktop
+    ../../modules/desktop/hypr/default.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
