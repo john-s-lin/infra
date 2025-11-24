@@ -74,7 +74,7 @@
           "tooltip-format-wifi" = "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-ethernet" = "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
           "tooltip-format-disconnected" = "Disconnected";
-          "on-click" = "nm-applet";
+          "on-click" = "networkmanager_dmenu";
           interval = 5;
         };
         battery = {

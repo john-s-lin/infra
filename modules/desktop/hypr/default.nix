@@ -248,5 +248,6 @@ in
     lm_sensors
     wlogout
     networkmanagerapplet
+    networkmanager_dmenu
   ];
 }
