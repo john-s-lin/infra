@@ -161,6 +161,7 @@ in
         "$mainMod, V, togglefloating,"
         "$mainMod, SPACE, exec, $menu"
         "$mainMod, N, exec, nm-applet"
+        "$mainMod SHIFT, W, exec, killall waybar && waybar"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
         "$mainMod, H, movefocus, l"
