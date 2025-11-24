@@ -250,5 +250,6 @@ in
     wlogout
     networkmanagerapplet
     networkmanager_dmenu
+    psmisc
   ];
 }
