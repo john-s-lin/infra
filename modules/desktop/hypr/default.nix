@@ -241,6 +241,7 @@ in
     playerctl
     blueberry
     bluetui
+    impala
     pavucontrol
     apple-cursor
     lm_sensors
