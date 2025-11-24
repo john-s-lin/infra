@@ -240,6 +240,7 @@ in
     brightnessctl
     playerctl
     blueberry
+    bluetui
     pavucontrol
     apple-cursor
     lm_sensors
