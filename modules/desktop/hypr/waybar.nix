@@ -122,7 +122,7 @@
           "format-disabled" = "";
           "format-connected" = "  ";
           "tooltip-format" = "Devices connected: {num_connections}";
-          "on-click" = "bluetui";
+          "on-click" = "ghostty -- bluetui";
         };
         pulseaudio = {
           format = "{icon}  ";
