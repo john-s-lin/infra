@@ -246,5 +246,6 @@ in
     apple-cursor
     lm_sensors
     wlogout
+    networkmanagerapplet
   ];
 }
