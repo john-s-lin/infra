@@ -9,7 +9,7 @@
         theme = "tokyo-passion.ghostty";
         auto-update = "off";
         cursor-style = "block";
-        shell-integration-features = ["no-cursor" "ssh-terminfo" "ssh-env"];
+        shell-integration-features = "no-cursor,ssh-terminfo,ssh-env";
         background-opacity = 1.0;
         font-family = "JetBrainsMono Nerd Font";
         font-size = 12;
