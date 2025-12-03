@@ -12,11 +12,6 @@
     ../../modules/home/zsh.nix
   ];
 
-  # Make sure vim is installed for your user.
-  home.packages = [
-    pkgs.helix
-  ];
-
   home.shellAliases = {
     lg = "lazygit";
     ldock = "lazydocker";

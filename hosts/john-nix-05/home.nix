@@ -67,9 +67,8 @@
       source = "${inputs.dotfiles}/config/alacritty";
       recursive = true;
     };
-    # Copy only the themes over. Zed configuration is covered by ../../modules/home/zed.nix
-    ".config/zed/themes" = {
-      source = "${inputs.dotfiles}/config/zed/themes";
+    ".config/zed" = {
+      source = "${inputs.dotfiles}/config/zed";
       recursive = true;
     };
     ".config/ghostty/themes" = {
