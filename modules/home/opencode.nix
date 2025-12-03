@@ -1,9 +1,8 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 {
   home.file = {
     ".config/opencode" = {
-      source = "${inputs.dotfiles}/config/opencode";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/opencode";
     };
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 {
   imports = [
     # Config
@@ -25,23 +25,19 @@
 
   home.file = {
     ".config/ghostty" = {
-      source = "${inputs.dotfiles}/config/ghostty";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/ghostty";
     };
     ".config/zellij" = {
-      source = "${inputs.dotfiles}/config/zellij";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zellij";
     };
     ".bashrc" = {
-      source = "${inputs.dotfiles}/.bashrc";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.bashrc";
     };
     ".config/zed" = {
-      source = "${inputs.dotfiles}/config/zed";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zed";
     };
     ".config/opencode" = {
-      source = "${inputs.dotfiles}/config/opencode";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/opencode";
     };
   };
 

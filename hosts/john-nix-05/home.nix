@@ -64,16 +64,13 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/alacritty" = {
-      source = "${inputs.dotfiles}/config/alacritty";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/alacritty";
     };
     ".config/zed" = {
-      source = "${inputs.dotfiles}/config/zed";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zed";
     };
     ".config/ghostty/themes" = {
-      source = "${inputs.dotfiles}/config/ghostty/themes";
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/ghostty/themes";
     };
   };
 
