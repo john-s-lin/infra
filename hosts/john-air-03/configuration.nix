@@ -20,7 +20,6 @@
   users.users.john = {
     name = "john.lin";
     home = "/Users/john.lin";
-    uid = 1000;
   };
 
   system.primaryUser = "john.lin";
