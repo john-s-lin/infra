@@ -19,6 +19,7 @@
   users.users.john = {
     name = "john";
     home = "/Users/john";
+    uid = 1000;
   };
 
   system.primaryUser = "john";
