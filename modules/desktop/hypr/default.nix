@@ -162,9 +162,9 @@ in
         "$mainMod, E, exec, $fileManager"
         "$mainMod, M, togglefloating,"
         "$mainMod, SPACE, exec, $menu"
-        "$mainMod, X, exec, wl-copy --primary | wl-paste -p"
-        "$mainMod, C, exec, wl-copy"
-        "$mainMod, V, exec, wl-paste"
+        "$mainMod, X, exec, wtype -M ctrl x"
+        "$mainMod, C, exec, wtype -M ctrl c"
+        "$mainMod, V, exec, wtype -M ctrl v"
         "$mainMod, P, pseudo,"
         "$mainMod, G, togglesplit,"
         "$mainMod, H, movefocus, l"
@@ -181,16 +181,16 @@ in
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
-        "$mainMod SHIFT, 1, movetoworkspace, 1"
-        "$mainMod SHIFT, 2, movetoworkspace, 2"
-        "$mainMod SHIFT, 3, movetoworkspace, 3"
-        "$mainMod SHIFT, 4, movetoworkspace, 4"
-        "$mainMod SHIFT, 5, movetoworkspace, 5"
-        "$mainMod SHIFT, 6, movetoworkspace, 6"
-        "$mainMod SHIFT, 7, movetoworkspace, 7"
-        "$mainMod SHIFT, 8, movetoworkspace, 8"
-        "$mainMod SHIFT, 9, movetoworkspace, 9"
-        "$mainMod SHIFT, 0, movetoworkspace, 10"
+        "$mainMod CTRL, 1, movetoworkspace, 1"
+        "$mainMod CTRL, 2, movetoworkspace, 2"
+        "$mainMod CTRL, 3, movetoworkspace, 3"
+        "$mainMod CTRL, 4, movetoworkspace, 4"
+        "$mainMod CTRL, 5, movetoworkspace, 5"
+        "$mainMod CTRL, 6, movetoworkspace, 6"
+        "$mainMod CTRL, 7, movetoworkspace, 7"
+        "$mainMod CTRL, 8, movetoworkspace, 8"
+        "$mainMod CTRL, 9, movetoworkspace, 9"
+        "$mainMod CTRL, 0, movetoworkspace, 10"
         "$mainMod, Left, workspace, e-1"
         "$mainMod, Right, workspace, e+1"
         "$mainMod, S, togglespecialworkspace, magic"
@@ -256,6 +256,6 @@ in
     networkmanagerapplet
     networkmanager_dmenu
     psmisc
-    wl-clipboard
+    wtype
   ];
 }
