@@ -162,9 +162,9 @@ in
         "$mainMod, E, exec, $fileManager"
         "$mainMod, M, togglefloating,"
         "$mainMod, SPACE, exec, $menu"
-        "$mainMod, X, exec, wtype -M ctrl x"
-        "$mainMod, C, exec, wtype -M ctrl c"
-        "$mainMod, V, exec, wtype -M ctrl v"
+        "$mainMod, X, sendshortcut, ctrl, x"
+        "$mainMod, C, sendshortcut, ctrl, c"
+        "$mainMod, V, sendshortcut, ctrl, v"
         "$mainMod, P, pseudo,"
         "$mainMod, G, togglesplit,"
         "$mainMod, H, movefocus, l"
@@ -256,6 +256,5 @@ in
     networkmanagerapplet
     networkmanager_dmenu
     psmisc
-    wtype
   ];
 }
