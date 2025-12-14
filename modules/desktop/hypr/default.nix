@@ -155,13 +155,18 @@ in
 
       bind = [
         "$mainMod, Q, killactive,"
+        "$mainMod, W, killactive,"
         "$mainMod CTRL, Q, exec, loginctl lock-session"
+        "$mainMod ALT, L, exec, loginctl lock-session"
         "$mainMod SHIFT, Q, exit,"
         "$mainMod, E, exec, $fileManager"
-        "$mainMod, V, togglefloating,"
+        "$mainMod, M, togglefloating,"
         "$mainMod, SPACE, exec, $menu"
+        "$mainMod, X, exec, wl-copy --primary | wl-paste -p"
+        "$mainMod, C, exec, wl-copy"
+        "$mainMod, V, exec, wl-paste"
         "$mainMod, P, pseudo,"
-        "$mainMod, J, togglesplit,"
+        "$mainMod, G, togglesplit,"
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
         "$mainMod, K, movefocus, u"
@@ -186,13 +191,15 @@ in
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+        "$mainMod, Left, workspace, e-1"
+        "$mainMod, Right, workspace, e+1"
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-        "$mainMod, PRINT, exec, hyprshot -m window"
-        ", PRINT, exec, hyprshot -m output"
-        "$shiftMod, PRINT, exec, hyprshot -m region"
+        "$mainMod SHIFT, 3, exec, hyprshot -m output"
+        "$mainMod SHIFT, 4, exec, hyprshot -m region"
+        "$mainMod SHIFT, 5, exec, hyprshot -m window"
         "$mainMod, F, fullscreen"
         "$mainMod, TAB, cyclenext"
         "$mainMod SHIFT, Tab, cyclenext, prev"
@@ -249,5 +256,6 @@ in
     networkmanagerapplet
     networkmanager_dmenu
     psmisc
+    wl-clipboard
   ];
 }
