@@ -22,6 +22,7 @@ in
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone\
           --vfs-cache-mode writes\
+          --no-xattr\
           --ignore-checksum\
           --config=${config.xdg.configHome}/rclone/rclone.conf\
           mount gdrive: ${gdrive_mount}
@@ -47,6 +48,7 @@ in
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone\
           --vfs-cache-mode writes\
+          --no-xattr\
           --ignore-checksum\
           --config=${config.xdg.configHome}/rclone/rclone.conf\
           mount onedrive: ${onedrive_mount}
