@@ -5,7 +5,6 @@
       "docker-desktop"
       "ghostty"
       "google-chrome"
-      "microsoft-outlook"
       "obsidian"
       "rectangle"
       "zed"
