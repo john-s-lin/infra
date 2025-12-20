@@ -8,6 +8,8 @@
     ../../modules/darwin/packages/rclone.nix
     ../../modules/darwin/packages/work.nix
     ../../modules/darwin/defaults.nix
+    ../../modules/darwin/services/tailscale.nix
+    ../../modules/gc/darwin.nix
   ];
 
   # Flakes
