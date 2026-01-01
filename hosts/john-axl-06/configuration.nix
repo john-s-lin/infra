@@ -5,9 +5,7 @@
     ../../modules/darwin/packages/common.nix
     ../../modules/darwin/packages/ai.nix
     ../../modules/darwin/packages/axl.nix
-    ../../modules/darwin/packages/rclone.nix
     ../../modules/darwin/defaults.nix
-    ../../modules/darwin/services/tailscale.nix
     ../../modules/gc/darwin.nix
   ];
 
