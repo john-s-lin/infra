@@ -40,7 +40,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "America/Toronto";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
