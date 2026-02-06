@@ -1,9 +1,13 @@
-{ inputs, ... }:
+{ config, ... }:
+let
+  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
+in
 {
+  imports = [
+    ./dotfiles.nix
+  ];
+
   home.file = {
-    ".config/opencode" = {
-      source = "${inputs.dotfiles}/config/opencode";
-      recursive = true;
-    };
+    ".config/opencode".source = mkDotfilesSymlink "config/opencode";
   };
 }

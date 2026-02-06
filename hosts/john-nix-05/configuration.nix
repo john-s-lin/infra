@@ -10,13 +10,19 @@
     ./hardware-configuration.nix
 
     ../../modules/desktop/gnome.nix
+    ../../modules/desktop/hyprland.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
     ../../modules/services/keyd.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
+    ../../modules/services/vpn.nix
+    ../../modules/gc/default.nix
   ];
+
+  # Firewall
+  networking.firewall.allowedTCPPorts = [ 53317 ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -34,7 +40,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Toronto";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -53,6 +59,9 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  # Path
+  environment.localBinInPath = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.john = {

@@ -18,7 +18,7 @@ in
         ProgramArguments = [
           "/bin/sh"
           "-c"
-          "mkdir -p ${homeDir}/OneDrive && ${pkgs.rclone}/bin/rclone --vfs-cache-mode writes --config=${homeDir}/.config/rclone/rclone.conf --ignore-checksum mount OneDrive: ${homeDir}/OneDrive"
+          "mkdir -p ${homeDir}/OneDrive && ${pkgs.rclone}/bin/rclone --vfs-cache-mode writes --noappledouble --noapplexattr --config=${homeDir}/.config/rclone/rclone.conf --ignore-checksum mount OneDrive: ${homeDir}/OneDrive"
         ];
         RunAtLoad = true;
         KeepAlive = {
@@ -34,7 +34,7 @@ in
         ProgramArguments = [
           "/bin/sh"
           "-c"
-          "mkdir -p ${homeDir}/GDrive && ${pkgs.rclone}/bin/rclone --vfs-cache-mode writes --config=${homeDir}/.config/rclone/rclone.conf --ignore-checksum mount GDrive: ${homeDir}/GDrive"
+          "mkdir -p ${homeDir}/GDrive && ${pkgs.rclone}/bin/rclone --vfs-cache-mode writes --noappledouble --noapplexattr --config=${homeDir}/.config/rclone/rclone.conf --ignore-checksum mount GDrive: ${homeDir}/GDrive"
         ];
         RunAtLoad = true;
         KeepAlive = {

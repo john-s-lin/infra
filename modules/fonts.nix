@@ -8,7 +8,7 @@ let
   linuxFonts = with pkgs; [
     noto-fonts-cjk-sans
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     font-awesome
     source-han-sans
   ];

@@ -2,10 +2,11 @@
 let
   nixDeveloperPackages = with pkgs; [
     nil
-    nixfmt-rfc-style
+    nixfmt
   ];
   defaultPackages = with pkgs; [
     git
+    localsend
     vim
     wget
   ];

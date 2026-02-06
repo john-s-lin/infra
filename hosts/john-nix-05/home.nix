@@ -1,16 +1,24 @@
 {
   config,
-  inputs,
   ...
 }:
+let
+  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
+in
 {
   imports = [
+    # Dotfiles configuration
+    ../../modules/home/dotfiles.nix
+
     # Packages
     ../../modules/packages/ai.nix
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
     ../../modules/packages/personal.nix
     ../../modules/packages/work.nix
+
+    # Desktop
+    ../../modules/desktop/hypr/default.nix
 
     # Config
     ../../modules/home/bat.nix
@@ -60,19 +68,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/alacritty" = {
-      source = "${inputs.dotfiles}/config/alacritty";
-      recursive = true;
-    };
-    # Copy only the themes over. Zed configuration is covered by ../../modules/home/zed.nix
-    ".config/zed/themes" = {
-      source = "${inputs.dotfiles}/config/zed/themes";
-      recursive = true;
-    };
-    ".config/ghostty/themes" = {
-      source = "${inputs.dotfiles}/config/ghostty/themes";
-      recursive = true;
-    };
+    ".config/alacritty".source = mkDotfilesSymlink "config/alacritty";
+    ".config/zed".source = mkDotfilesSymlink "config/zed";
+    ".config/ghostty/themes".source = mkDotfilesSymlink "config/ghostty/themes";
   };
 
   # Let Home Manager install and manage itself.
