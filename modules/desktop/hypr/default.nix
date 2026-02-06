@@ -228,14 +228,14 @@ in
 
       windowrule = [
         # Assign applications to specific workspaces
-        "workspace 1, class:com.mitchellh.ghostty"
-        "workspace 2, class:thunderbird"
-        "workspace 3, class:obsidian"
-        "workspace 4, class:zen-twilight"
-        "workspace 5, class:dev.zed.Zed"
-        "workspace 6, class:Code"
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        "workspace 1, match:class com.mitchellh.ghostty"
+        "workspace 2, match:class thunderbird"
+        "workspace 3, match:class obsidian"
+        "workspace 4, match:class zen-twilight"
+        "workspace 5, match:class dev.zed.Zed"
+        "workspace 6, match:class Code"
+        "suppressevent maximize, match:class .*"
+        "nofocus, match:class ^$, match:title ^$, match:xwayland 1, match:floating 1, match:fullscreen 0, match:pinned 0"
       ];
     };
   };
