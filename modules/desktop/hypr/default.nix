@@ -234,8 +234,8 @@ in
         "workspace 4, match:class zen-twilight"
         "workspace 5, match:class dev.zed.Zed"
         "workspace 6, match:class Code"
-        "suppressevent maximize, match:class .*"
-        "nofocus, match:class ^$, match:title ^$, match:xwayland 1, match:floating 1, match:fullscreen 0, match:pinned 0"
+        "suppress_event maximize, match:class .*"
+        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pinned 0"
       ];
     };
   };
