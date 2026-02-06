@@ -235,7 +235,7 @@ in
         "workspace 5, match:class dev.zed.Zed"
         "workspace 6, match:class Code"
         "suppress_event maximize, match:class .*"
-        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pinned 0"
+        "no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0"
       ];
     };
   };
