@@ -7,13 +7,15 @@ in
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [
-        "${wallpaperPrimary}"
-        "${wallpaperSecondary}"
-      ];
       wallpaper = [
-        "eDP-1, ${wallpaperPrimary}"
-        "${secondMonitor}, ${wallpaperSecondary}"
+        {
+          monitor = "eDP-1";
+          path = "${wallpaperPrimary}";
+        }
+        {
+          monitor = secondMonitor;
+          path = "${wallpaperSecondary}";
+        }
       ];
     };
   };
