@@ -17,13 +17,11 @@ in
     };
   };
 
-  config = {
-    # Provide a library function for other modules to use
-    lib.mkDotfilesSymlink =
-      subpath:
-      if cfg.useSymlinks then
-        config.lib.file.mkOutOfStoreSymlink "${cfg.path}/${subpath}"
-      else
-        "${cfg.path}/${subpath}";
-  };
+  # Inject mkDotfilesSymlink as a module argument for all modules to use
+  _module.args.mkDotfilesSymlink =
+    subpath:
+    if cfg.useSymlinks then
+      config.lib.file.mkOutOfStoreSymlink "${cfg.path}/${subpath}"
+    else
+      "${cfg.path}/${subpath}";
 }

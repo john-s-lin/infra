@@ -1,10 +1,10 @@
-{ config, ... }:
+{ mkDotfilesSymlink, ... }:
 {
   imports = [
     ./dotfiles.nix
   ];
 
   home.file = {
-    ".config/opencode".source = config.lib.mkDotfilesSymlink "config/opencode";
+    ".config/opencode".source = mkDotfilesSymlink "config/opencode";
   };
 }

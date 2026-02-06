@@ -1,5 +1,5 @@
 {
-  config,
+  mkDotfilesSymlink,
   ...
 }:
 {
@@ -65,9 +65,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/alacritty".source = config.lib.mkDotfilesSymlink "config/alacritty";
-    ".config/zed".source = config.lib.mkDotfilesSymlink "config/zed";
-    ".config/ghostty/themes".source = config.lib.mkDotfilesSymlink "config/ghostty/themes";
+    ".config/alacritty".source = mkDotfilesSymlink "config/alacritty";
+    ".config/zed".source = mkDotfilesSymlink "config/zed";
+    ".config/ghostty/themes".source = mkDotfilesSymlink "config/ghostty/themes";
   };
 
   # Let Home Manager install and manage itself.

@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, mkDotfilesSymlink, ... }:
 {
   imports = [
     # Dotfiles configuration
@@ -27,11 +27,11 @@
   };
 
   home.file = {
-    ".config/ghostty".source = config.lib.mkDotfilesSymlink "config/ghostty";
-    ".config/zellij".source = config.lib.mkDotfilesSymlink "config/zellij";
-    ".bashrc".source = config.lib.mkDotfilesSymlink ".bashrc";
-    ".config/zed".source = config.lib.mkDotfilesSymlink "config/zed";
-    ".config/opencode".source = config.lib.mkDotfilesSymlink "config/opencode";
+    ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
+    ".config/zellij".source = mkDotfilesSymlink "config/zellij";
+    ".bashrc".source = mkDotfilesSymlink ".bashrc";
+    ".config/zed".source = mkDotfilesSymlink "config/zed";
+    ".config/opencode".source = mkDotfilesSymlink "config/opencode";
   };
 
   # Set your Home Manager state version.
