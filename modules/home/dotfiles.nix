@@ -1,7 +1,4 @@
 { config, lib, ... }:
-let
-  cfg = config.dotfiles;
-in
 {
   options.dotfiles = {
     path = lib.mkOption {
@@ -16,12 +13,4 @@ in
       description = "When true, use out-of-store symlinks for live config updates. When false, configs are copied to the Nix store.";
     };
   };
-
-  # Inject mkDotfilesSymlink as a module argument for all modules to use
-  _module.args.mkDotfilesSymlink =
-    subpath:
-    if cfg.useSymlinks then
-      config.lib.file.mkOutOfStoreSymlink "${cfg.path}/${subpath}"
-    else
-      "${cfg.path}/${subpath}";
 }

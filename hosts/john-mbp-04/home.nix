@@ -1,8 +1,11 @@
 {
   pkgs,
-  mkDotfilesSymlink,
+  config,
   ...
 }:
+let
+  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
+in
 {
   imports = [
     # Dotfiles configuration
