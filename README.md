@@ -2,6 +2,36 @@
 
 Everything is computer
 
+## Bootstrap (First Time Setup)
+
+Since `just` is installed via this Nix configuration, it won't be available on the first run. Use one of these methods to bootstrap:
+
+### Option 1: Use `nix run` (Recommended)
+
+Run `just` directly from nixpkgs without installing it:
+
+```bash
+# On macOS
+nix run nixpkgs#just -- dr <hostname>
+
+# On NixOS
+nix run nixpkgs#just -- nr <hostname>
+```
+
+### Option 2: Use raw Nix commands
+
+Bypass `just` entirely for the first rebuild:
+
+```bash
+# On macOS
+sudo nix run nix-darwin -- switch --flake .#<hostname>
+
+# On NixOS
+sudo nixos-rebuild switch --flake .#<hostname>
+```
+
+After the first successful rebuild, `just` will be installed and available for all subsequent commands.
+
 ## NixOS
 
 To rebuild, run
