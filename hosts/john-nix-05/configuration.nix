@@ -18,7 +18,6 @@
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
     ../../modules/services/vpn.nix
-    ../../modules/services/location.nix
     ../../modules/gc/default.nix
   ];
 
@@ -41,7 +40,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = null;
+  time.timeZone = "America/Toronto";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
