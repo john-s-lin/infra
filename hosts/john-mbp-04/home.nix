@@ -1,6 +1,14 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 {
   imports = [
+    # Dotfiles configuration
+    ../../modules/home/dotfiles.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
@@ -24,21 +32,10 @@
   };
 
   home.file = {
-    ".config/ghostty" = {
-      source = "${inputs.dotfiles}/config/ghostty";
-      recursive = true;
-    };
-    ".config/zellij" = {
-      source = "${inputs.dotfiles}/config/zellij";
-      recursive = true;
-    };
-    ".bashrc" = {
-      source = "${inputs.dotfiles}/.bashrc";
-    };
-    ".config/zed" = {
-      source = "${inputs.dotfiles}/config/zed";
-      recursive = true;
-    };
+    ".config/ghostty".source = config.lib.mkDotfilesSymlink "config/ghostty";
+    ".config/zellij".source = config.lib.mkDotfilesSymlink "config/zellij";
+    ".bashrc".source = config.lib.mkDotfilesSymlink ".bashrc";
+    ".config/zed".source = config.lib.mkDotfilesSymlink "config/zed";
   };
 
   # Set your Home Manager state version.

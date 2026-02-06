@@ -1,8 +1,10 @@
 { config, ... }:
 {
+  imports = [
+    ./dotfiles.nix
+  ];
+
   home.file = {
-    ".config/opencode" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/opencode";
-    };
+    ".config/opencode".source = config.lib.mkDotfilesSymlink "config/opencode";
   };
 }

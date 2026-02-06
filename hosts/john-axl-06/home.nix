@@ -1,6 +1,9 @@
 { pkgs, config, ... }:
 {
   imports = [
+    # Dotfiles configuration
+    ../../modules/home/dotfiles.nix
+
     # Config
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
@@ -24,21 +27,11 @@
   };
 
   home.file = {
-    ".config/ghostty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/ghostty";
-    };
-    ".config/zellij" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zellij";
-    };
-    ".bashrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.bashrc";
-    };
-    ".config/zed" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zed";
-    };
-    ".config/opencode" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/opencode";
-    };
+    ".config/ghostty".source = config.lib.mkDotfilesSymlink "config/ghostty";
+    ".config/zellij".source = config.lib.mkDotfilesSymlink "config/zellij";
+    ".bashrc".source = config.lib.mkDotfilesSymlink ".bashrc";
+    ".config/zed".source = config.lib.mkDotfilesSymlink "config/zed";
+    ".config/opencode".source = config.lib.mkDotfilesSymlink "config/opencode";
   };
 
   # Set your Home Manager state version.
