@@ -42,6 +42,16 @@ just update
 
 which will update your `flake.lock` file.
 
+## Validation
+
+To validate the flake configuration before applying changes, run
+
+```bash
+just check
+```
+
+This runs `nix flake check` to verify the configuration is valid.
+
 ## Additional Setup
 
 ### rclone
