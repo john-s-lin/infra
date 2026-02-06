@@ -10,7 +10,10 @@ in
     # Dotfiles configuration
     ../../modules/home/dotfiles.nix
 
-    # Packages
+    # Common terminal tools (shared across all hosts)
+    ../../modules/home/common.nix
+
+    # Additional packages
     ../../modules/packages/ai.nix
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
@@ -20,19 +23,12 @@ in
     # Desktop
     ../../modules/desktop/hypr/default.nix
 
-    # Config
-    ../../modules/home/bat.nix
-    ../../modules/home/bottom.nix
-    ../../modules/home/direnv.nix
-    ../../modules/home/git.nix
+    # Host-specific config
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
-    ../../modules/home/starship.nix
     ../../modules/home/zed.nix
-    ../../modules/home/zellij.nix
-    ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
 

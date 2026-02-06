@@ -1,30 +1,14 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # Terminal and CLIs
+    # Terminal emulators and editors
     alacritty
-    bat
-    bottom
     bun
-    direnv
-    fd
     fnm
-    fzf
     ghostty
     gnumake
     helix
-    hyperfine
-    lazygit
-    nvtopPackages.intel
     parallel
-    rename
-    ripgrep
-    starship
-    tree
-    zellij
-    zoxide
-
-    # Editors
     vscode
     zed-editor
   ];

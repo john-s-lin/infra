@@ -11,15 +11,12 @@ in
     # Dotfiles configuration
     ../../modules/home/dotfiles.nix
 
-    # Config
-    ../../modules/home/bat.nix
-    ../../modules/home/bottom.nix
-    ../../modules/home/direnv.nix
-    ../../modules/home/git.nix
+    # Common terminal tools
+    ../../modules/home/common.nix
+
+    # Additional config
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
-    ../../modules/home/starship.nix
-    ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
   ];
 
