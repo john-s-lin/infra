@@ -1,10 +1,10 @@
 {
   homebrew = {
-    casks = [
-      "cursor"
+    taps = [
+      "anomalyco/homebrew-tap"
     ];
     brews = [
-      "opencode"
+      "anomalyco/tap/opencode"
     ];
   };
 }
