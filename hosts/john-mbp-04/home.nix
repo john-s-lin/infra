@@ -17,6 +17,7 @@ in
     ../../modules/home/direnv.nix
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
+    ../../modules/home/opencode.nix
     ../../modules/home/starship.nix
     ../../modules/home/zoxide.nix
     ../../modules/home/zsh.nix
