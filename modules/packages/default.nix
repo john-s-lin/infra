@@ -5,6 +5,7 @@ let
     nixfmt
   ];
   defaultPackages = with pkgs; [
+    gh
     git
     just
     localsend

@@ -10,7 +10,6 @@
     ];
     brews = [
       "fnm"
-      "gh"
       "uv"
       "supabase/tap/supabase"
     ];
