@@ -7,7 +7,7 @@ Everything is computer
 To rebuild, run
 
 ```bash
-make nr NIX=<hostname>
+just nr <hostname>
 ```
 
 ## macOS
@@ -15,7 +15,7 @@ make nr NIX=<hostname>
 To rebuild, run
 
 ```bash
-make dr DARWIN=<hostname>
+just dr <hostname>
 ```
 
 ## Garbage Collection
@@ -23,7 +23,13 @@ make dr DARWIN=<hostname>
 To collect garbage, run
 
 ```bash
-make gc
+just gc
+```
+
+Default is 30 days. To specify a different number of days:
+
+```bash
+just gc <days>
 ```
 
 ## Updating Packages
@@ -31,7 +37,7 @@ make gc
 Updating packages is as easy as
 
 ```bash
-make update
+just update
 ```
 
 which will update your `flake.lock` file.

@@ -6,6 +6,7 @@ let
   ];
   defaultPackages = with pkgs; [
     git
+    just
     localsend
     vim
     wget
