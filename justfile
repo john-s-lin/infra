@@ -17,3 +17,7 @@ gc days="30":
 # Update nix flake
 update:
     nix flake update
+
+# Run nix flake check
+check:
+    nix flake check
