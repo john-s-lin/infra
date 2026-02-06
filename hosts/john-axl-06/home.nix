@@ -27,9 +27,11 @@ in
     cat = "bat";
   };
 
+  home.username = "john";
+  home.homeDirectory = "/Users/john";
+
   home.file = {
     ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
-    ".config/zellij".source = mkDotfilesSymlink "config/zellij";
     ".bashrc".source = mkDotfilesSymlink ".bashrc";
     ".config/zed".source = mkDotfilesSymlink "config/zed";
   };
