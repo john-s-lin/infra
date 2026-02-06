@@ -4,6 +4,7 @@
     ../../modules/packages/default.nix
     ../../modules/darwin/packages/common.nix
     ../../modules/darwin/packages/personal.nix
+    ../../modules/darwin/packages/ai.nix
     ../../modules/darwin/packages/rclone.nix
     ../../modules/darwin/packages/work.nix
     ../../modules/darwin/defaults.nix
