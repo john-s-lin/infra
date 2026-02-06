@@ -19,7 +19,7 @@
     lazygit
     ripgrep
     tree
-    (if stdenv.isDarwin then nvtopPackages.apple else nvtopPackages.full)
+    (if stdenv.isDarwin then nvtopPackages.apple else nvtopPackages.intel)
     rename
   ];
 }
