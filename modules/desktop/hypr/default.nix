@@ -229,11 +229,16 @@ in
       windowrule = [
         # Assign applications to specific workspaces
         "workspace 1, match:class com.mitchellh.ghostty"
-        # Only send main Thunderbird window to workspace 2 (not reminder dialogs)
-        "workspace 2, match:class thunderbird, match:title .*Mozilla Thunderbird"
-        # Make reminder windows float so they can be dismissed properly
-        "float on, match:class thunderbird, match:title .*Reminder"
-        "center on, match:class thunderbird, match:title .*Reminder"
+
+        # Thunderbird Main Window - only workspace assignment
+        "workspace 2, match:class ^thunderbird$, match:initial_title ^Mozilla Thunderbird$"
+
+        # Thunderbird Reminder Window - float, center, size, and workspace 2
+        "workspace 2, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
+        "float on, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
+        "center on, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
+        "size 600 400, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
+
         "workspace 3, match:class obsidian"
         "workspace 4, match:class zen-twilight"
         "workspace 5, match:class dev.zed.Zed"
