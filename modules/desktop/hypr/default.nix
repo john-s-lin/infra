@@ -58,6 +58,7 @@ in
         "HYPRCURSOR_SIZE,24"
         "XCURSOR_THEME,macOS-White"
         "HYPRCURSOR_THEME,macOS-White"
+        "XDG_CURRENT_DESKTOP,Hyprland:GNOME"
       ];
 
       general = {
