@@ -45,7 +45,6 @@ in
 
       exec-once = [
         terminal
-        "waybar"
         "hyprpaper"
         "hypridle"
 
@@ -252,7 +251,6 @@ in
 
   home.packages = with pkgs; [
     rofi
-    waybar
     hyprshot
     brightnessctl
     playerctl
