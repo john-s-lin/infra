@@ -19,10 +19,10 @@
   ];
 
   users.users.john = {
-    name = "john.lin";
-    home = "/Users/john.lin";
+    name = "john";
+    home = "/Users/john";
   };
 
-  system.primaryUser = "john.lin";
+  system.primaryUser = "john";
   system.stateVersion = 6;
 }

@@ -91,7 +91,7 @@
         "john-air-03" = mkDarwinSystem {
           hostname = "john-air-03";
           system = "aarch64-darwin";
-          username = "john.lin";
+          username = "john";
         };
 
         "john-axl-06" = mkDarwinSystem {
@@ -103,7 +103,7 @@
         "john-mbp-04" = mkDarwinSystem {
           hostname = "john-mbp-04";
           system = "x86_64-darwin";
-          username = "john.lin";
+          username = "john";
         };
       };
     };

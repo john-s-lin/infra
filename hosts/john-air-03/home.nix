@@ -22,8 +22,8 @@ in
     cat = "bat";
   };
 
-  home.username = "john.lin";
-  home.homeDirectory = "/Users/john.lin";
+  home.username = "john";
+  home.homeDirectory = "/Users/john";
 
   home.file = {
     ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
