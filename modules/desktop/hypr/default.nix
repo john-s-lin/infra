@@ -16,6 +16,7 @@ in
     ./hyprlock.nix
     ./hyprpaper.nix
     ./hypridle.nix
+    ./mako.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -266,5 +267,6 @@ in
     networkmanagerapplet
     networkmanager_dmenu
     psmisc
+    libnotify # For notify-send testing
   ];
 }
