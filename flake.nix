@@ -94,12 +94,6 @@
           username = "john";
         };
 
-        "john-axl-06" = mkDarwinSystem {
-          hostname = "john-axl-06";
-          system = "aarch64-darwin";
-          username = "john";
-        };
-
         "john-mbp-04" = mkDarwinSystem {
           hostname = "john-mbp-04";
           system = "x86_64-darwin";
