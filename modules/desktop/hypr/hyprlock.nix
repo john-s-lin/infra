@@ -20,7 +20,7 @@ in
       };
 
       input-field = {
-        monitor = "";
+        monitor = "eDP-1";
         size = "300, 60";
         outline_thickness = 0;
         dots_size = 0.2;
@@ -47,7 +47,7 @@ in
       };
 
       label = {
-        monitor = "";
+        monitor = "eDP-1";
         text = "cmd[update:1000] echo \"<span>$(date +'%Y-%m-%d // %H:%M:%S')</span>\"";
         color = "rgba(200, 200, 200, 1.0)";
         font_size = 50;
