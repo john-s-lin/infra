@@ -5,6 +5,5 @@
     obsidian
     thunderbird
     libreoffice-qt-fresh
-    onlyoffice-desktopeditors
   ];
 }
