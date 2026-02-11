@@ -28,7 +28,6 @@ in
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
-    ../../modules/home/zed.nix
     ../../modules/home/zsh.nix
   ];
 
