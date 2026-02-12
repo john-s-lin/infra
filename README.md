@@ -28,6 +28,9 @@ sudo nix run nix-darwin -- switch --flake .#<hostname>
 
 # On NixOS
 sudo nixos-rebuild switch --flake .#<hostname>
+
+# On Linux with Home Manager (standalone, non-NixOS)
+nix run home-manager -- switch --flake .#<username>@<hostname>
 ```
 
 After the first successful rebuild, `just` will be installed and available for all subsequent commands.
@@ -46,6 +49,20 @@ To rebuild, run
 
 ```bash
 just dr <hostname>
+```
+
+## Home Manager (Standalone Linux)
+
+For standalone Home Manager on non-NixOS Linux systems (e.g., AlmaLinux, Ubuntu with Nix installed):
+
+```bash
+nix run home-manager -- switch --flake .#<username>@<hostname>
+```
+
+For example, to apply the configuration for `john@heimdall`:
+
+```bash
+nix run home-manager -- switch --flake .#john@heimdall
 ```
 
 ## Garbage Collection

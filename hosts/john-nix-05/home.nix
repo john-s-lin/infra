@@ -12,6 +12,7 @@ in
 
     # Common terminal tools (shared across all hosts)
     ../../modules/home/common.nix
+    ../../modules/home/workstation.nix
 
     # Additional packages
     ../../modules/packages/ai.nix

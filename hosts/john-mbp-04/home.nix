@@ -13,6 +13,7 @@ in
 
     # Common terminal tools
     ../../modules/home/common.nix
+    ../../modules/home/workstation.nix
 
     # Additional config
     ../../modules/home/helix.nix
