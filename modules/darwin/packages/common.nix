@@ -2,7 +2,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "docker-desktop"
       "ghostty"
       "google-chrome"
       "obsidian"
