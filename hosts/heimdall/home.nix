@@ -33,6 +33,11 @@
 
   home.stateVersion = "25.05";
 
+  # Server packages
+  home.packages = with pkgs; [
+    gh
+  ];
+
   # Aliases
   home.shellAliases = {
     lg = "lazygit";
