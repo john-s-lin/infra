@@ -17,6 +17,9 @@
     ../../modules/home/zsh.nix
   ];
 
+  # Server-specific: disable zellij auto-start to prevent nested sessions when SSH'd from workstation
+  custom.zellij.enableAutoStart = false;
+
   home.username = "john";
   home.homeDirectory = "/home/john";
 
