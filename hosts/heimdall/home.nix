@@ -8,6 +8,9 @@
     # Packages: fd, fzf, hyperfine, lazygit, ripgrep, tree
     ../../modules/home/common.nix
 
+    # AI/development packages
+    ../../modules/packages/ai.nix
+
     # Host-specific config
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
