@@ -2,7 +2,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "docker-desktop"
       "ghostty"
       "google-chrome"
       "obsidian"
@@ -10,6 +9,7 @@
       "zed"
       "zen"
     ];
+
     # Always upgrade casks
     greedyCasks = true;
     global.autoUpdate = false;
