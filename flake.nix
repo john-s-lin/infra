@@ -100,5 +100,13 @@
           username = "john";
         };
       };
+
+      homeConfigurations."john@heimdall" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-linux;
+        modules = [ ./hosts/heimdall/home.nix ];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
+      };
     };
 }
