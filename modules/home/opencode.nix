@@ -7,7 +7,12 @@ in
     ./dotfiles.nix
   ];
 
-  home.file = {
-    ".config/opencode".source = mkDotfilesSymlink "config/opencode";
+  home = {
+    file = {
+      ".config/opencode".source = mkDotfilesSymlink "config/opencode";
+    };
+    sessionVariables = {
+      OPENCODE_ENABLE_EXA = 1;
+    };
   };
 }
