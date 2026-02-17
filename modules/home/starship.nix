@@ -3,7 +3,7 @@
   programs.starship = {
     enable = true;
     settings = {
-      format = "$directory$python$rust$zig$git_branch$git_commit$git_state$git_status$cmd_duration$character";
+      format = "$directory$python$rust$zig$git_branch$git_commit$git_state$git_status$jj$cmd_duration$character";
       add_newline = false;
 
       directory = {
@@ -40,6 +40,11 @@
       };
 
       git_status = {
+        style = "bold purple";
+      };
+
+      jj = {
+        format = "[\\[$change_id$status\\]](\$style) ";
         style = "bold purple";
       };
     };
