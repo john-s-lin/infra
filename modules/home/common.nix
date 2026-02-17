@@ -5,6 +5,7 @@
     ./bottom.nix
     ./direnv.nix
     ./git.nix
+    ./jujutsu.nix
     ./starship.nix
     ./zellij.nix
     ./zoxide.nix
