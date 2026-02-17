@@ -12,6 +12,7 @@
       plugins = [
         "git"
         "vi-mode"
+        "jj"
       ];
       theme = "robbyrussell";
     };
