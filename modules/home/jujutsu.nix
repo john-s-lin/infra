@@ -4,9 +4,6 @@
     enable = true;
 
     settings = {
-      # Import local identity file (not tracked in repo)
-      import = [ "~/.config/jj/identity.toml" ];
-
       # Use Helix as the default editor
       ui.editor = "hx";
 
