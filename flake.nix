@@ -69,6 +69,18 @@
             (mkUserConfig { inherit hostname system username; })
           ];
         };
+
+      mkStandaloneHome =
+        {
+          hostname,
+          system,
+          username,
+        }:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [ ./hosts/${hostname}/${username}/home.nix ];
+          extraSpecialArgs = { inherit inputs; };
+        };
     in
     {
       nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
@@ -101,11 +113,17 @@
         };
       };
 
-      homeConfigurations."john@heimdall" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-linux;
-        modules = [ ./hosts/heimdall/home.nix ];
-        extraSpecialArgs = {
-          inherit inputs;
+      # VPS Home-Manager only
+      homeConfigurations = {
+        "john@heimdall" = mkStandaloneHome {
+          hostname = "heimdall";
+          username = "john";
+          system = "aarch64-linux";
+        };
+        "claw@heimdall" = mkStandaloneHome {
+          hostname = "heimdall";
+          username = "claw";
+          system = "aarch64-linux";
         };
       };
     };
