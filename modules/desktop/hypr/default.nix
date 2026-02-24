@@ -280,7 +280,7 @@ in
       accent_secondary = 0xFF7DCFFF
 
       # Font - JetBrains Mono Nerd Font
-      font_family = JetBrainsMono Nerd Font
+      font_family = JetBrainsMono Nerd Font Mono
       font_family_monospace = JetBrainsMono Nerd Font Mono
       font_size = 11
       small_font_size = 10
