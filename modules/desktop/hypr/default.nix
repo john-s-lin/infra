@@ -265,6 +265,35 @@ in
     };
   };
 
+  # hyprtoolkit config - shared theme for hyprlauncher, hyprlock, etc.
+  xdg.configFile."hypr/hyprtoolkit.conf" = {
+    text = ''
+      # hyprtoolkit theme - Tokyo Night
+      # https://wiki.hypr.land/Hypr-Ecosystem/hyprtoolkit
+
+      background = 0xFF1A1B26
+      base = 0xFF16161E
+      text = 0xFFC0CAF5
+      alternate_base = 0xFF292E42
+      bright_text = 0xFFC0CAF5
+      accent = 0xFF7AA2F7
+      accent_secondary = 0xFF7DCFFF
+
+      # Font - JetBrains Mono Nerd Font
+      font_family = JetBrainsMono Nerd Font
+      font_family_monospace = JetBrainsMono Nerd Font Mono
+      font_size = 11
+      small_font_size = 10
+      h1_size = 19
+      h2_size = 15
+      h3_size = 13
+
+      # Rounding
+      rounding_large = 20
+      rounding_small = 10
+    '';
+  };
+
   home.packages = with pkgs; [
     hyprlauncher
     waybar
