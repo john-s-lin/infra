@@ -1,17 +1,15 @@
 {
   pkgs,
-  # rofiPowermenuScript,
   ...
 }:
 let
   terminal = "ghostty";
   fileManager = "nautilus";
-  menu = "rofi -show drun";
+  menu = "hyprlauncher";
   secondMonitor = "DP-2";
 in
 {
   imports = [
-    # ./rofi.nix
     ./waybar.nix
     ./hyprlock.nix
     ./hyprpaper.nix
@@ -48,6 +46,7 @@ in
         "waybar"
         "hyprpaper"
         "hypridle"
+        "hyprlauncher -d"
 
         # Apps that I want open
         "obsidian"
@@ -204,6 +203,7 @@ in
         "$mainMod, F, fullscreen"
         "$mainMod, TAB, cyclenext"
         "$mainMod SHIFT, Tab, cyclenext, prev"
+        "$mainMod SHIFT, E, exec, wlogout"
       ];
 
       bindel = [
@@ -250,8 +250,23 @@ in
     };
   };
 
+  services.hyprlauncher = {
+    enable = true;
+    settings = {
+      general = {
+        grab_focus = true;
+      };
+      cache = {
+        enabled = true;
+      };
+      finders = {
+        desktop_icons = true;
+      };
+    };
+  };
+
   home.packages = with pkgs; [
-    rofi
+    hyprlauncher
     waybar
     hyprshot
     brightnessctl
