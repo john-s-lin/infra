@@ -15,6 +15,12 @@
     };
   };
 
+  # Unlock GNOME Keyring automatically at login via PAM
+  security.pam.services = {
+    gdm.enableGnomeKeyring = true;
+    login.enableGnomeKeyring = true;
+  };
+
   # Disable default GNOME apps
   environment.gnome.excludePackages = with pkgs; [
     baobab # disk usage analyzer
