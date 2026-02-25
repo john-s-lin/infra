@@ -1,16 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-let
-  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
-in
+{ pkgs, ... }:
 {
   imports = [
-    # Dotfiles configuration
-    ../../modules/home/dotfiles.nix
-
     # Common terminal tools (shared across all hosts)
     ../../modules/home/common.nix
     ../../modules/home/workstation.nix
@@ -64,8 +54,7 @@ in
   # Enable XDG
   xdg.enable = true;
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+  # Ghostty theme file
   home.file = {
     ".config/ghostty/themes/tokyo-passion.ghostty".source =
       ../../modules/home/ghostty/themes/tokyo-passion.ghostty;

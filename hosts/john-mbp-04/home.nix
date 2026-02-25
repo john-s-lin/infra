@@ -1,16 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
-}:
-let
-  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
-in
+{ pkgs, ... }:
 {
   imports = [
-    # Dotfiles configuration
-    ../../modules/home/dotfiles.nix
-
     # Common terminal tools
     ../../modules/home/common.nix
     ../../modules/home/workstation.nix
@@ -37,8 +27,8 @@ in
   home.username = "john";
   home.homeDirectory = "/Users/john";
 
+  # Ghostty theme file
   home.file = {
-    ".bashrc".source = mkDotfilesSymlink ".bashrc";
     ".config/ghostty/themes/tokyo-passion.ghostty".source =
       ../../modules/home/ghostty/themes/tokyo-passion.ghostty;
   };

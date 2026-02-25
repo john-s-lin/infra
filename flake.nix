@@ -12,10 +12,6 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dotfiles = {
-      url = "github:john-s-lin/dotfiles";
-      flake = false;
-    };
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +23,6 @@
       nixpkgs,
       home-manager,
       zen-browser,
-      dotfiles,
       nix-darwin,
       ...
     }@inputs:
