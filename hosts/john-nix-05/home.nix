@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 let
@@ -66,7 +67,8 @@ in
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/ghostty/themes".source = mkDotfilesSymlink "config/ghostty/themes";
+    ".config/ghostty/themes/tokyo-passion.ghostty".source =
+      ../../modules/home/ghostty/themes/tokyo-passion.ghostty;
   };
 
   # Let Home Manager install and manage itself.

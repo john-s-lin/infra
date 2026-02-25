@@ -1,3 +1,4 @@
+{ lib, pkgs, ... }:
 {
   programs = {
     ghostty = {
@@ -20,6 +21,9 @@
         confirm-close-surface = false;
         clipboard-read = "allow";
         clipboard-write = "allow";
+      }
+      // lib.optionalAttrs pkgs.stdenv.isDarwin {
+        macos-titlebar-style = "hidden";
       };
     };
   };
