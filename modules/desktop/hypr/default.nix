@@ -62,6 +62,7 @@ in
       ];
 
       exec-once = [
+        "gnome-keyring-daemon --start --components=secrets"
         terminal
         "waybar"
         "hyprpaper"
