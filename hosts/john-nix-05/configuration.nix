@@ -9,7 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    ../../modules/desktop/gnome.nix
+    ../../modules/desktop/cosmic.nix
     ../../modules/desktop/hyprland.nix
     ../../modules/fonts.nix
     ../../modules/packages/default.nix
