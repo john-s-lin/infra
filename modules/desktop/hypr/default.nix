@@ -4,7 +4,7 @@
 }:
 let
   terminal = "ghostty";
-  fileManager = "nautilus";
+  fileManager = "cosmic-files";
   menu = "rofi -show drun";
   secondMonitor = "DP-2";
 in
