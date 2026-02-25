@@ -26,6 +26,7 @@ in
 
     # Host-specific config
     ../../modules/home/alacritty.nix
+    ../../modules/home/zed.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
@@ -65,7 +66,6 @@ in
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/zed".source = mkDotfilesSymlink "config/zed";
     ".config/ghostty/themes".source = mkDotfilesSymlink "config/ghostty/themes";
   };
 
