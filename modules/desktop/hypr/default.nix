@@ -11,6 +11,7 @@ in
 {
   home.packages = with pkgs; [
     rofi
+    waybar
     hyprshot
     brightnessctl
     playerctl
@@ -63,6 +64,7 @@ in
       exec-once = [
         "gnome-keyring-daemon --start --components=secrets"
         terminal
+        "waybar"
         "hyprpaper"
         "hypridle"
 
