@@ -1,9 +1,6 @@
 { pkgs, lib, ... }:
 let
   zedSettings = {
-    features = {
-      edit_prediction_provider = "none";
-    };
     auto_install_extensions = {
       html = false;
     };
@@ -13,6 +10,9 @@ let
     buffer_font_size = 13;
     colorize_brackets = true;
     disable_ai = true;
+    edit_predictions = {
+      provider = "none";
+    };
     format_on_save = "on";
     git_panel = {
       dock = "right";
