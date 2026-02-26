@@ -18,6 +18,7 @@ in
     # Additional config
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
+    ../../modules/home/zed.nix
     ../../modules/home/zsh.nix
   ];
 
@@ -38,7 +39,6 @@ in
   home.file = {
     ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
     ".bashrc".source = mkDotfilesSymlink ".bashrc";
-    ".config/zed".source = mkDotfilesSymlink "config/zed";
   };
 
   # Set your Home Manager state version.
