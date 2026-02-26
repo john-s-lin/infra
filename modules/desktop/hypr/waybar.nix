@@ -1,6 +1,7 @@
 {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     settings = [
       {
         reload_style_on_change = true;
@@ -77,6 +78,7 @@
           interval = 5;
         };
         battery = {
+          bat = "BAT0";
           format = "{capacity}% {icon}  ";
           "format-discharging" = "{capacity}% {icon}  ";
           "format-charging" = "{capacity}% {icon}  ";
