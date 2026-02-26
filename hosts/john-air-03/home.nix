@@ -30,7 +30,6 @@ in
   home.file = {
     ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
     ".bashrc".source = mkDotfilesSymlink ".bashrc";
-    ".config/zed".source = mkDotfilesSymlink "config/zed";
   };
 
   # Set your Home Manager state version.
