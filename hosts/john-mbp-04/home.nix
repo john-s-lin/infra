@@ -16,6 +16,7 @@ in
     ../../modules/home/workstation.nix
 
     # Additional config
+    ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
     ../../modules/home/zed.nix
@@ -37,7 +38,6 @@ in
   home.homeDirectory = "/Users/john";
 
   home.file = {
-    ".config/ghostty".source = mkDotfilesSymlink "config/ghostty";
     ".bashrc".source = mkDotfilesSymlink ".bashrc";
   };
 
