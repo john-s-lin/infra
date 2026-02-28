@@ -9,7 +9,7 @@
     ../../modules/home/bash.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
-    ../../modules/home/opencode.nix
+    ../../modules/home/opencode
     ../../modules/home/zed.nix
     ../../modules/home/zsh.nix
   ];
