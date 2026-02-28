@@ -1,17 +1,12 @@
-{ config, ... }:
-let
-  mkDotfilesSymlink = import ../../lib/dotfiles.nix { inherit config; };
-in
+{ ... }:
 {
   imports = [
-    # Dotfiles configuration
-    ../../modules/home/dotfiles.nix
-
     # Common terminal tools
     ../../modules/home/common.nix
     ../../modules/home/workstation.nix
 
     # Additional config
+    ../../modules/home/bash.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
@@ -27,10 +22,6 @@ in
 
   home.username = "john";
   home.homeDirectory = "/Users/john";
-
-  home.file = {
-    ".bashrc".source = mkDotfilesSymlink ".bashrc";
-  };
 
   # Set your Home Manager state version.
   home.stateVersion = "25.05"; # Or your current version
