@@ -1,9 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    # Dotfiles configuration
-    ../../../modules/home/dotfiles.nix
-
     # Common terminal tools (shared across all hosts)
     # Includes: bottom, starship, direnv, bat, git, zoxide, zellij
     # Packages: fd, fzf, hyperfine, lazygit, ripgrep, tree
@@ -14,7 +11,7 @@
 
     # Host-specific config
     ../../../modules/home/helix.nix
-    ../../../modules/home/opencode.nix
+    ../../../modules/home/opencode
     ../../../modules/home/zsh.nix
   ];
 
