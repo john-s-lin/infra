@@ -22,7 +22,7 @@
     ../../modules/home/alacritty.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
-    ../../modules/home/opencode
+    ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
     ../../modules/home/zed.nix
     ../../modules/home/zsh.nix

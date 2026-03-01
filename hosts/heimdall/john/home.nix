@@ -11,7 +11,7 @@
 
     # Host-specific config
     ../../../modules/home/helix.nix
-    ../../../modules/home/opencode
+    ../../../modules/home/opencode.nix
     ../../../modules/home/zsh.nix
   ];
 
