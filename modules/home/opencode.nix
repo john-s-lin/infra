@@ -1,7 +1,7 @@
 { ... }:
 {
   xdg.configFile."opencode" = {
-    source = ./.;
+    source = ./opencode;
     recursive = true;
   };
 
