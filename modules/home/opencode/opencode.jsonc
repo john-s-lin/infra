@@ -5,5 +5,5 @@
 		"session_child_cycle": "ctrl+alt+n",
 		"session_child_cycle_reverse": "ctrl+alt+p"
 	},
-	"small_model": "google/gemini-2.5-flash-lite",
+	"small_model": "openai/gpt-oss-20b:free",
 }
