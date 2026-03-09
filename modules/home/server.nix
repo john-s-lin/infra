@@ -7,7 +7,7 @@
   ];
 
   programs.zsh.initContent = ''
-    PROMPT="%{$fg_bold[yellow]%}%n@%m%{$reset_color%} $PROMPT"
+    PROMPT="%{$fg_bold[yellow]%}%n@%m%{$reset_color%}$PROMPT"
   '';
 
   # Ghostty terminfo: system ncurses 6.4 compiles a corrupted entry;
