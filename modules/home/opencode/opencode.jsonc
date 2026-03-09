@@ -1,5 +1,4 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"theme": "tokyonight",
 	"small_model": "openrouter/google/gemma-3-12b-it",
 }
