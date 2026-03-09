@@ -120,6 +120,13 @@
           username = "claw";
           system = "aarch64-linux";
         };
+
+        # Raspberry Pi - DietPi Home-Manager only
+        "dietpi@apollo" = mkStandaloneHome {
+          hostname = "apollo";
+          username = "dietpi";
+          system = "aarch64-linux";
+        };
       };
     };
 }
