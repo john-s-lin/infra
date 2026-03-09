@@ -6,9 +6,6 @@
     ./direnv.nix
     ./git.nix
     ./jujutsu.nix
-    ./starship.nix
-    ./zellij.nix
-    ./zoxide.nix
   ];
 
   # Terminal tools managed by nixpkgs (previously in Homebrew brews)
