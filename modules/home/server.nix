@@ -17,8 +17,6 @@
     recursive = true;
   };
 
-  home.packages = with pkgs; [ gh ];
-
   home.shellAliases = {
     lg = "lazygit";
     cat = "bat";
