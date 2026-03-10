@@ -127,6 +127,11 @@
           username = "dietpi";
           system = "aarch64-linux";
         };
+        "dietpi@atlas" = mkStandaloneHome {
+          hostname = "atlas";
+          username = "dietpi";
+          system = "aarch64-linux";
+        };
       };
     };
 }
