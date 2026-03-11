@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ../../modules/fonts.nix
@@ -22,7 +23,10 @@
   users.users.john = {
     name = "john";
     home = "/Users/john";
+    shell = pkgs.fish;
   };
+
+  programs.fish.enable = true;
 
   system.primaryUser = "john";
   system.stateVersion = 6;
