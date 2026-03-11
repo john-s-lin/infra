@@ -19,7 +19,6 @@
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
     ../../modules/home/zed.nix
-    ../../modules/home/fish.nix
     ../../modules/home/zsh.nix
 
     # Terminal packages

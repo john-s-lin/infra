@@ -74,7 +74,7 @@
       "scanner"
     ];
     ignoreShellProgramCheck = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -86,7 +86,6 @@
   # };
 
   # List services that you want to enable:
-  programs.fish.enable = true;
   programs.nix-ld.enable = true;
 
   # This value determines the NixOS release from which the default
