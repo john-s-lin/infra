@@ -1,11 +1,18 @@
 { ... }:
 {
   imports = [
-    ../../../modules/home/server.nix
+    # Server tools (previously in server.nix)
+    ../../modules/home/bat.nix
+    ../../modules/home/bottom.nix
+    ../../modules/home/direnv.nix
+    ../../modules/home/git.nix
+    ../../modules/home/jujutsu.nix
+    ../../modules/home/helix.nix
+    ../../modules/home/zsh.nix
 
     # AI/development packages
-    ../../../modules/packages/ai.nix
-    ../../../modules/home/opencode.nix
+    ../../modules/packages/ai.nix
+    ../../modules/home/opencode.nix
   ];
 
   home.username = "john";
