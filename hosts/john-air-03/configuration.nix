@@ -6,10 +6,10 @@
     ../../modules/darwin/packages/personal.nix
     ../../modules/darwin/packages/ai.nix
     ../../modules/darwin/packages/rclone.nix
+    ../../modules/darwin/packages/vpn.nix
     ../../modules/darwin/packages/work.nix
     ../../modules/darwin/defaults.nix
     ../../modules/darwin/services/tailscale.nix
-    ../../modules/darwin/services/vpn.nix
     ../../modules/gc/darwin.nix
   ];
 
