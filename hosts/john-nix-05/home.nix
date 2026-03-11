@@ -19,6 +19,7 @@
     ../../modules/packages/personal.nix
     ../../modules/packages/terminal.nix
     ../../modules/packages/work.nix
+    ../../modules/packages/workstation.nix
 
     # Desktop
     ../../modules/desktop/cosmic/default.nix

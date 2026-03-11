@@ -6,6 +6,7 @@
     fzf
     hyperfine
     lazygit
+    lazydocker
     ripgrep
     tree
     rename

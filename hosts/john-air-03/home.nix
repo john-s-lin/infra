@@ -23,6 +23,7 @@
 
     # Terminal packages
     ../../modules/packages/terminal.nix
+    ../../modules/packages/workstation.nix
   ];
 
   home.shellAliases = {
