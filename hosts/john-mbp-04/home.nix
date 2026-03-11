@@ -1,9 +1,17 @@
 { pkgs, ... }:
 {
   imports = [
-    # Common terminal tools
-    ../../modules/home/common.nix
-    ../../modules/home/workstation.nix
+    # Common terminal tools (previously in common.nix)
+    ../../modules/home/bat.nix
+    ../../modules/home/bottom.nix
+    ../../modules/home/direnv.nix
+    ../../modules/home/git.nix
+    ../../modules/home/jujutsu.nix
+
+    # Workstation tools (previously in workstation.nix)
+    ../../modules/home/starship.nix
+    ../../modules/home/zellij.nix
+    ../../modules/home/zoxide.nix
 
     # Additional config
     ../../modules/home/bash.nix
@@ -12,6 +20,9 @@
     ../../modules/home/opencode.nix
     ../../modules/home/zed.nix
     ../../modules/home/zsh.nix
+
+    # Terminal packages
+    ../../modules/packages/terminal.nix
   ];
 
   # Make sure vim is installed for your user.
