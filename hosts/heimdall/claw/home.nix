@@ -5,6 +5,9 @@
     ../../modules/home/git.nix
     ../../modules/home/jujutsu.nix
     ../../modules/home/direnv.nix
+
+    # Terminal packages
+    ../../modules/packages/terminal.nix
   ];
 
   home.username = "claw";

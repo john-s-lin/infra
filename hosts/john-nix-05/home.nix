@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   imports = [
     # Common terminal tools (previously in common.nix)
     ../../modules/home/bat.nix
@@ -20,6 +17,7 @@
     ../../modules/packages/browsers.nix
     ../../modules/packages/developer.nix
     ../../modules/packages/personal.nix
+    ../../modules/packages/terminal.nix
     ../../modules/packages/work.nix
 
     # Desktop

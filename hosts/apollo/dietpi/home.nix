@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     # Server tools (previously in server.nix)
@@ -9,6 +8,9 @@
     ../../modules/home/jujutsu.nix
     ../../modules/home/helix.nix
     ../../modules/home/zsh.nix
+
+    # Terminal packages
+    ../../modules/packages/terminal.nix
   ];
 
   home.username = "dietpi";

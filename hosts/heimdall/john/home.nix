@@ -13,6 +13,9 @@
     # AI/development packages
     ../../modules/packages/ai.nix
     ../../modules/home/opencode.nix
+
+    # Terminal packages
+    ../../modules/packages/terminal.nix
   ];
 
   home.username = "john";

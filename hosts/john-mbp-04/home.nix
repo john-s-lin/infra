@@ -20,6 +20,9 @@
     ../../modules/home/opencode.nix
     ../../modules/home/zed.nix
     ../../modules/home/zsh.nix
+
+    # Terminal packages
+    ../../modules/packages/terminal.nix
   ];
 
   # Make sure vim is installed for your user.
