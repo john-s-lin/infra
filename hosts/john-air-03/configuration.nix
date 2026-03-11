@@ -10,6 +10,7 @@
     ../../modules/darwin/defaults.nix
     ../../modules/darwin/services/tailscale.nix
     ../../modules/gc/darwin.nix
+    ../../modules/services/vpn.nix
   ];
 
   # Flakes
