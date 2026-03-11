@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-  programs.zsh.shellInit = ''
-    autoload -U colors && colors
+  programs.zsh.initContent = ''
     PROMPT="%{$fg_bold[yellow]%}%n@%m%{$reset_color%} $PROMPT"
   '';
 
