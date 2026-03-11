@@ -9,8 +9,8 @@
     ../../modules/darwin/packages/work.nix
     ../../modules/darwin/defaults.nix
     ../../modules/darwin/services/tailscale.nix
+    ../../modules/darwin/services/vpn.nix
     ../../modules/gc/darwin.nix
-    ../../modules/services/vpn.nix
   ];
 
   # Flakes
