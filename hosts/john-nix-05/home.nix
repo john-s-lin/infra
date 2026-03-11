@@ -32,6 +32,7 @@
     ../../modules/home/opencode.nix
     ../../modules/home/rclone.nix
     ../../modules/home/zed.nix
+    ../../modules/home/fish.nix
     ../../modules/home/zsh.nix
   ];
 
