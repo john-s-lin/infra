@@ -1,5 +1,10 @@
 { ... }:
 {
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   networking = {
     hostName = "john-nix-05";
     networkmanager.enable = true;

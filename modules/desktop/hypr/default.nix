@@ -15,7 +15,7 @@ in
     hyprshot
     brightnessctl
     playerctl
-    blueberry
+    overskride
     bluetui
     impala
     pavucontrol
