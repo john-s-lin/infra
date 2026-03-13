@@ -3,6 +3,20 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    settings = {
+      General = {
+        FastConnectable = true;
+      };
+      Policy = {
+        ReconnectAttempts = 7;
+        ReconnectIntervals = "1,2,4,8,16,32,64";
+      };
+    };
+    input = {
+      General = {
+        IdleTimeout = 0;
+      };
+    };
   };
 
   networking = {
