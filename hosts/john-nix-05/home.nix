@@ -64,6 +64,18 @@
   # Enable XDG
   xdg.enable = true;
 
+  # Set Okular as default PDF viewer
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = [ "okularApplication_pdf.desktop" ];
+      "application/x-pdf" = [ "okularApplication_pdf.desktop" ];
+      "application/acrobat" = [ "okularApplication_pdf.desktop" ];
+      "application/vnd.pdf" = [ "okularApplication_pdf.desktop" ];
+      "text/pdf" = [ "okularApplication_pdf.desktop" ];
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

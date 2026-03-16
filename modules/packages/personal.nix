@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    papers
+    kdePackages.okular
     qbittorrent
     signal-desktop
     vesktop
