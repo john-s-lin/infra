@@ -6,4 +6,8 @@
       theme = "base16";
     };
   };
+
+  home.shellAliases = {
+    fcat = "fzf --preview 'bat --style=plain --color=always {}' --preview-window=right:60%";
+  };
 }
