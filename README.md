@@ -59,10 +59,10 @@ For standalone Home Manager on non-NixOS Linux systems (e.g., AlmaLinux, Ubuntu 
 nix run home-manager -- switch --flake .#<username>@<hostname>
 ```
 
-For example, to apply the configuration for `john@heimdall`:
+For example, to apply the configuration for `john@ajax`:
 
 ```bash
-nix run home-manager -- switch --flake .#john@heimdall
+nix run home-manager -- switch --flake .#john@ajax
 ```
 
 ## Garbage Collection

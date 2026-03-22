@@ -110,13 +110,13 @@
 
       # VPS Home-Manager only
       homeConfigurations = {
-        "john@heimdall" = mkStandaloneHome {
-          hostname = "heimdall";
+        "john@ajax" = mkStandaloneHome {
+          hostname = "ajax";
           username = "john";
           system = "aarch64-linux";
         };
-        "claw@heimdall" = mkStandaloneHome {
-          hostname = "heimdall";
+        "claw@ajax" = mkStandaloneHome {
+          hostname = "ajax";
           username = "claw";
           system = "aarch64-linux";
         };

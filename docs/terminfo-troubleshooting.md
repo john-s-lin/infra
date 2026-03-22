@@ -30,7 +30,7 @@ The `initc` and `invis` capabilities get fused together, causing malformed escap
 
 ## Solution: Declarative Terminfo via Home-Manager
 
-For servers managed by home-manager (e.g., `heimdall`), the terminfo is provided declaratively from the Nix store, which uses ncurses 6.6+.
+For servers managed by home-manager (e.g., `ajax`), the terminfo is provided declaratively from the Nix store, which uses ncurses 6.6+.
 
 ### Implementation
 
