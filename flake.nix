@@ -78,16 +78,16 @@
         };
     in
     {
-      nixosConfigurations.john-nix-05 = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.john-tpd-05 = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
           system = "x86_64-linux";
         };
         modules = [
-          ./hosts/john-nix-05/configuration.nix
+          ./hosts/john-tpd-05/configuration.nix
           home-manager.nixosModules.home-manager
           (mkUserConfig {
-            hostname = "john-nix-05";
+            hostname = "john-tpd-05";
             username = "john";
             system = "x86_64-linux";
           })

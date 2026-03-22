@@ -1,6 +1,6 @@
 # Default host names
 darwin_host := "john-air-03"
-nixos_host  := "john-nix-05"
+nixos_host  := "john-tpd-05"
 
 # Run nixos-rebuild switch
 nr host=nixos_host:
