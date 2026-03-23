@@ -60,6 +60,9 @@
           };
           modules = [
             ./hosts/${hostname}/configuration.nix
+            {
+              networking.hostName = hostname;
+            }
             home-manager.darwinModules.home-manager
             (mkUserConfig { inherit hostname system username; })
           ];
@@ -95,8 +98,8 @@
       };
 
       darwinConfigurations = {
-        "john-air-03" = mkDarwinSystem {
-          hostname = "john-air-03";
+        "john-mba-03" = mkDarwinSystem {
+          hostname = "john-mba-03";
           system = "aarch64-darwin";
           username = "john";
         };
