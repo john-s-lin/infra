@@ -8,6 +8,6 @@
   };
 
   home.shellAliases = {
-    fcat = "fzf --preview 'bat --style=plain --color=always {}' --preview-window=right:60%";
+    fcat = "fzf --preview 'bat --style=plain --color=always {}' --preview-window=right:50% --bind 'enter:execute($EDITOR {})+abort'";
   };
 }
