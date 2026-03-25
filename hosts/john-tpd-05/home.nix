@@ -22,7 +22,7 @@
     ../../modules/packages/workstation.nix
 
     # Desktop
-    ../../modules/desktop/cosmic/default.nix
+    # ../../modules/desktop/cosmic/default.nix
     ../../modules/desktop/hypr/default.nix
 
     # Host-specific config
