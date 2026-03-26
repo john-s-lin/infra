@@ -1,7 +1,7 @@
 ---
 description: Ask agent
 mode: primary
-model: opencode/minimax-m2.5-free
+model: openai/gpt-5.4
 temperature: 0.7
 permission:
   edit: deny
