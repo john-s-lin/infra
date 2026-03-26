@@ -69,7 +69,6 @@ in
         "hypridle"
 
         # Apps that I want open
-        "obsidian"
         "thunderbird"
       ];
 
@@ -260,7 +259,6 @@ in
         "center on, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
         "size 600 400, match:class ^thunderbird$, match:initial_title ^Calendar Reminders$"
 
-        "workspace 3, match:class obsidian"
         "workspace 4, match:class zen-twilight"
         "workspace 5, match:class dev.zed.Zed"
         "workspace 6, match:class Code"
