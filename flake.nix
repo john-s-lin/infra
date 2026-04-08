@@ -30,7 +30,7 @@
       mkUserConfig =
         {
           username,
-          hostKey,
+          hostname,
           system,
         }:
         {
@@ -42,14 +42,14 @@
           };
           home-manager.users.john = {
             imports = [
-              ./hosts/${hostKey}/home.nix
+              ./hosts/${hostname}/home.nix
             ];
           };
         };
 
       mkDarwinSystem =
         {
-          hostKey,
+          hostname,
           system,
           username,
         }:
@@ -59,9 +59,12 @@
             inherit inputs system;
           };
           modules = [
-            ./hosts/${hostKey}/configuration.nix
+            ./hosts/${hostname}/configuration.nix
+            {
+              networking.hostName = hostname;
+            }
             home-manager.darwinModules.home-manager
-            (mkUserConfig { inherit hostKey system username; })
+            (mkUserConfig { inherit hostname system username; })
           ];
         };
 
@@ -87,7 +90,7 @@
           ./hosts/john-tpd-05/configuration.nix
           home-manager.nixosModules.home-manager
           (mkUserConfig {
-            hostKey = "john-tpd-05";
+            hostname = "john-tpd-05";
             username = "john";
             system = "x86_64-linux";
           })
@@ -96,20 +99,14 @@
 
       darwinConfigurations = {
         "john-mba-03" = mkDarwinSystem {
-          hostKey = "john-mba-03";
+          hostname = "john-mba-03";
           system = "aarch64-darwin";
           username = "john";
         };
 
         "john-mbp-04" = mkDarwinSystem {
-          hostKey = "john-mbp-04";
+          hostname = "john-mbp-04";
           system = "x86_64-darwin";
-          username = "john";
-        };
-
-        "work-mbp-01" = mkDarwinSystem {
-          hostKey = "work-mbp-01";
-          system = "aarch64-darwin";
           username = "john";
         };
       };
