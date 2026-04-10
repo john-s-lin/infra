@@ -8,7 +8,6 @@ let
     gh
     git
     just
-    localsend
     vim
     wget
   ];

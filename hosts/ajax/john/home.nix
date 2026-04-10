@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 {
   imports = [
     # Server tools (previously in server.nix)
@@ -19,7 +19,7 @@
     ../../../modules/packages/terminal.nix
   ];
 
-  home.username = "john";
-  home.homeDirectory = "/home/john";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.05";
 }

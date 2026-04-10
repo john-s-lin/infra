@@ -1,14 +1,21 @@
+{ username, ... }:
 {
   imports = [
     ../../modules/fonts.nix
+
     ../../modules/packages/default.nix
+    ../../modules/packages/localsend.nix
+
+    ../../modules/darwin/defaults.nix
+
     ../../modules/darwin/packages/ai.nix
-    ../../modules/darwin/packages/homebrew.nix
+    ../../modules/darwin/packages/common.nix
     ../../modules/darwin/packages/personal.nix
     ../../modules/darwin/packages/rclone.nix
     ../../modules/darwin/packages/work.nix
-    ../../modules/darwin/defaults.nix
+
     ../../modules/darwin/services/tailscale.nix
+
     ../../modules/gc/darwin.nix
   ];
 
@@ -18,11 +25,11 @@
     "flakes"
   ];
 
-  users.users.john = {
-    name = "john";
-    home = "/Users/john";
+  users.users.${username} = {
+    name = username;
+    home = "/Users/${username}";
   };
 
-  system.primaryUser = "john";
+  system.primaryUser = username;
   system.stateVersion = 6;
 }
