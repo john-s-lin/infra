@@ -31,6 +31,7 @@
     name = username;
     home = "/Users/${username}";
     shell = pkgs.zsh;
+    ignoreShellProgramCheck = true;
   };
 
   system.primaryUser = username;
