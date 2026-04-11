@@ -47,6 +47,29 @@
           };
         };
 
+      mkNixosSystem =
+        {
+          hostKey,
+          hostname,
+          system,
+          username,
+        }:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit
+              inputs
+              system
+              username
+              hostname
+              ;
+          };
+          modules = [
+            ./hosts/${hostKey}/configuration.nix
+            home-manager.nixosModules.home-manager
+            (mkUserConfig { inherit hostKey system username; })
+          ];
+        };
+
       mkDarwinSystem =
         {
           hostKey,
@@ -82,21 +105,13 @@
         };
     in
     {
-      nixosConfigurations.john-tpd-05 = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          system = "x86_64-linux";
+      nixosConfigurations = {
+        "john-tpd-05" = mkNixosSystem {
+          hostKey = "john-tpd-05";
+          hostname = "john-tpd-05";
           username = "john";
+          system = "x86_64-linux";
         };
-        modules = [
-          ./hosts/john-tpd-05/configuration.nix
-          home-manager.nixosModules.home-manager
-          (mkUserConfig {
-            hostKey = "john-tpd-05";
-            username = "john";
-            system = "x86_64-linux";
-          })
-        ];
       };
 
       darwinConfigurations = {

@@ -3,7 +3,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, username, ... }:
+{
+  pkgs,
+  hostname,
+  username,
+  ...
+}:
 {
   imports = [
     # Include the results of the hardware scan.
@@ -90,7 +95,7 @@
   #   enableSSHSupport = true;
   # };
 
-  networking.hostName = "john-tpd-05";
+  networking.hostName = hostname;
 
   # List services that you want to enable:
   programs.nix-ld.enable = true;
