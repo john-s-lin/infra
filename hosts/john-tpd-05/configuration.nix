@@ -3,7 +3,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{
+  pkgs,
+  hostname,
+  username,
+  ...
+}:
 {
   imports = [
     # Include the results of the hardware scan.
@@ -11,13 +16,18 @@
 
     ../../modules/desktop/cosmic.nix
     ../../modules/desktop/hyprland.nix
+
     ../../modules/fonts.nix
+
     ../../modules/packages/default.nix
+    ../../modules/packages/localsend.nix
+
     ../../modules/services/keyd.nix
     ../../modules/services/networking.nix
     ../../modules/services/printing.nix
     ../../modules/services/sound.nix
     ../../modules/services/vpn.nix
+
     ../../modules/gc/default.nix
   ];
 
@@ -64,7 +74,7 @@
   environment.localBinInPath = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.john = {
+  users.users.${username} = {
     isNormalUser = true;
     description = "John";
     extraGroups = [
@@ -84,6 +94,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  networking.hostName = hostname;
 
   # List services that you want to enable:
   programs.nix-ld.enable = true;

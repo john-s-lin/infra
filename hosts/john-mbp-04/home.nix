@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   imports = [
     # Common terminal tools (previously in common.nix)
@@ -37,8 +37,8 @@
     cat = "bat";
   };
 
-  home.username = "john";
-  home.homeDirectory = "/Users/john";
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
 
   # Set your Home Manager state version.
   home.stateVersion = "25.05"; # Or your current version

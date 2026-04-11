@@ -20,7 +20,6 @@
   };
 
   networking = {
-    hostName = "john-tpd-05";
     networkmanager.enable = true;
     nameservers = [
       # "192.168.2.100"

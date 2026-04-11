@@ -30,7 +30,7 @@
       mkUserConfig =
         {
           username,
-          hostname,
+          hostKey,
           system,
         }:
         {
@@ -38,34 +38,58 @@
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
           home-manager.extraSpecialArgs = {
-            inherit inputs system;
+            inherit inputs system username;
           };
-          home-manager.users.john = {
+          home-manager.users.${username} = {
             imports = [
-              ./hosts/${hostname}/home.nix
+              ./hosts/${hostKey}/home.nix
             ];
           };
         };
 
+      mkNixosSystem =
+        {
+          hostKey,
+          hostname,
+          system,
+          username,
+        }:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit
+              inputs
+              system
+              username
+              hostname
+              ;
+          };
+          modules = [
+            ./hosts/${hostKey}/configuration.nix
+            home-manager.nixosModules.home-manager
+            (mkUserConfig { inherit hostKey system username; })
+          ];
+        };
+
       mkDarwinSystem =
         {
-          hostname,
+          hostKey,
+          hostname ? null,
           system,
           username,
         }:
         nix-darwin.lib.darwinSystem {
           inherit system;
           specialArgs = {
-            inherit inputs system;
+            inherit inputs system username;
           };
           modules = [
-            ./hosts/${hostname}/configuration.nix
-            {
-              networking.hostName = hostname;
-            }
+            ./hosts/${hostKey}/configuration.nix
             home-manager.darwinModules.home-manager
-            (mkUserConfig { inherit hostname system username; })
-          ];
+            (mkUserConfig { inherit hostKey system username; })
+          ]
+          ++ nixpkgs.lib.optional (hostname != null) {
+            networking.hostName = hostname;
+          };
         };
 
       mkStandaloneHome =
@@ -77,37 +101,38 @@
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
           modules = [ ./hosts/${hostname}/${username}/home.nix ];
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = { inherit inputs username system; };
         };
     in
     {
-      nixosConfigurations.john-tpd-05 = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
+      nixosConfigurations = {
+        "john-tpd-05" = mkNixosSystem {
+          hostKey = "john-tpd-05";
+          hostname = "john-tpd-05";
+          username = "john";
           system = "x86_64-linux";
         };
-        modules = [
-          ./hosts/john-tpd-05/configuration.nix
-          home-manager.nixosModules.home-manager
-          (mkUserConfig {
-            hostname = "john-tpd-05";
-            username = "john";
-            system = "x86_64-linux";
-          })
-        ];
       };
 
       darwinConfigurations = {
         "john-mba-03" = mkDarwinSystem {
+          hostKey = "john-mba-03";
           hostname = "john-mba-03";
           system = "aarch64-darwin";
           username = "john";
         };
 
         "john-mbp-04" = mkDarwinSystem {
+          hostKey = "john-mbp-04";
           hostname = "john-mbp-04";
           system = "x86_64-darwin";
           username = "john";
+        };
+
+        "work-mbp-01" = mkDarwinSystem {
+          hostKey = "work-mbp-01";
+          system = "aarch64-darwin";
+          username = "johnslin";
         };
       };
 
