@@ -7,6 +7,12 @@
     syntaxHighlighting.enable = true;
     dotDir = "${config.xdg.configHome}/zsh";
 
+    profileExtra = ''
+      if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+        . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+      fi
+    '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [

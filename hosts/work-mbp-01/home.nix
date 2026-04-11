@@ -30,6 +30,11 @@
     cat = "bat";
   };
 
+  home.sessionPath = [
+    "$HOME/.nix-profile/bin"
+    "/etc/profiles/per-user/${username}/bin"
+  ];
+
   programs.ssh.forwardAgent = true;
 
   home.username = username;

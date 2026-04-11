@@ -1,4 +1,4 @@
-{ username, ... }:
+{ pkgs, username, ... }:
 {
   imports = [
     ../../modules/fonts.nix
@@ -16,6 +16,8 @@
   # however, this will require disabling the nix.gc garbage collector
   # nix.enable = false;
 
+  environment.shells = [ pkgs.zsh ];
+
   programs.bash.enable = false;
   programs.zsh.enable = false;
 
@@ -28,6 +30,7 @@
   users.users.${username} = {
     name = username;
     home = "/Users/${username}";
+    shell = pkgs.zsh;
   };
 
   system.primaryUser = username;
