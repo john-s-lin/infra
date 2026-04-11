@@ -30,6 +30,8 @@
     cat = "bat";
   };
 
+  programs.ssh.forwardAgent = true;
+
   home.username = username;
   home.homeDirectory = "/Users/${username}";
 
