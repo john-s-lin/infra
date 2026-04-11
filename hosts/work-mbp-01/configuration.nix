@@ -13,7 +13,7 @@
   ];
 
   # patch: will work with Determinate Nix install
-  nix.enable = false;
+  # nix.enable = false;
 
   # Flakes
   nix.settings.experimental-features = [
