@@ -36,6 +36,12 @@
   ];
 
   programs.ssh.forwardAgent = true;
+  programs.zsh.initExtra = ''
+    # Workaround for corp-managed /etc/zshrc wiping Nix daemon source
+    if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+      . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+    fi
+  '';
 
   home.username = username;
   home.homeDirectory = "/Users/${username}";
