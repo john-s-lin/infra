@@ -4,16 +4,16 @@
     if [ -f ~/.bash_aliases ]; then
       . ~/.bash_aliases
     fi
-    PROMPT="%{$fg_bold[yellow]%}%n@%m%{$reset_color%} $PROMPT"
+    PROMPT="%{$fg_bold[yellow]%}$USER@%m%{$reset_color%} $PROMPT"
   '';
 
   programs.bash = {
     enable = true;
     initExtra = ''
-      if [-f ~/.bash_aliases ]; then
+      if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases
       fi
-      PS1="\[\033[1;33m\]\u@\h\[\033[0m\] $PS1"
+      PS1="\[\033[1;33m\]\u@\h\[\033[0m\] ➜ \w \$ "
     '';
   };
 
