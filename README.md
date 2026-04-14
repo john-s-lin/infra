@@ -90,7 +90,7 @@ nix run home-manager -- switch --flake .#<username>@<hostname>
 And for `nimbus` specifically:
 
 ```bash
-nix run home-manager -- switch --flake .#johnslin@nimbus --impure --backup-extension bak
+nix run home-manager -- switch --flake .#johnslin@nimbus --impure -b bak
 ```
 
 ## Garbage Collection

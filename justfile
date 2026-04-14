@@ -32,6 +32,6 @@ hm host=home_host backup="backup" impure=home_impure:
         args+=("--impure")
     fi
     if [ "{{backup}}" = "backup" ]; then
-        args+=("--backup-extension" "bak")
+        args+=("-b" "bak")
     fi
     nix run home-manager -- switch --flake .#{{host}} "${args[@]}"
