@@ -94,14 +94,28 @@
 
       mkStandaloneHome =
         {
-          hostname,
+          hostKey,
+          hostname ? null,
           system,
           username,
         }:
+        let
+          multiUserPath = ./hosts/${hostKey}/${username}/home.nix;
+          singleUserPath = ./hosts/${hostKey}/home.nix;
+          modulePath = if builtins.pathExists multiUserPath then multiUserPath else singleUserPath;
+        in
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
-          modules = [ ./hosts/${hostname}/${username}/home.nix ];
-          extraSpecialArgs = { inherit inputs username system; };
+          modules = [ modulePath ];
+          extraSpecialArgs = {
+            inherit
+              inputs
+              username
+              system
+              hostname
+              hostKey
+              ;
+          };
         };
     in
     {
@@ -139,11 +153,13 @@
       # VPS Home-Manager only
       homeConfigurations = {
         "john@ajax" = mkStandaloneHome {
+          hostKey = "ajax";
           hostname = "ajax";
           username = "john";
           system = "aarch64-linux";
         };
         "claw@ajax" = mkStandaloneHome {
+          hostKey = "ajax";
           hostname = "ajax";
           username = "claw";
           system = "aarch64-linux";
@@ -151,14 +167,22 @@
 
         # Raspberry Pi - DietPi Home-Manager only
         "dietpi@apollo" = mkStandaloneHome {
+          hostKey = "apollo";
           hostname = "apollo";
           username = "dietpi";
           system = "aarch64-linux";
         };
         "dietpi@atlas" = mkStandaloneHome {
+          hostKey = "atlas";
           hostname = "atlas";
           username = "dietpi";
           system = "aarch64-linux";
+        };
+
+        "johnslin@nimbus" = mkStandaloneHome {
+          hostKey = "nimbus";
+          username = "johnslin";
+          system = "x86_64-linux";
         };
       };
     };
