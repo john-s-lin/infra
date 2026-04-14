@@ -5,8 +5,10 @@
     fd
     fzf
     hyperfine
+    just
     lazygit
     lazydocker
+    nixfmt
     ripgrep
     tree
     rename
