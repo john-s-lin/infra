@@ -18,4 +18,5 @@
   home.username = username;
   home.homeDirectory = home;
   home.stateVersion = "25.05";
+  home.backupFileExtension = "bak";
 }

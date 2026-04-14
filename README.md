@@ -68,7 +68,7 @@ nix run home-manager -- switch --flake .#john@ajax
 For configurations that rely on environment variables to keep paths private (like `johnslin@nimbus`), you must add the `--impure` flag to allow Nix to read the `$HOME` environment variable:
 
 ```bash
-nix run --impure home-manager -- switch --flake .#johnslin@nimbus
+nix run home-manager -- switch --flake .#johnslin@nimbus --impure
 ```
 
 ## Garbage Collection
