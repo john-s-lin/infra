@@ -1,6 +1,8 @@
 # Default host names
 darwin_host := "john-mba-03"
 nixos_host  := "john-tpd-05"
+home_host   := "dietpi@atlas"
+home_impure := ""
 
 # Run nixos-rebuild switch
 nr host=nixos_host:
@@ -21,3 +23,15 @@ update:
 # Run nix flake check
 check:
     nix flake check
+
+# Run home-manager switch
+hm host=home_host backup="backup" impure=home_impure:
+    #!/usr/bin/env bash
+    args=()
+    if [ "{{impure}}" = "impure" ]; then
+        args+=("--impure")
+    fi
+    if [ "{{backup}}" = "backup" ]; then
+        args+=("--backup-extension" "bak")
+    fi
+    nix run home-manager -- switch --flake .#{{host}} "${args[@]}"

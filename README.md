@@ -55,17 +55,39 @@ just dr <hostname>
 
 For standalone Home Manager on non-NixOS Linux systems (e.g., AlmaLinux, Ubuntu with Nix installed):
 
+To rebuild, run:
+
 ```bash
-nix run home-manager -- switch --flake .#<username>@<hostname>
+just hm <username>@<hostname>
 ```
 
 For example, to apply the configuration for `john@ajax`:
 
 ```bash
-nix run home-manager -- switch --flake .#john@ajax
+just hm john@ajax
 ```
 
-For configurations that rely on environment variables to keep paths private (like `johnslin@nimbus`), you must add the `--impure` flag to allow Nix to read the `$HOME` environment variable:
+The `hm` command in the `justfile` accepts `host`, `backup`, and `impure` parameters. It defaults to `host=dietpi@atlas`, `backup=backup`, and `impure=""`.
+
+To apply the configuration for `johnslin@nimbus` (which requires impure mode), you can pass the arguments in order:
+
+```bash
+just hm johnslin@nimbus backup impure
+```
+
+For other hosts that don't need impure mode, you can just pass the host name:
+
+```bash
+just hm john@ajax
+```
+
+If you need to run it manually without `just` (e.g., for bootstrapping):
+
+```bash
+nix run home-manager -- switch --flake .#<username>@<hostname>
+```
+
+And for `nimbus` specifically:
 
 ```bash
 nix run home-manager -- switch --flake .#johnslin@nimbus --impure --backup-extension bak
