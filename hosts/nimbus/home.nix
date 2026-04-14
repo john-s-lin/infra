@@ -1,6 +1,7 @@
 { username, home, ... }:
 {
   imports = [
+    ../../modules/home/bash.nix
     ../../modules/home/bat.nix
     ../../modules/home/bottom.nix
     ../../modules/home/direnv.nix

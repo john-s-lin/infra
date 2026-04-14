@@ -44,6 +44,14 @@
           )
         ''
       else
-        "";
+        ''
+          # Enable unique path tracking to prevent duplicates
+          typeset -U path
+
+          path=(
+            "$HOME/.nix-profile/bin"
+            $path
+          )
+        '';
   };
 }
