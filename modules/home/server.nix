@@ -13,7 +13,7 @@
       if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases
       fi
-      PS1="\[\033[1;33m\]\u@\h\[\033[0m\] ➜ \w \$ "
+      PS1="\[\033[1;33m\]$USER@\h\[\033[0m\] ➜ \w \$ "
     '';
   };
 
