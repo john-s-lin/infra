@@ -98,6 +98,7 @@
           hostname ? null,
           system,
           username,
+          home ? "/home/${username}",
         }:
         let
           multiUserPath = ./hosts/${hostKey}/${username}/home.nix;
@@ -114,6 +115,7 @@
               system
               hostname
               hostKey
+              home
               ;
           };
         };
@@ -183,6 +185,7 @@
           hostKey = "nimbus";
           username = "johnslin";
           system = "x86_64-linux";
+          home = let h = builtins.getEnv "HOME"; in if h != "" then h else "/home/johnslin";
         };
       };
     };

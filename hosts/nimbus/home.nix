@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, home, ... }:
 {
   imports = [
     ../../modules/home/bat.nix
@@ -14,6 +14,6 @@
   ];
 
   home.username = username;
-  home.homeDirectory = "/home/${username}";
-  home.stateversion = "25.05";
+  home.homeDirectory = home;
+  home.stateVersion = "25.05";
 }
