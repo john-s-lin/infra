@@ -16,6 +16,12 @@
     ../../modules/packages/terminal.nix
   ];
 
+  programs.zsh.initContent = ''
+    if [ -e /etc/bash_completion.d/hgd ]; then
+      source /etc/bash_completion.d/hgd
+    fi
+  '';
+
   home.username = username;
   home.homeDirectory = home;
   home.stateVersion = "25.05";
