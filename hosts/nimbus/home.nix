@@ -7,7 +7,6 @@
     ../../modules/home/direnv.nix
     ../../modules/home/git.nix
     ../../modules/home/helix.nix
-    ../../modules/home/jujutsu.nix
     ../../modules/home/server.nix
     ../../modules/home/shpool.nix
     ../../modules/home/zoxide.nix
