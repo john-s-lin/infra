@@ -39,7 +39,20 @@
 
   programs.ssh = {
     enable = true;
-    matchBlocks."*".forwardAgent = true;
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      # This is to forward the hardware key
+      forwardAgent = true;
+      addKeysToAgent = "no";
+      compression = false;
+      serverAliveInterval = 0;
+      serverAliveCountMax = 3;
+      hashKnownHosts = false;
+      userKnownHostsFile = "~/.ssh/known_hosts";
+      controlMaster = "no";
+      controlPath = "~/.ssh/master-%r@%n:%p";
+      controlPersist = "no";
+    };
   };
 
   programs.zsh.initContent = ''
