@@ -17,6 +17,7 @@
     ../../modules/home/bash.nix
     ../../modules/home/ghostty.nix
     ../../modules/home/helix.nix
+    ../../modules/home/shpool.nix
     ../../modules/home/zsh.nix
 
     # Terminal packages
