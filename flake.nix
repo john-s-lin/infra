@@ -38,7 +38,12 @@
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
           home-manager.extraSpecialArgs = {
-            inherit inputs system username;
+            inherit
+              inputs
+              system
+              username
+              hostKey
+              ;
           };
           home-manager.users.${username} = {
             imports = [
@@ -185,7 +190,11 @@
           hostKey = "nimbus";
           username = "johnslin";
           system = "x86_64-linux";
-          home = let h = builtins.getEnv "HOME"; in if h != "" then h else "/home/johnslin";
+          home =
+            let
+              h = builtins.getEnv "HOME";
+            in
+            if h != "" then h else "/home/johnslin";
         };
       };
     };

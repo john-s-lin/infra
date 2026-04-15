@@ -1,4 +1,10 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  hostKey ? null,
+  ...
+}:
 {
   programs.zsh = {
     enable = true;
@@ -18,8 +24,8 @@
       plugins = [
         "git"
         "vi-mode"
-        "jj"
-      ];
+      ]
+      ++ lib.optional (hostKey != "nimbus") "jj";
       theme = "robbyrussell";
     };
 
