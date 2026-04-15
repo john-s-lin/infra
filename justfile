@@ -10,11 +10,11 @@ nr host=nixos_host:
 
 # Run darwin-rebuild switch
 dr host=darwin_host:
-    nix run nix-darwin -- switch --flake .#{{host}}
+    sudo nix run nix-darwin -- switch --flake .#{{host}}
 
 # Run garbage-collect (default 30 days)
 gc days="30":
-    sudo $(which nix-collect-garbage) --delete-older-than {{days}}d
+    sudo nix-collect-garbage --delete-older-than {{days}}d
 
 # Update nix flake
 update:
