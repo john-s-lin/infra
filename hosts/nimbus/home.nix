@@ -20,6 +20,9 @@
     if [ -e /etc/bash_completion.d/hgd ]; then
       source /etc/bash_completion.d/hgd
     fi
+    if [ -e /etc/bash_completion.d/jjd ]; then
+      source /etc/bash_completion.d/jjd
+    fi
   '';
 
   home.username = username;
