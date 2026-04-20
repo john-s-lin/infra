@@ -1,5 +1,5 @@
 let
-  wallpaperPrimary = ./wallpapers/tiantan-01.jpg;
+  wallpaperPrimary = ../wallpapers/tiantan-01.jpg;
 in
 { ... }:
 
