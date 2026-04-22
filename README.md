@@ -134,6 +134,11 @@ This runs `nix flake check` to verify the configuration is valid.
 `rclone` is used to sync cloud storage to local drives. The configuration is pretty much ready to go, except you need to sign in to get access tokens to OneDrive and Google Drive.
 Refer to [docs/cloud-storage.md](./docs/cloud-storage.md) for more info.
 
+### gmailctl
+
+`gmailctl` is installed declaratively, but its `~/.gmailctl/config.jsonnet` filter config is sourced from Bitwarden Secrets Manager.
+Refer to [docs/gmailctl.md](./docs/gmailctl.md) for setup and operational details.
+
 ## Troubleshooting
 
 ### Ghostty Terminfo Issues
