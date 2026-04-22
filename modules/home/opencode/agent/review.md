@@ -1,7 +1,6 @@
 ---
 description: Review agent
 mode: subagent
-model: google/gemini-3-flash-preview
 temperature: 0.5
 permission:
   edit: deny

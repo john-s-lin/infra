@@ -1,7 +1,6 @@
 ---
 description: Ask agent
 mode: primary
-model: openai/gpt-5.4
 temperature: 0.7
 permission:
   edit: deny

@@ -1,7 +1,6 @@
 ---
 description: Build agent
 mode: primary
-model: openai/gpt-5.4
 temperature: 0.2
 permission:
   edit: allow
