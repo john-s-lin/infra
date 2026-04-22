@@ -16,6 +16,7 @@
     # Additional config
     ../../modules/home/bash.nix
     ../../modules/home/ghostty.nix
+    ../../modules/home/gmailctl.nix
     ../../modules/home/helix.nix
     ../../modules/home/opencode.nix
     ../../modules/home/zed.nix
