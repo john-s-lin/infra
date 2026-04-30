@@ -60,6 +60,9 @@
     if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
       . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
     fi
+    if [ -f ~/.bash_aliases ]; then
+      . ~/.bash_aliases
+    fi
   '';
 
   home.username = username;
