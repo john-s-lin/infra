@@ -1,7 +1,7 @@
 {
   homebrew = {
     casks = [
-      "linear-linear"
+      "linear"
       "microsoft-outlook"
     ];
   };
