@@ -94,6 +94,19 @@
           ]
           ++ nixpkgs.lib.optional (hostname != null) {
             networking.hostName = hostname;
+          }
+          # TEMPORARY: direnv 2.37.1 checkPhase hangs on aarch64-darwin due to test suite
+          # creating directories with literal backspace/carriage return characters that
+          # trip up macOS APFS. Remove once upstream fixes this.
+          # Ref: https://github.com/NixOS/nixpkgs/issues/507531
+          ++ nixpkgs.lib.optional (system == "aarch64-darwin") {
+            nixpkgs.overlays = [
+              (final: prev: {
+                direnv = prev.direnv.overrideAttrs (old: final.lib.optionalAttrs final.stdenv.isDarwin {
+                  doCheck = false;
+                });
+              })
+            ];
           };
         };
 
