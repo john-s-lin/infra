@@ -22,6 +22,7 @@
     ../../modules/home/zsh.nix
 
     # Terminal packages
+    ../../modules/packages/bws.nix
     ../../modules/packages/gmailctl.nix
     ../../modules/packages/terminal.nix
     ../../modules/packages/workstation.nix

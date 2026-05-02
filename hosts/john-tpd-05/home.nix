@@ -16,6 +16,7 @@
     # Additional packages
     ../../modules/packages/ai.nix
     ../../modules/packages/browsers.nix
+    ../../modules/packages/bws.nix
     ../../modules/packages/developer.nix
     ../../modules/packages/gmailctl.nix
     ../../modules/packages/personal.nix
